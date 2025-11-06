@@ -1024,10 +1024,10 @@ td {
   width: 100%;
   opacity: 0;
   transform: translate(0,-100%);
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .xptf-btn span {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position:relative;
   display: block;
 }
@@ -8770,7 +8770,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 .food-price-menu .menu-label {
   font-size: 74%;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--accent-color);
   border-radius: 0;
   padding: 6px 10px;
   font-weight: 600;
