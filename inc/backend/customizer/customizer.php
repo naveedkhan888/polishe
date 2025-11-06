@@ -1089,7 +1089,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Primary Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#b58c67',
+            'default'  => '#e8d4ad',
             'priority' => 10,
         ),
 
@@ -1097,7 +1097,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Secondary Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#0e1730',
+            'default'  => '#343a20',
             'priority' => 10,
         ),
 
@@ -1113,7 +1113,7 @@ function bistroly_customize_settings() {
             'type'     => 'color',
             'label'    => esc_html__( 'Accent Color', 'bistroly' ),
             'section'  => 'color_scheme',
-            'default'  => '#111b37',
+            'default'  => '#262b14',
             'priority' => 10,
         ),
 
