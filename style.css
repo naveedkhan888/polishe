@@ -1082,8 +1082,8 @@ td {
 }
 
 .xptf-btn.xptf-btn-border:hover, .xptf-btn.xptf-btn-border:focus {
-  background: var(--primary-color);
-  color: #fff;
+  background: transparent;
+  color: var(--primary-color);
 }
 .xptf-btn.xptf-btn-border.xptf-btn-light {
   border-color: #fff;
@@ -7199,7 +7199,6 @@ select option:checked {
 
 /* Today’s date */
 .ui-datepicker td a.ui-state-highlight {
-  background: var(--primary-color) !important;
   color: var(--white-color) !important;
   border-radius: 0;
   opacity: 1;
