@@ -2662,7 +2662,7 @@ Vertical Menu
   border-radius: 0;
 }
 .blog-post .tagcloud a:hover {
-  background: rgb(193, 153, 119, 0.1);
+  background: transparent;
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
@@ -2812,7 +2812,7 @@ Vertical Menu
   top: 0;
   font-family: "xpcustomicon";
   font-size: 21px;
-  color: #fff;
+  color: var(--accent-color);
   background: var(--primary-color);
   height: 70px;
   width: 70px;
@@ -3291,8 +3291,8 @@ Vertical Menu
   border-radius: 0;
 }
 .widget .tagcloud a:hover {
-  background: var(--primary-color);
-  color: #ffffff;
+  background: transparent;
+  color: var(--primary-color);
   border-color: var(--primary-color);
 }
 .widget table {
@@ -3511,7 +3511,7 @@ Vertical Menu
 }
 
 .search-form .search-submit:hover i {
-  color: #ffffff;
+  color: var(--accent-color);
 }
 
 .author-widget_wrapper {
@@ -3581,6 +3581,7 @@ Vertical Menu
 }
 .author-widget_social a:hover {
   background: var(--primary-color);
+  color: var(--accent-color);
 }
 .author-widget_social a * {
   color: #fff;
@@ -8253,7 +8254,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   height: 18px;
   line-height: 18px;
   background: var(--primary-color);
-  color: #fff;
+  color: var(--accent-color);
   text-align: center;
   font-size: 10px;
   font-weight: 700;

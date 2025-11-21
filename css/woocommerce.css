@@ -144,9 +144,7 @@ WooCommerce styles override
 
 }
 .woocommerce ul.products li.product:hover .add_to_cart_button, .woocommerce-page ul.products li.product:hover .add_to_cart_button {
-  -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  transform: translateY(0px);
+
 }
 
 .woocommerce .site-main .product.sale span.onsale {
@@ -691,7 +689,8 @@ WooCommerce styles override
 .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,
 .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
 .woocommerce input.button:hover, .woocommerce button.button.alt.disabled:hover {
-  background-color: var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
 }
 
 .woocommerce button.button {
@@ -802,8 +801,8 @@ WooCommerce styles override
 }
 
 .woocommerce a.remove:hover {
-  color: #fff !important;
-  background: var(--primary-color);
+  opacity: 0.7;
+  background: transparent;
 }
 
 .woocommerce .widget_shopping_cart .total,
@@ -848,7 +847,7 @@ WooCommerce styles override
   border-radius: 0;
 }
 .woocommerce-mini-cart__buttons a.button.wc-forward:hover {
-  background: var(--primary-color);
+  color: var(--primary-color);
 }
 .woocommerce-mini-cart__buttons a.button.checkout {
   background-color: transparent;
