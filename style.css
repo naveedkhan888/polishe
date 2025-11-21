@@ -5351,14 +5351,14 @@ object {
   font-family: "xpcustomicon";
   font-size: 13px;
   right: 0;
-  color: #d92300;
+  color: var(--primary-color);
 }
 .xp-pricing-table .inner-table .details ul li.active {
   color: #282828;
 }
 .xp-pricing-table .inner-table .details ul li.active:after {
   content: "\f126";
-  color: #69c47e;
+  color: var(--primary-color);
   font-size: 14px;
 }
 .xp-pricing-table .inner-table .details.no-icon ul li:after {
@@ -6424,7 +6424,7 @@ object {
   -ms-transition: all 0.3s linear;
 }
 .circle-social .team-social a:hover {
-  color: #fff;
+  color: var(--accent-color);
   border-color: transparent;
   background: var(--primary-color);
 }
@@ -6547,7 +6547,7 @@ object {
 .xp-accordions .acc-item.current .acc-toggle {
   background: var(--primary-color);
   border-color: var(--primary-color);
-  color: #fff;
+  color: var(--accent-color);
 }
 .xp-accordions .acc-item.current .acc-toggle i {
   -webkit-transform: rotate(-90deg);
@@ -6664,7 +6664,7 @@ object {
   right: -15px;
   font-size: 29px;
   background: var(--primary-color);
-  color: #fff;
+  color: var(--accent-color);
   width: 45px;
   height: 45px;
   text-align: center;
