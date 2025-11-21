@@ -3583,6 +3583,9 @@ Vertical Menu
   background: var(--primary-color);
   color: var(--accent-color);
 }
+.author-widget_social a:hover i {
+  color: var(--accent-color);
+}
 .author-widget_social a * {
   color: #fff;
 }
