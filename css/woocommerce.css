@@ -408,6 +408,7 @@ WooCommerce styles override
  */
 .woocommerce a.remove {
   font-weight: 400;
+  color: #fff !important;
 }
 
 .woocommerce-cart-form table, .woocommerce-cart-form th, .woocommerce-cart-form td {
@@ -530,12 +531,15 @@ WooCommerce styles override
 .woocommerce-message:before {
   color: var(--primary-color);
 }
+.woocommerce form .form-row .required {
+  color: var(--primary-color) !important; }
 
 .woocommerce-info {
   border-top-color: var(--primary-color);
   border-left: 1px solid var(--divider-color);
   border-right: 1px solid var(--divider-color);
   border-bottom: 1px solid var(--divider-color);
+  color: #fff;
 }
 .woocommerce-info:before {
   color: var(--primary-color);
