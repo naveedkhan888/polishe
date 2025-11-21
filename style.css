@@ -2603,7 +2603,7 @@ Vertical Menu
 }
 .page-pagination li span, .page-pagination li a:hover {
   background: var(--primary-color);
-  color: #fff;
+  color: var(--accent-color);
   border-color: var(--primary-color);
 }
 
