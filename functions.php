@@ -88,6 +88,34 @@ if ( ! function_exists( 'bistroly_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'bistroly_setup' );
 
+
+// Auto-regenerate Elementor CSS files when a post or page is updated
+add_action('save_post', function($post_id) {
+
+    // Prevent running on revisions, autosaves, etc.
+    if (wp_is_post_revision($post_id) || wp_is_post_autosave($post_id)) {
+        return;
+    }
+
+    // Check if Elementor is active
+    if (!did_action('elementor/loaded')) {
+        return;
+    }
+
+    // Make sure it's a post/page that uses Elementor
+    $is_built_with_elementor = \Elementor\Plugin::$instance->db->is_built_with_elementor($post_id);
+    if (!$is_built_with_elementor) {
+        return;
+    }
+
+    // Regenerate CSS for this post
+    \Elementor\Plugin::$instance->files_manager->clear_cache();
+    \Elementor\Plugin::$instance->files_manager->clear_post_css_cache($post_id);
+
+}, 20);
+
+
+
 /**
  * Register widget area.
  *
