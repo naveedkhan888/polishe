@@ -6436,7 +6436,7 @@ object {
   background: var(--primary-color);
 }
 .circle-social .team-social a:hover svg {
-  fill: #fff;
+  fill: var(--accent-color);
 }
 
 /* team carousel */
