@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Bistroly_Elementor_Text_Marquee extends Widget_Base {
+class Polishe_Elementor_Text_Marquee extends Widget_Base {
 
 	public function get_name() {
-		return 'bistroly_elementor_text_marquee';
+		return 'polishe_elementor_text_marquee';
 	}
 
 	public function get_title() {
-		return esc_html__( 'Text Marquee', 'bistroly' );
+		return esc_html__( 'Text Marquee', 'polishe' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bistroly' ];
+		return [ 'polishe' ];
 	}
 
 	public function get_script_depends() {
@@ -31,14 +31,14 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => esc_html__( 'Content', 'bistroly' ),
+				'label' => esc_html__( 'Content', 'polishe' ),
 			]
 		);	
 
 			$this->add_control(
 				'icon',
 				[
-					'label' => esc_html__( 'Icon', 'bistroly' ),
+					'label' => esc_html__( 'Icon', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::ICONS,
 					'default' => [
 						'value' => 'flaticon flaticon-flower',
@@ -52,9 +52,9 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'text',
 				[
-					'label' => esc_html__( 'Text', 'bistroly' ),
+					'label' => esc_html__( 'Text', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::TEXTAREA,
-					'default' => esc_html__( 'Your Text' , 'bistroly' ),
+					'default' => esc_html__( 'Your Text' , 'polishe' ),
 					'show_label' => true,
 				]
 			);
@@ -70,7 +70,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$repeater->add_control(
 				'color',
 				[
-					'label' => esc_html__( 'Color', 'bistroly' ),
+					'label' => esc_html__( 'Color', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} {{CURRENT_ITEM}}' => 'color: {{VALUE}}',
@@ -81,21 +81,21 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'items',
 				[
-					'label' => esc_html__( 'Items', 'bistroly' ),
+					'label' => esc_html__( 'Items', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::REPEATER,
 					'fields' => $repeater->get_controls(),
 					'default' => [
 						[
-							'text' => esc_html__( '100% Natural & Paraben-Free','bistroly' ),
+							'text' => esc_html__( '100% Natural & Paraben-Free','polishe' ),
 						],
 						[
-							'text' => esc_html__( 'Get 20% Off For Your First Order','bistroly' ),
+							'text' => esc_html__( 'Get 20% Off For Your First Order','polishe' ),
 						],
 						[
-							'text' => esc_html__( 'No Artificial Fragrances', 'bistroly' ),
+							'text' => esc_html__( 'No Artificial Fragrances', 'polishe' ),
 						],
 						[
-							'text' => esc_html__( 'Completely Aluminum Free', 'bistroly' ),
+							'text' => esc_html__( 'Completely Aluminum Free', 'polishe' ),
 						],
 					],
 				]
@@ -106,7 +106,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'general_section_style',
 			[
-				'label' => esc_html__( 'General', 'bistroly' ),
+				'label' => esc_html__( 'General', 'polishe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -123,7 +123,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_opacity',
 				[
-					'label' => esc_html__( 'Opacity', 'bistroly' ),
+					'label' => esc_html__( 'Opacity', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -142,7 +142,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'general_padding',
 				[
-					'label' => esc_html__( 'Padding', 'bistroly' ),
+					'label' => esc_html__( 'Padding', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'selectors' => [
@@ -156,7 +156,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'icon_section_style',
 			[
-				'label' => esc_html__( 'Icon', 'bistroly' ),
+				'label' => esc_html__( 'Icon', 'polishe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -164,7 +164,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_size',
 				[
-					'label' => esc_html__( 'Size', 'bistroly' ),
+					'label' => esc_html__( 'Size', 'polishe' ),
 					'type' => Controls_Manager::SLIDER,
 					'size_units' => [ 'px' ],
 					'range' => [
@@ -184,7 +184,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'icon_color',
 				[
-					'label' => esc_html__( 'Color', 'bistroly' ),
+					'label' => esc_html__( 'Color', 'polishe' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .icon i' => 'color : {{VALUE}};',
@@ -196,7 +196,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'icon_margin',
 				[
-					'label' => esc_html__( 'Margin', 'bistroly' ),
+					'label' => esc_html__( 'Margin', 'polishe' ),
 					'type' => Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px', 'em', '%' ],
 					'selectors' => [
@@ -210,7 +210,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 		$this->start_controls_section(
 			'text_section_style',
 			[
-				'label' => esc_html__( 'Text', 'bistroly' ),
+				'label' => esc_html__( 'Text', 'polishe' ),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -226,7 +226,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'text_color',
 				[
-					'label' => esc_html__( 'Color', 'bistroly' ),
+					'label' => esc_html__( 'Color', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'selectors' => [
 						'{{WRAPPER}} .xp-text-marquee .content .text' => 'color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'text_wrapper_width',
 				[
-					'label' => esc_html__( 'Width (%)', 'bistroly' ),
+					'label' => esc_html__( 'Width (%)', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ '%' ],
 					'range' => [
@@ -259,7 +259,7 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_responsive_control(
 				'space_between',
 				[
-					'label' => esc_html__( 'Space Between', 'bistroly' ),
+					'label' => esc_html__( 'Space Between', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::SLIDER,
 					'size_units' => [ 'px', '%', 'em', 'rem' ],
 					'range' => [
@@ -282,13 +282,13 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'time_duration',
 				[
-					'label' => esc_html__( 'Time Duration', 'bistroly' ),
+					'label' => esc_html__( 'Time Duration', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'normal',
 					'options' => [
-						'slow' => esc_html__( 'Slow', 'bistroly' ),
-						'normal' => esc_html__( 'Normal', 'bistroly' ),
-						'fast' => esc_html__( 'Fast', 'bistroly' ),
+						'slow' => esc_html__( 'Slow', 'polishe' ),
+						'normal' => esc_html__( 'Normal', 'polishe' ),
+						'fast' => esc_html__( 'Fast', 'polishe' ),
 					],
 				]
 			);
@@ -296,12 +296,12 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 			$this->add_control(
 				'direction',
 				[
-					'label' => esc_html__( 'Direction', 'bistroly' ),
+					'label' => esc_html__( 'Direction', 'polishe' ),
 					'type' => \Elementor\Controls_Manager::SELECT,
 					'default' => 'rtl',
 					'options' => [
-						'ltr' => esc_html__( 'Left to Right', 'bistroly' ),
-						'rtl' => esc_html__( 'Right to Left', 'bistroly' ),
+						'ltr' => esc_html__( 'Left to Right', 'polishe' ),
+						'rtl' => esc_html__( 'Right to Left', 'polishe' ),
 					],
 				]
 			);
@@ -371,4 +371,4 @@ class Bistroly_Elementor_Text_Marquee extends Widget_Base {
 
 	
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Bistroly_Elementor_Text_Marquee() );
+Plugin::instance()->widgets_manager->register_widget_type( new Polishe_Elementor_Text_Marquee() );

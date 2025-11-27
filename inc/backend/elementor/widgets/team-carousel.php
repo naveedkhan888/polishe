@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Team Carousel
  */
-class Bistroly_Team_Carousel extends Widget_Base{
+class Polishe_Team_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Team Carousel', 'bistroly' );
+		return __( 'XP Team Carousel', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Team', 'bistroly' ),
+				'label' => esc_html__( 'Team', 'polishe' ),
 			]
 		);
 
@@ -42,7 +42,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 	       'member_image',
 	        [
-	            'label' => esc_html__( 'Photo', 'bistroly' ),
+	            'label' => esc_html__( 'Photo', 'polishe' ),
 	            'type'  => Controls_Manager::MEDIA,
 		    ]
 		);
@@ -50,9 +50,9 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_name',
 	      	[
-	          	'label' => esc_html__( 'Name', 'bistroly' ),
+	          	'label' => esc_html__( 'Name', 'polishe' ),
 	          	'type'  => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Peter Perish', 'bistroly' ),
+				'default' => esc_html__( 'Peter Perish', 'polishe' ),
 				'label_block' => true
 	    	]
 	    );
@@ -60,28 +60,28 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'member_extra',
 	      	[
-	          	'label' => esc_html__( 'Extra/Job', 'bistroly' ),
+	          	'label' => esc_html__( 'Extra/Job', 'polishe' ),
 	          	'type'  => Controls_Manager::TEXTAREA,
-	          	'default' => esc_html__( 'co-founder of company', 'bistroly' ),
+	          	'default' => esc_html__( 'co-founder of company', 'polishe' ),
 	    	]
 	    );
 
 	    $repeater->add_control(
 			'link',
 			[
-				'label' => __( 'Link To Details', 'bistroly' ),
+				'label' => __( 'Link To Details', 'polishe' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://', 'bistroly' ),
+				'placeholder' => __( 'https://', 'polishe' ),
 			]
 		);
 
 		$repeater->add_control(
 			'socials',
 			[
-				'label' => __( 'Socials', 'bistroly' ),
+				'label' => __( 'Socials', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bistroly' ),
-				'label_off' => __( 'Hide', 'bistroly' ),
+				'label_on' => __( 'Show', 'polishe' ),
+				'label_off' => __( 'Hide', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 				'separator' => 'before',
@@ -91,7 +91,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 		    'social1',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 1', 'bistroly' ),
+	          	'label' => esc_html__( 'Icon Social 1', 'polishe' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -106,9 +106,9 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social1_link',
 			[
-				'label' => __( 'Link Social 1', 'bistroly' ),
+				'label' => __( 'Link Social 1', 'polishe' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://twitter.com/', 'bistroly' ),
+				'placeholder' => __( 'https://twitter.com/', 'polishe' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -118,7 +118,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social2',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 2', 'bistroly' ),
+	          	'label' => esc_html__( 'Icon Social 2', 'polishe' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -134,9 +134,9 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social2_link',
 			[
-				'label' => __( 'Link Social 2', 'bistroly' ),
+				'label' => __( 'Link Social 2', 'polishe' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://facebook.com/', 'bistroly' ),
+				'placeholder' => __( 'https://facebook.com/', 'polishe' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -146,7 +146,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$repeater->add_control(
 		    'social3',
 	      	[
-	          	'label' => esc_html__( 'Icon Social 3', 'bistroly' ),
+	          	'label' => esc_html__( 'Icon Social 3', 'polishe' ),
                 'type'  => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
 				'default' => [
@@ -162,9 +162,9 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    $repeater->add_control(
 			'social3_link',
 			[
-				'label' => __( 'Link Social 3', 'bistroly' ),
+				'label' => __( 'Link Social 3', 'polishe' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://pinterest.com/', 'bistroly' ),
+				'placeholder' => __( 'https://pinterest.com/', 'polishe' ),
 				'condition' => [
 					'socials' => 'yes',
 				],
@@ -174,7 +174,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 		    'members',
 		    [
-		        'label'       => esc_html__( 'Team', 'bistroly' ),
+		        'label'       => esc_html__( 'Team', 'polishe' ),
 		        'type'        => Controls_Manager::REPEATER,
 		        'show_label'  => false,
 		        'default'     => [],
@@ -198,10 +198,10 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'bistroly' ),
+				'label' => __( 'Slides To Show', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'bistroly' ),
+					'' => __( 'Default', 'polishe' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -209,31 +209,31 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'bistroly' ),
+				'label' => __( 'Loop', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'bistroly' ),
+				'label' => __( 'Autoplay', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'bistroly' ),
+				'label' => __( 'Autoplay Timeout', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -253,31 +253,31 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'bistroly' ),
+				'label' => __( 'Gap Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -294,7 +294,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_style',
 			[
-				'label' => esc_html__( 'General', 'bistroly' ),
+				'label' => esc_html__( 'General', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -302,7 +302,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -323,7 +323,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		    Group_Control_Background::get_type(),
 		    [
 		        'name' => 'team_thumb_bg',
-		        'label' => __( 'Team Thumb Background', 'bistroly' ),
+		        'label' => __( 'Team Thumb Background', 'polishe' ),
 		        'types' => [ 'classic', 'gradient' ],
 		        'selector' => '{{WRAPPER}} .xp-team .team-thumb:before',
 		    ]
@@ -334,14 +334,14 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'info_style',
 			[
-				'label' => esc_html__( 'Info Box', 'bistroly' ),
+				'label' => esc_html__( 'Info Box', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_info_box',
 			[
-				'label' => __( 'General', 'bistroly' ),
+				'label' => __( 'General', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -349,19 +349,19 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -373,7 +373,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'padding_box',
 			[
-				'label' => __( 'Padding Box', 'bistroly' ),
+				'label' => __( 'Padding Box', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -384,7 +384,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'bg_box',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -403,7 +403,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -412,7 +412,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => esc_html__( 'Spacing', 'bistroly' ),
+				'label' => esc_html__( 'Spacing', 'polishe' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -429,7 +429,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label'     => esc_html__( 'Color', 'bistroly' ),
+				'label'     => esc_html__( 'Color', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -440,7 +440,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label'     => esc_html__( 'Color Hover', 'bistroly' ),
+				'label'     => esc_html__( 'Color Hover', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -455,7 +455,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 			[
 				'name'     => 'title_typography',
-				'label'    => esc_html__( 'Typography', 'bistroly' ),
+				'label'    => esc_html__( 'Typography', 'polishe' ),
 				'selector' => '{{WRAPPER}} .xp-team h6',
 			]
 		);
@@ -464,7 +464,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'heading_job',
 			[
-				'label' => __( 'Extra/Job', 'bistroly' ),
+				'label' => __( 'Extra/Job', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -473,7 +473,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'job_space',
 			[
-				'label' => esc_html__( 'Spacing', 'bistroly' ),
+				'label' => esc_html__( 'Spacing', 'polishe' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -489,7 +489,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label'     => esc_html__( 'Color', 'bistroly' ),
+				'label'     => esc_html__( 'Color', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -501,7 +501,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 			Group_Control_Typography::get_type(),
 				[
 					'name'     => 'job_typography',
-					'label'    => esc_html__( 'Typography', 'bistroly' ),
+					'label'    => esc_html__( 'Typography', 'polishe' ),
 					'selector' => '{{WRAPPER}} .team-info span',
 				]
 		);
@@ -512,7 +512,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'icon_style',
 			[
-				'label' => esc_html__( 'Socials', 'bistroly' ),
+				'label' => esc_html__( 'Socials', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -520,7 +520,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_social_space',
 			[
-				'label' => esc_html__( 'Spacing', 'bistroly' ),
+				'label' => esc_html__( 'Spacing', 'polishe' ),
 				'type'  => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -536,7 +536,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_socials',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -548,7 +548,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_color',
 			[
-				'label'     => esc_html__( 'Color', 'bistroly' ),
+				'label'     => esc_html__( 'Color', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -560,7 +560,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_social_bg',
 			[
-				'label'     => esc_html__( 'Background', 'bistroly' ),
+				'label'     => esc_html__( 'Background', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -571,7 +571,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'icon_hover_color',
 			[
-				'label'     => esc_html__( 'Color Hover', 'bistroly' ),
+				'label'     => esc_html__( 'Color Hover', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -583,7 +583,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'social_hover_bg',
 			[
-				'label'     => esc_html__( 'Background Hover', 'bistroly' ),
+				'label'     => esc_html__( 'Background Hover', 'polishe' ),
 				'type'      => Controls_Manager::COLOR,
 				'default'   => '',
 				'selectors' => [
@@ -598,7 +598,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -609,7 +609,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -626,7 +626,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -637,7 +637,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'bistroly' ),
+                'label' => __( 'Color Active', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -651,7 +651,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -661,7 +661,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -678,7 +678,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -694,7 +694,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -706,7 +706,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -717,7 +717,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'bistroly' ),
+				'label' => __( 'Color Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -728,7 +728,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'bistroly' ),
+				'label' => __( 'Background Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -739,7 +739,7 @@ class Bistroly_Team_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -830,5 +830,5 @@ class Bistroly_Team_Carousel extends Widget_Base{
 	    <?php
 	}
 }
-// After the Bistroly_Team_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Team_Carousel() );
+// After the Polishe_Team_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Team_Carousel() );

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 get_header();
@@ -13,7 +13,7 @@ get_header();
 <div class="entry-content">
 	<div class="container">
 		<div class="row">
-			<div id="primary" class="content-area <?php bistroly_content_columns(); ?>">
+			<div id="primary" class="content-area <?php polishe_content_columns(); ?>">
 				<main id="main" class="site-main">
 
 				<?php if ( have_posts() ) : ?>
@@ -32,7 +32,7 @@ get_header();
 
 					endwhile;
 
-	                bistroly_posts_navigation();
+	                polishe_posts_navigation();
 
 				else :
 

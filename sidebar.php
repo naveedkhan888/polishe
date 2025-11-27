@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bistroly
+ * @package Polishe
  */
 
-if ( bistroly_get_layout() === 'full-content' ) {
+if ( polishe_get_layout() === 'full-content' ) {
 	return;
 }
 

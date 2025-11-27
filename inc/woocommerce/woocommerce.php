@@ -4,7 +4,7 @@
  *
  * @link https://woocommerce.com/
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 /**
@@ -15,26 +15,26 @@
  *
  * @return void
  */
-function bistroly_woocommerce_setup() {
+function polishe_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'bistroly_woocommerce_setup' );
+add_action( 'after_setup_theme', 'polishe_woocommerce_setup' );
 
 /**
  * WooCommerce specific scripts & stylesheets.
  *
  * @return void
  */
-function bistroly_woocommerce_scripts() {
-	wp_enqueue_style( 'bistroly-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css' );
+function polishe_woocommerce_scripts() {
+	wp_enqueue_style( 'polishe-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css' );
 	if ( class_exists( 'woocommerce' ) ) {
-		wp_enqueue_style( 'bistroly-woocommerce-style' );
+		wp_enqueue_style( 'polishe-woocommerce-style' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bistroly_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 'polishe_woocommerce_scripts' );
 
 /**
  * Add 'woocommerce-active' class to the body tag.
@@ -42,22 +42,22 @@ add_action( 'wp_enqueue_scripts', 'bistroly_woocommerce_scripts' );
  * @param  array $classes CSS classes applied to the body tag.
  * @return array $classes modified to include 'woocommerce-active' class.
  */
-function bistroly_woocommerce_active_body_class( $classes ) {
+function polishe_woocommerce_active_body_class( $classes ) {
 	$classes[] = 'woocommerce-active';
 
 	return $classes;
 }
-add_filter( 'body_class', 'bistroly_woocommerce_active_body_class' );
+add_filter( 'body_class', 'polishe_woocommerce_active_body_class' );
 
 /**
  * Product gallery thumnbail columns.
  *
  * @return integer number of columns.
  */
-function bistroly_woocommerce_thumbnail_columns() {
+function polishe_woocommerce_thumbnail_columns() {
 	return 4;
 }
-add_filter( 'woocommerce_product_thumbnails_columns', 'bistroly_woocommerce_thumbnail_columns' );
+add_filter( 'woocommerce_product_thumbnails_columns', 'polishe_woocommerce_thumbnail_columns' );
 
 /**
  * Related Products Args.
@@ -65,7 +65,7 @@ add_filter( 'woocommerce_product_thumbnails_columns', 'bistroly_woocommerce_thum
  * @param array $args related products args.
  * @return array $args related products args.
  */
-function bistroly_woocommerce_related_products_args( $args ) {
+function polishe_woocommerce_related_products_args( $args ) {
 	$defaults = array(
 		'posts_per_page' => 4,
 		'columns'        => 4,
@@ -75,29 +75,29 @@ function bistroly_woocommerce_related_products_args( $args ) {
 
 	return $args;
 }
-add_filter( 'woocommerce_output_related_products_args', 'bistroly_woocommerce_related_products_args' );
+add_filter( 'woocommerce_output_related_products_args', 'polishe_woocommerce_related_products_args' );
 
 /**
  * Remove the breadcrumbs 
  */
-add_action( 'init', 'bistroly_wc_breadcrumbs' );
-function bistroly_wc_breadcrumbs() {
+add_action( 'init', 'polishe_wc_breadcrumbs' );
+function polishe_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-	add_action( 'bistroly_woocommerce_breadcrumb', 'woocommerce_breadcrumb' );
+	add_action( 'polishe_woocommerce_breadcrumb', 'woocommerce_breadcrumb' );
 }
 
 /**
  * Change several of the breadcrumb defaults
  */
-add_filter( 'woocommerce_breadcrumb_defaults', 'bistroly_woocommerce_breadcrumbs' );
-function bistroly_woocommerce_breadcrumbs() {
+add_filter( 'woocommerce_breadcrumb_defaults', 'polishe_woocommerce_breadcrumbs' );
+function polishe_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => '',
             'wrap_before' => '<ul id="breadcrumbs" class="breadcrumbs" itemprop="breadcrumb">',
             'wrap_after'  => '</ul>',
             'before'      => '<li>',
             'after'       => '</li>',
-            'home'        => _x( 'Home', 'breadcrumb', 'bistroly' ),
+            'home'        => _x( 'Home', 'breadcrumb', 'polishe' ),
         );
 }
 
@@ -108,8 +108,8 @@ remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_p
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 
 remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
-add_action('woocommerce_shop_loop_item_title', 'bistroly_change_products_title', 10 );
-function bistroly_change_products_title() {
+add_action('woocommerce_shop_loop_item_title', 'polishe_change_products_title', 10 );
+function polishe_change_products_title() {
     echo '<h2 class="woocommerce-loop-product__title"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></h2>';
 }
 
@@ -119,7 +119,7 @@ function bistroly_change_products_title() {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-if ( ! function_exists( 'bistroly_woocommerce_wrapper_before' ) ) {
+if ( ! function_exists( 'polishe_woocommerce_wrapper_before' ) ) {
 	/**
 	 * Before Content.
 	 *
@@ -127,16 +127,16 @@ if ( ! function_exists( 'bistroly_woocommerce_wrapper_before' ) ) {
 	 *
 	 * @return void
 	 */
-	function bistroly_woocommerce_wrapper_before() {
+	function polishe_woocommerce_wrapper_before() {
 		?>
-		<div id="primary" class="content-area <?php bistroly_shop_content_columns(); ?>">
+		<div id="primary" class="content-area <?php polishe_shop_content_columns(); ?>">
 			<main id="main" class="site-main" role="main">
 			<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'bistroly_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'polishe_woocommerce_wrapper_before' );
 
-if ( ! function_exists( 'bistroly_woocommerce_wrapper_after' ) ) {
+if ( ! function_exists( 'polishe_woocommerce_wrapper_after' ) ) {
 	/**
 	 * After Content.
 	 *
@@ -144,14 +144,14 @@ if ( ! function_exists( 'bistroly_woocommerce_wrapper_after' ) ) {
 	 *
 	 * @return void
 	 */
-	function bistroly_woocommerce_wrapper_after() {
+	function polishe_woocommerce_wrapper_after() {
 			?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'bistroly_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'polishe_woocommerce_wrapper_after' );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -159,13 +159,13 @@ add_action( 'woocommerce_after_main_content', 'bistroly_woocommerce_wrapper_afte
  * You can add the WooCommerce Mini Cart to header.php like so ...
  *
 	<?php
-		if ( function_exists( 'bistroly_woocommerce_header_cart' ) ) {
-			bistroly_woocommerce_header_cart();
+		if ( function_exists( 'polishe_woocommerce_header_cart' ) ) {
+			polishe_woocommerce_header_cart();
 		}
 	?>
  */
 
-if ( ! function_exists( 'bistroly_woocommerce_cart_link_fragment' ) ) {
+if ( ! function_exists( 'polishe_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
 	 *
@@ -174,17 +174,17 @@ if ( ! function_exists( 'bistroly_woocommerce_cart_link_fragment' ) ) {
 	 * @param array $fragments Fragments to refresh via AJAX.
 	 * @return array Fragments to refresh via AJAX.
 	 */
-	function bistroly_woocommerce_cart_link_fragment( $fragments ) {
+	function polishe_woocommerce_cart_link_fragment( $fragments ) {
 		ob_start();
-		bistroly_woocommerce_cart_link();
+		polishe_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
 
 		return $fragments;
 	}
 }
-add_filter( 'woocommerce_add_to_cart_fragments', 'bistroly_woocommerce_cart_link_fragment' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'polishe_woocommerce_cart_link_fragment' );
 
-if ( ! function_exists( 'bistroly_woocommerce_cart_link' ) ) {
+if ( ! function_exists( 'polishe_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
 	 *
@@ -192,14 +192,14 @@ if ( ! function_exists( 'bistroly_woocommerce_cart_link' ) ) {
 	 *
 	 * @return void
 	 */
-	function bistroly_woocommerce_cart_link() {
+	function polishe_woocommerce_cart_link() {
 		?>
-		<a class="cart-contents xp-minicart" href="<?php echo wc_get_cart_url(); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'bistroly' ); ?>">
+		<a class="cart-contents xp-minicart" href="<?php echo wc_get_cart_url(); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'polishe' ); ?>">
 			<i class="xp-webicon-business"></i>
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'bistroly' ),
+				_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'polishe' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
@@ -210,13 +210,13 @@ if ( ! function_exists( 'bistroly_woocommerce_cart_link' ) ) {
 }
 
 //Get layout shop page.
-if ( ! function_exists( 'bistroly_get_shop_layout' ) ) :
-	function bistroly_get_shop_layout() {
+if ( ! function_exists( 'polishe_get_shop_layout' ) ) :
+	function polishe_get_shop_layout() {
 		// Get layout.
 		if( is_product() ){
-			$page_layout = bistroly_get_option( 'single_shop_layout' );
+			$page_layout = polishe_get_option( 'single_shop_layout' );
 		}else{
-			$page_layout = bistroly_get_option( 'shop_layout' );
+			$page_layout = polishe_get_option( 'shop_layout' );
 		}
 
 		return $page_layout;
@@ -230,15 +230,15 @@ endif;
  *
  * @global int $content_width
  */
-if ( ! function_exists( 'bistroly_shop_content_columns' ) ) :
-	function bistroly_shop_content_columns() {
+if ( ! function_exists( 'polishe_shop_content_columns' ) ) :
+	function polishe_shop_content_columns() {
 
 		$shop_content_width = array();
 
 		// Check if layout is one column.
-		if ( 'content-sidebar' === bistroly_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
+		if ( 'content-sidebar' === polishe_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
 			$shop_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12';
-		}elseif ('sidebar-content' === bistroly_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
+		}elseif ('sidebar-content' === polishe_get_shop_layout() && is_active_sidebar( 'shop-sidebar' ) ) {
 			$shop_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12 pull-right';
 		}else{
 			$shop_content_width[] = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -254,9 +254,9 @@ endif;
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bistroly_woocommerce_widgets_init() {
+function polishe_woocommerce_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Shop Sidebar', 'bistroly' ),
+        'name'          => __( 'Shop Sidebar', 'polishe' ),
         'id'            => 'shop-sidebar',
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
@@ -264,24 +264,24 @@ function bistroly_woocommerce_widgets_init() {
         'after_title'   => '</h6>',
     ) );
 }
-add_action( 'widgets_init', 'bistroly_woocommerce_widgets_init' );
+add_action( 'widgets_init', 'polishe_woocommerce_widgets_init' );
 
 
 /* Customizer Shop */
-function bistroly_shop_customize_settings() {
+function polishe_shop_customize_settings() {
 	/**
 	 * Customizer configuration
 	 */
 
 	$settings = array(
-		'theme' => 'bistroly',
+		'theme' => 'polishe',
 	);
 
 	$panels = array();
 
 	$sections = array(		
         'single_product'           => array(
-			'title'       => esc_html__( 'Single Product', 'bistroly' ),
+			'title'       => esc_html__( 'Single Product', 'polishe' ),
 			'description' => '',
 			'priority'    => 16,
 			'capability'  => 'edit_theme_options',
@@ -293,11 +293,11 @@ function bistroly_shop_customize_settings() {
 		// Shop Page
 		'shop_layout'           => array(
 			'type'        => 'radio-image',
-			'label'       => esc_html__( 'Shop Layout', 'bistroly' ),
+			'label'       => esc_html__( 'Shop Layout', 'polishe' ),
 			'section'     => 'woocommerce_product_catalog',
 			'default'     => 'content-sidebar',
 			'priority'    => 7,
-			'description' => esc_html__( 'Select default sidebar for the shop page.', 'bistroly' ),
+			'description' => esc_html__( 'Select default sidebar for the shop page.', 'polishe' ),
 			'choices'     => array(
 				'content-sidebar' 	=> get_template_directory_uri() . '/inc/backend/images/right.png',
 				'sidebar-content' 	=> get_template_directory_uri() . '/inc/backend/images/left.png',
@@ -308,7 +308,7 @@ function bistroly_shop_customize_settings() {
         // Single Product Page
         'single_shop_layout'           => array(
             'type'        => 'radio-image',
-            'label'       => esc_html__( 'Single Product Layout', 'bistroly' ),
+            'label'       => esc_html__( 'Single Product Layout', 'polishe' ),
             'section'     => 'single_product',
             'default'     => 'content-sidebar',
             'priority'    => 1,
@@ -320,18 +320,18 @@ function bistroly_shop_customize_settings() {
         ),
         'page_title_product'    => array(
             'type'     => 'text',
-            'label'    => esc_html__( 'Title Page Header', 'bistroly' ),
+            'label'    => esc_html__( 'Title Page Header', 'polishe' ),
             'section'  => 'single_product',
             'default'  => 'Shop Single',
             'priority' => 1,
         ),
 	);
 
-	$settings['panels']   = apply_filters( 'bistroly_customize_panels', $panels );
-	$settings['sections'] = apply_filters( 'bistroly_customize_sections', $sections );
-	$settings['fields']   = apply_filters( 'bistroly_customize_fields', $fields );
+	$settings['panels']   = apply_filters( 'polishe_customize_panels', $panels );
+	$settings['sections'] = apply_filters( 'polishe_customize_sections', $sections );
+	$settings['fields']   = apply_filters( 'polishe_customize_fields', $fields );
 
 	return $settings;
 }
 
-$bistroly_customize = new Bistroly_Customize( bistroly_shop_customize_settings() );
+$polishe_customize = new Polishe_Customize( polishe_shop_customize_settings() );

@@ -9,13 +9,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 get_header();
 ?>
 
-    <?php if( bistroly_get_layout() == 'full-content' ) :
+    <?php if( polishe_get_layout() == 'full-content' ) :
 
         while ( have_posts() ) : the_post();
 
@@ -26,7 +26,7 @@ get_header();
 <div class="entry-content">
     <div class="container">
         <div class="row">
-        <div id="primary" class="content-area <?php bistroly_content_columns(); ?>">
+        <div id="primary" class="content-area <?php polishe_content_columns(); ?>">
             <main id="main" class="site-main">
 
             <?php

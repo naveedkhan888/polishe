@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Bistroly
+ * @package Polishe
  */
 
-if ( ! function_exists( 'bistroly_posted_on' ) ) :
+if ( ! function_exists( 'polishe_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function bistroly_posted_on() {
+	function polishe_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -24,7 +24,7 @@ if ( ! function_exists( 'bistroly_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( '%s', 'post date', 'bistroly' ),
+			esc_html_x( '%s', 'post date', 'polishe' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -33,16 +33,16 @@ if ( ! function_exists( 'bistroly_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'bistroly_posted_in' ) ) :
+if ( ! function_exists( 'polishe_posted_in' ) ) :
     /**
      * Prints HTML with meta information for the current author.
      */
-    function bistroly_posted_in() {
-        $categories_list = get_the_category_list( esc_html__( ' ', 'bistroly' ) );
+    function polishe_posted_in() {
+        $categories_list = get_the_category_list( esc_html__( ' ', 'polishe' ) );
         $posted_in = '';
         if ( $categories_list ) {
             /* translators: 1: list of categories. */
-            $posted_in = sprintf( esc_html__( '%1$s', 'bistroly' ), $categories_list ); // WPCS: XSS OK.
+            $posted_in = sprintf( esc_html__( '%1$s', 'polishe' ), $categories_list ); // WPCS: XSS OK.
         }
 
         echo '<div class="post-cat"><div class="posted-in">' . $posted_in . '</div></div>'; // WPCS: XSS OK.
@@ -50,14 +50,14 @@ if ( ! function_exists( 'bistroly_posted_in' ) ) :
     };
 endif;
 
-if ( ! function_exists( 'bistroly_posted_by' ) ) :
+if ( ! function_exists( 'polishe_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function bistroly_posted_by() {
+	function polishe_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( '%s', 'post author', 'bistroly' ),
+			esc_html_x( '%s', 'post author', 'polishe' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -66,11 +66,11 @@ if ( ! function_exists( 'bistroly_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'bistroly_post_meta' ) ) :
+if ( ! function_exists( 'polishe_post_meta' ) ) :
     /**
      * Prints HTML with meta information for the current author.
      */
-    function bistroly_post_meta() {
+    function polishe_post_meta() {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
@@ -83,34 +83,34 @@ if ( ! function_exists( 'bistroly_post_meta' ) ) :
 
         $posted_on = sprintf(
         /* translators: %s: post date. */
-            esc_html_x( '%s', 'post date', 'bistroly' ),
+            esc_html_x( '%s', 'post date', 'polishe' ),
             '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
         );
 
         $byline = sprintf(
         /* translators: %s: post author. */
-            esc_html_x( '%s', 'post author', 'bistroly' ),
+            esc_html_x( '%s', 'post author', 'polishe' ),
             '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
         );
 
-        $categories_list = get_the_category_list( esc_html__( ', ', 'bistroly' ) );
+        $categories_list = get_the_category_list( esc_html__( ', ', 'polishe' ) );
         if ( $categories_list ) {
             /* translators: 1: list of categories. */
-            $posted_in = sprintf( esc_html__( '%1$s', 'bistroly' ), $categories_list ); // WPCS: XSS OK.
+            $posted_in = sprintf( esc_html__( '%1$s', 'polishe' ), $categories_list ); // WPCS: XSS OK.
         }
 
         $comment_num = sprintf(
             /* translators: %s: post author. */
-            esc_html_x( '%s', 'post comment', 'bistroly' ),
-            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'bistroly'), esc_html__('1 Comment', 'bistroly'), esc_html__(  '% Comments', 'bistroly') ). '</a>' );
+            esc_html_x( '%s', 'post comment', 'polishe' ),
+            '<a href="' .get_comments_link(). '">'. get_comments_number_text( esc_html__('0 Comments', 'polishe'), esc_html__('1 Comment', 'polishe'), esc_html__(  '% Comments', 'polishe') ). '</a>' );
 
         /* translators: used between list items, there is a space after the comma */
-        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'bistroly' ) );
+        $tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'polishe' ) );
         if ( $tags_list ) {
             /* translators: 1: list of tags. */
-            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'bistroly' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+            $tag_with = sprintf( '<span class="tags-links">' . esc_html__( '%1$s', 'polishe' ) . '</span>', $tags_list ); // WPCS: XSS OK.
         }
-        $metas = bistroly_get_option( 'post_entry_meta' );
+        $metas = polishe_get_option( 'post_entry_meta' );
         if ( ! empty( $metas ) ) :
             if( in_array('date', $metas) ) echo '<span class="posted-on">' . $posted_on . '</span>';
             if( in_array('author', $metas) ) echo '<span class="byline"> <div class="divider_blg">/</div> ' . $byline . '</span>';
@@ -120,28 +120,28 @@ if ( ! function_exists( 'bistroly_post_meta' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'bistroly_entry_footer' ) ) :
+if ( ! function_exists( 'polishe_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function bistroly_entry_footer() {
+	function polishe_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'bistroly' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'polishe' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'bistroly' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+				printf( '<div class="tagcloud">' . esc_html__( '%1$s', 'polishe' ) . '</div>', $tags_list ); // WPCS: XSS OK.
             }
-            if( bistroly_get_option('post_socials') ) bistroly_socials_share();
+            if( polishe_get_option('post_socials') ) polishe_socials_share();
 		}
 
 	}
 endif;
 
 /** Posts Navigation **/
-if ( ! function_exists( 'bistroly_posts_navigation' ) ) :
-    function bistroly_posts_navigation($prev = '<i class="xp-webicon-arrow-pointing-to-left"></i>', $next = '<i class="xp-webicon-arrowsoutline"></i>', $pages='') {
+if ( ! function_exists( 'polishe_posts_navigation' ) ) :
+    function polishe_posts_navigation($prev = '<i class="xp-webicon-arrow-pointing-to-left"></i>', $next = '<i class="xp-webicon-arrowsoutline"></i>', $pages='') {
         global $wp_query, $wp_rewrite;
         $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
         if($pages==''){
@@ -169,8 +169,8 @@ if ( ! function_exists( 'bistroly_posts_navigation' ) ) :
 endif;
 
 /** Excerpt blog post **/
-if ( ! function_exists( 'bistroly_excerpt' ) ) :
-function bistroly_excerpt($limit) {
+if ( ! function_exists( 'polishe_excerpt' ) ) :
+function polishe_excerpt($limit) {
 
     $excerpt = explode(' ', get_the_excerpt(), $limit);
     
@@ -187,8 +187,8 @@ function bistroly_excerpt($limit) {
 endif;
 
 //Custom comment list
-if ( ! function_exists( 'bistroly_comment_list' ) ) :
-    function bistroly_comment_list($comment, $args, $depth) {
+if ( ! function_exists( 'polishe_comment_list' ) ) :
+    function polishe_comment_list($comment, $args, $depth) {
 
         $GLOBALS['comment'] = $comment; ?>
 
@@ -201,13 +201,13 @@ if ( ! function_exists( 'bistroly_comment_list' ) ) :
 
                 <div class="comment-content">
                     <div class="comment-meta">
-                        <h6 class="comment-author"><?php printf(__('%s','bistroly'), get_comment_author()) ?></h6>
+                        <h6 class="comment-author"><?php printf(__('%s','polishe'), get_comment_author()) ?></h6>
                         <span class="comment-time"><?php comment_time( get_option( 'date_format' ) ); ?></span>
                         <div class="comment-reply"><?php echo preg_replace( '/comment-reply-link/', 'comment-reply-link', get_comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth'])))); ?></div>
                     </div>
                     <div class="comment-text">
                         <?php if ($comment->comment_approved == '0'){ ?>
-                            <em><?php esc_html_e('Your comment is awaiting moderation.','bistroly') ?></em>
+                            <em><?php esc_html_e('Your comment is awaiting moderation.','polishe') ?></em>
                         <?php }else{ ?>
                             <?php comment_text() ?>
                         <?php } ?>
@@ -222,40 +222,40 @@ if ( ! function_exists( 'bistroly_comment_list' ) ) :
 endif;
 
 //Generate custom search form
-function bistroly_search_form( $form ) {
+function polishe_search_form( $form ) {
     $form = '<form method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
-    <label><span class="screen-reader-text">' . _x( 'Search for:', 'label', 'bistroly' ) . '</span>
-    <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search&hellip;', 'bistroly' ) . '" value="' . get_search_query() . '" name="s" /></label>
+    <label><span class="screen-reader-text">' . _x( 'Search for:', 'label', 'polishe' ) . '</span>
+    <input type="search" class="search-field" placeholder="' . esc_attr__( 'Search&hellip;', 'polishe' ) . '" value="' . get_search_query() . '" name="s" /></label>
     <button type="submit" class="search-submit"><i class="xp-webicon-search-1"></i></button>
     </form>';
 
     return $form;
 }
-add_filter( 'get_search_form', 'bistroly_search_form' );
+add_filter( 'get_search_form', 'polishe_search_form' );
 
 
 
 //Add span to category post count
-function bistroly_cat_count_span($links) {
+function polishe_cat_count_span($links) {
     $links = str_replace('</a> (', '</a> <span class="posts-count">(', $links);
     $links = str_replace(')', ')</span>', $links);
     return $links;
 }
-add_filter('wp_list_categories', 'bistroly_cat_count_span');
+add_filter('wp_list_categories', 'polishe_cat_count_span');
 
 //Add span to archive post count
-function bistroly_archive_count_span($links) {
+function polishe_archive_count_span($links) {
     $links = str_replace('</a>&nbsp;(', '</a> <span class="posts-count">(', $links);
     $links = str_replace(')', ')</span>', $links);
     return $links;
 }
-add_filter('get_archives_link', 'bistroly_archive_count_span');
+add_filter('get_archives_link', 'polishe_archive_count_span');
 
 /** Socials Share Post**/
-if ( ! function_exists( 'bistroly_socials_share' ) ) :
+if ( ! function_exists( 'polishe_socials_share' ) ) :
 
-    function bistroly_socials_share(){
-        $share = bistroly_get_option( 'post_socials' );
+    function polishe_socials_share(){
+        $share = polishe_get_option( 'post_socials' );
         echo '<div class="share-post">';
 
         if( in_array('twit', $share) ) echo '<a class="twit" target="_blank" href="https://twitter.com/intent/tweet?text=' .get_the_title(). '&url=' .get_the_permalink(). '" title="Twitter"><i class="fab fa-twitter"></i></a>';
@@ -272,9 +272,9 @@ if ( ! function_exists( 'bistroly_socials_share' ) ) :
 endif;
 
 /** Single Post Navigation**/
-if ( ! function_exists( 'bistroly_single_post_nav' ) ) :
+if ( ! function_exists( 'polishe_single_post_nav' ) ) :
 
-    function bistroly_single_post_nav(){
+    function polishe_single_post_nav(){
         echo '<div class="post-nav clearfix">';
         $class = '';
         $pcate = '';
@@ -325,9 +325,9 @@ endif;
 
 /** Add Contact Methods in the User Profile **/
 
-//add_filter( 'user_contactmethods', 'bistroly_user_contact_methods' );
+//add_filter( 'user_contactmethods', 'polishe_user_contact_methods' );
 
-function bistroly_author_info_box() {
+function polishe_author_info_box() {
 
     global $post;
 
@@ -357,7 +357,7 @@ function bistroly_author_info_box() {
     // Author avatar - - the number 90 is the px size of the image.
     $author_details .= '<div class="author-image">' . get_avatar( get_the_author_meta('ID') , 160 ) . '</div>';
     $author_details .= '<div class="author-info">';
-    $author_details .= '<p class="title text-primary font-second">' . esc_html__('Author', 'bistroly'). '</p>';
+    $author_details .= '<p class="title text-primary font-second">' . esc_html__('Author', 'polishe'). '</p>';
     $author_details .= '<h6>' . $display_name . '</h6>';
     $author_details .= '<p class="des">' . get_the_author_meta( 'description' ). '</p>';
     $author_details .= '<div class="author-socials">';
@@ -408,7 +408,7 @@ function bistroly_author_info_box() {
 //remove_filter('pre_user_description', 'wp_filter_kses');
 
 /** Related Posts **/
-function bistroly_related_posts() {
+function polishe_related_posts() {
 
     global $post;
 
@@ -416,7 +416,7 @@ function bistroly_related_posts() {
     if( $related ) : 
 
     echo '<div class="related-posts">';
-    echo '<h4>'.esc_html__( 'Related Posts', 'bistroly' ).'</h4>';
+    echo '<h4>'.esc_html__( 'Related Posts', 'polishe' ).'</h4>';
     echo '<div class="row">';
     foreach( $related as $post ) {
     setup_postdata($post); ?>
@@ -426,18 +426,18 @@ function bistroly_related_posts() {
             <div class="post-inner">
                 <?php if(has_post_thumbnail()) { ?>
                 <div class="entry-media post-cat-abs">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'bistroly-post-thumbnail-grid' ); ?></a>
-                    <?php bistroly_posted_in(); ?>
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'polishe-post-thumbnail-grid' ); ?></a>
+                    <?php polishe_posted_in(); ?>
                 </div>
                 <?php } ?>
                 <div class="inner-post">
-                    <?php if( !has_post_thumbnail() ) bistroly_posted_in(); ?>
+                    <?php if( !has_post_thumbnail() ) polishe_posted_in(); ?>
                     <div class="entry-header">
                         <?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
                     </div>
                 </div>
                 <div class="entry-meta">
-                    <?php if( bistroly_get_option( 'post_entry_meta' ) ) { bistroly_post_meta(); } ?>
+                    <?php if( polishe_get_option( 'post_entry_meta' ) ) { polishe_post_meta(); } ?>
                     <a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
                 </div>
             </div>

@@ -2,24 +2,24 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 /** 
  * Add body class by filter 
  * 
  */
-add_filter( 'body_class', 'bistroly_body_class_names', 999 );
-function bistroly_body_class_names( $classes ) {
+add_filter( 'body_class', 'polishe_body_class_names', 999 );
+function polishe_body_class_names( $classes ) {
 	
 	$theme = wp_get_theme();
 	if( is_child_theme() ) { $theme = wp_get_theme()->parent(); }
 
-  	$classes[] = 'bistroly-theme-ver-'.$theme->version;
+  	$classes[] = 'polishe-theme-ver-'.$theme->version;
 
   	$classes[] = 'wordpress-version-'.get_bloginfo( 'version' );
 
-  	if ( bistroly_get_option('footer_fixed') != false ){
+  	if ( polishe_get_option('footer_fixed') != false ){
 		$classes[] = 'footer-fixed';
 	}
 
@@ -29,11 +29,11 @@ function bistroly_body_class_names( $classes ) {
 /**
  *  Add specific CSS class to header
  */
-function bistroly_header_class() {
+function polishe_header_class() {
 
 	$header_classes = '';
 
-	if ( bistroly_get_option('header_fixed') != false ){
+	if ( polishe_get_option('header_fixed') != false ){
 		$header_classes = 'header-transparent';
 	}else{
 		$header_classes = 'header-static';
@@ -52,23 +52,23 @@ function bistroly_header_class() {
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function bistroly_pingback_header() {
+function polishe_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'bistroly_pingback_header' );
+add_action( 'wp_head', 'polishe_pingback_header' );
 
 //Get layout post & page.
-if ( ! function_exists( 'bistroly_get_layout' ) ) :
-	function bistroly_get_layout() {
+if ( ! function_exists( 'polishe_get_layout' ) ) :
+	function polishe_get_layout() {
 		// Get layout.
 		if( is_page() && !is_home() && function_exists( 'rwmb_meta' ) ) {
 			$page_layout = rwmb_meta('page_layout');
 		}elseif( is_single() ){
-			$page_layout = bistroly_get_option( 'single_post_layout' );
+			$page_layout = polishe_get_option( 'single_post_layout' );
 		}else{
-			$page_layout = bistroly_get_option( 'blog_layout' );
+			$page_layout = polishe_get_option( 'blog_layout' );
 		}
 
 		return $page_layout;
@@ -82,15 +82,15 @@ endif;
  *
  * @global int $content_width
  */
-if ( ! function_exists( 'bistroly_content_columns' ) ) :
-	function bistroly_content_columns() {
+if ( ! function_exists( 'polishe_content_columns' ) ) :
+	function polishe_content_columns() {
 
 		$blog_content_width = array();
 
 		// Check if layout is one column.
-		if ( 'content-sidebar' === bistroly_get_layout() && is_active_sidebar( 'primary' ) ) {
+		if ( 'content-sidebar' === polishe_get_layout() && is_active_sidebar( 'primary' ) ) {
 			$blog_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12';
-		}elseif ('sidebar-content' === bistroly_get_layout() && is_active_sidebar( 'primary' ) ) {
+		}elseif ('sidebar-content' === polishe_get_layout() && is_active_sidebar( 'primary' ) ) {
 			$blog_content_width[] = 'col-lg-9 col-md-9 col-sm-12 col-xs-12 pull-right';
 		}else{
 			$blog_content_width[] = 'col-lg-12 col-md-12 col-sm-12 col-xs-12';
@@ -102,15 +102,15 @@ if ( ! function_exists( 'bistroly_content_columns' ) ) :
 endif;
 
 /* Select blog style */
-if ( ! function_exists( 'bistroly_blog_style' ) ) :
-	function bistroly_blog_style() {
+if ( ! function_exists( 'polishe_blog_style' ) ) :
+	function polishe_blog_style() {
 
 		$blog_style = array();
 
 		// Check if layout is one column.
-		if ( bistroly_get_option( 'blog_style' ) === 'grid' ) {
+		if ( polishe_get_option( 'blog_style' ) === 'grid' ) {
 			$blog_style[] = 'blog-grid';
-			$blog_style[] = bistroly_get_option( 'blog_columns' );
+			$blog_style[] = polishe_get_option( 'blog_columns' );
 		} else {
 			$blog_style[] = 'blog-list';
 		}
@@ -123,24 +123,24 @@ endif;
 /**
  * Portfolio Columns
  */
-if ( ! function_exists( 'bistroly_portfolio_option_class' ) ) :
-	function bistroly_portfolio_option_class() {
+if ( ! function_exists( 'polishe_portfolio_option_class' ) ) :
+	function polishe_portfolio_option_class() {
 
 		$portfolio_option_class = array();
 
-		if( bistroly_get_option('portfolio_column') == "2cl" ){
+		if( polishe_get_option('portfolio_column') == "2cl" ){
 			$portfolio_option_class[] = 'pf_2_cols';
-		}elseif( bistroly_get_option('portfolio_column') == "4cl" ) {
+		}elseif( polishe_get_option('portfolio_column') == "4cl" ) {
 			$portfolio_option_class[] = 'pf_4_cols';
-		}elseif( bistroly_get_option('portfolio_column') == "5cl" ) {
+		}elseif( polishe_get_option('portfolio_column') == "5cl" ) {
 			$portfolio_option_class[] = 'pf_5_cols';
 		}else{
 			$portfolio_option_class[] = '';
 		}
 
-		if( bistroly_get_option('portfolio_style') == "style2" ) {
+		if( polishe_get_option('portfolio_style') == "style2" ) {
 			$portfolio_option_class[] = 'style-2';
-		}elseif( bistroly_get_option('portfolio_style') == "style3" ) {
+		}elseif( polishe_get_option('portfolio_style') == "style3" ) {
 			$portfolio_option_class[] = 'style-3';
 		}else{
 			$portfolio_option_class[] = 'style-1';
@@ -157,8 +157,8 @@ endif;
  * @param object $query data
  *
  */
-function bistroly_change_portfolio_posts_per_page( $query ) {
-	$portfolio_ppp = (!empty( bistroly_get_option('portfolio_posts_per_page') ) ? bistroly_get_option('portfolio_posts_per_page') : '6');
+function polishe_change_portfolio_posts_per_page( $query ) {
+	$portfolio_ppp = (!empty( polishe_get_option('portfolio_posts_per_page') ) ? polishe_get_option('portfolio_posts_per_page') : '6');
 
 	if ( !is_singular() && !is_admin() ) {		
 	    if ( $query->is_post_type_archive( 'xp_portfolio' ) || $query->is_tax('portfolio_cat') && ! is_admin() && $query->is_main_query() ) {
@@ -167,32 +167,32 @@ function bistroly_change_portfolio_posts_per_page( $query ) {
 	}
     return $query;
 }
-add_filter( 'pre_get_posts', 'bistroly_change_portfolio_posts_per_page' );
+add_filter( 'pre_get_posts', 'polishe_change_portfolio_posts_per_page' );
 
 /**
  * Load More Ajax Portfolio
  */
-add_action( 'wp_enqueue_scripts', 'bistroly_script_and_styles', 1 );
-function bistroly_script_and_styles() {
+add_action( 'wp_enqueue_scripts', 'polishe_script_and_styles', 1 );
+function polishe_script_and_styles() {
 	global $wp_query;
 
 	// register our main script but do not enqueue it yet
-	wp_register_script( 'bistroly_scripts', get_template_directory_uri() . '/js/myloadmore.js', array('jquery'), time() );
+	wp_register_script( 'polishe_scripts', get_template_directory_uri() . '/js/myloadmore.js', array('jquery'), time() );
 
 	// now the most interesting part
 	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
 	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
-	wp_localize_script( 'bistroly_scripts', 'bistroly_loadmore_params', array(
+	wp_localize_script( 'polishe_scripts', 'polishe_loadmore_params', array(
 		'ajaxurl' => home_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
 	) );
 
- 	wp_enqueue_script( 'bistroly_scripts' );
+ 	wp_enqueue_script( 'polishe_scripts' );
 }
 
-add_action('wp_ajax_loadmore', 'bistroly_loadmore_ajax_handler'); // wp_ajax_{action}
-add_action('wp_ajax_nopriv_loadmore', 'bistroly_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
+add_action('wp_ajax_loadmore', 'polishe_loadmore_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmore', 'polishe_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}
 
-function bistroly_loadmore_ajax_handler(){
+function polishe_loadmore_ajax_handler(){
 	$offset  = (isset($_POST['offset'])) ? $_POST['offset'] : 0;
 	$cat     = (isset($_POST['cat'])) ? $_POST['cat'] : 0;
 	$ppp     = (isset($_POST['ppp'])) ? $_POST['ppp'] : 3;
@@ -233,31 +233,31 @@ function bistroly_loadmore_ajax_handler(){
 /**
  * Back-To-Top on Footer
  */
-if( !function_exists('bistroly_custom_back_to_top') ) {
-    function bistroly_custom_back_to_top() {     
-	    if( bistroly_get_option('backtotop') != false ){
+if( !function_exists('polishe_custom_back_to_top') ) {
+    function polishe_custom_back_to_top() {     
+	    if( polishe_get_option('backtotop') != false ){
 	    	echo '<a id="back-to-top" href="#" class="show"><i class="xp-webicon-left-arrow-2"></i></a>';
 	    }
     }
 }
-add_action('wp_footer', 'bistroly_custom_back_to_top');
+add_action('wp_footer', 'polishe_custom_back_to_top');
 
 /**
  * Google Analytics
  */
-if ( ! function_exists( 'bistroly_hook_javascript' ) ) {
-	function bistroly_hook_javascript() {
-		if ( bistroly_get_option('js_code') != '' ) {
+if ( ! function_exists( 'polishe_hook_javascript' ) ) {
+	function polishe_hook_javascript() {
+		if ( polishe_get_option('js_code') != '' ) {
 	    ?>
 	    	<!-- Google Analytics code -->
 	    	<script type="text/javascript">
-	            <?php echo bistroly_get_option('js_code'); ?>
+	            <?php echo polishe_get_option('js_code'); ?>
 	        </script>
 	    <?php
 	    }
 	}
 }
-add_action('wp_head', 'bistroly_hook_javascript');
+add_action('wp_head', 'polishe_hook_javascript');
 
 /**
  * Render date-time in Copyright

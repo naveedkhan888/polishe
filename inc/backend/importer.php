@@ -2,7 +2,7 @@
 /**
  * Hooks for importer
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 
@@ -12,7 +12,7 @@
  * @since  1.0
  *
  */
-function bistroly_importer() {
+function polishe_importer() {
 	return array(
 		array(
 			'name'       => 'Main Demo',
@@ -20,7 +20,7 @@ function bistroly_importer() {
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
 			'customizer' => get_template_directory_uri().'/inc/backend/data/maintheme/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
-			'sliders'    => 'https://dpsample.com/themes_data/bistroly/sliders.zip',
+			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
 				'front_page' => 'Home',
 				'blog'       => 'Blog',
@@ -39,7 +39,7 @@ function bistroly_importer() {
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
 			'customizer' => get_template_directory_uri().'/inc/backend/data/coffee/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
-			'sliders'    => 'https://dpsample.com/themes_data/bistroly/sliders.zip',
+			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
 				'front_page' => 'Home 2',
 				'blog'       => 'Blog',
@@ -58,7 +58,7 @@ function bistroly_importer() {
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
 			'customizer' => get_template_directory_uri().'/inc/backend/data/ice-cream/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
-			'sliders'    => 'https://dpsample.com/themes_data/bistroly/sliders.zip',
+			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
 				'front_page' => 'Home 3',
 				'blog'       => 'Blog',
@@ -77,7 +77,7 @@ function bistroly_importer() {
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
 			'customizer' => get_template_directory_uri().'/inc/backend/data/pizza/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
-			'sliders'    => 'https://dpsample.com/themes_data/bistroly/sliders.zip',
+			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
 				'front_page' => 'Home 4',
 				'blog'       => 'Blog',
@@ -96,7 +96,7 @@ function bistroly_importer() {
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
 			'customizer' => get_template_directory_uri().'/inc/backend/data/juice/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
-			'sliders'    => 'https://dpsample.com/themes_data/bistroly/sliders.zip',
+			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
 				'front_page' => 'Home 5',
 				'blog'       => 'Blog',
@@ -112,4 +112,4 @@ function bistroly_importer() {
 	);
 }
 
-add_filter( 'soo_demo_packages', 'bistroly_importer', 30 );
+add_filter( 'soo_demo_packages', 'polishe_importer', 30 );

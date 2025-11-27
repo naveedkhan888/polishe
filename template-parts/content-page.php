@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 ?>
@@ -16,7 +16,7 @@
 	    the_content();
 
 	    wp_link_pages( array(
-	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bistroly' ),
+	        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'polishe' ),
 	        'after'  => '</div>',
 	    ) );
 	    ?>

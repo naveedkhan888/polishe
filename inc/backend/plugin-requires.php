@@ -4,97 +4,97 @@
  *
  * @link http://tgmpluginactivation.com/configuration/
  *
- * @package Bistroly
+ * @package Polishe
  */
 require_once get_template_directory() . '/inc/libs/class-tgm-plugin-activation.php';
-function bistroly_register_required_plugins() {
+function polishe_register_required_plugins() {
 	$protocol = is_ssl() ? 'https' : 'http';
 	$plugins = array(
 		array(
-			'name'               => esc_html__( 'Meta Box', 'bistroly' ),
+			'name'               => esc_html__( 'Meta Box', 'polishe' ),
 			'slug'               => 'meta-box',
 			'required'           => true,
 		),
 		array(
-			'name'               => esc_html__( 'Kirki', 'bistroly' ),
+			'name'               => esc_html__( 'Kirki', 'polishe' ),
 			'slug'               => 'kirki',
 			'required'           => true,
 		),
 		array(
-			'name'               => esc_html__( 'Elementor Page Builder', 'bistroly' ),
+			'name'               => esc_html__( 'Elementor Page Builder', 'polishe' ),
 			'slug'               => 'elementor',
 			'required'           => true,
 		),
 		array(
-            'name'               => esc_html__( 'Contact Form 7', 'bistroly' ),
+            'name'               => esc_html__( 'Contact Form 7', 'polishe' ),
             'slug'               => 'contact-form-7',
             'required'           => true,
 		),
 		array(
-            'name'               => esc_html__( 'MailChimp for WordPress', 'bistroly' ),
+            'name'               => esc_html__( 'MailChimp for WordPress', 'polishe' ),
             'slug'               => 'mailchimp-for-wp',
             'required'           => true,
 		),
         array(            
-            'name'               => esc_html__( 'XP One Click Demo Content', 'bistroly' ), // The plugin name.
+            'name'               => esc_html__( 'XP One Click Demo Content', 'polishe' ), // The plugin name.
             'slug'               => 'soo-demo-importer', // The plugin slug (typically the folder name).
             'source'             => esc_url($protocol.'://dpsample.com/soo-demo-importer.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
-            'name'               => esc_html__( 'Core Code Bistroly', 'bistroly' ), // The plugin name.
-            'slug'               => 'core-code-bistroly', // The plugin slug (typically the folder name).
-            'source'             => esc_url($protocol.'://dpsample.com/themes_data/bistroly/core-code-bistroly.zip'), // The plugin source.
+            'name'               => esc_html__( 'Core Code Polishe', 'polishe' ), // The plugin name.
+            'slug'               => 'core-code-polishe', // The plugin slug (typically the folder name).
+            'source'             => esc_url($protocol.'://dpsample.com/themes_data/polishe/core-code-polishe.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(            
-            'name'               => esc_html__( 'Revolution Slider', 'bistroly' ), // The plugin name.
+            'name'               => esc_html__( 'Revolution Slider', 'polishe' ), // The plugin name.
             'slug'               => 'revslider', // The plugin slug (typically the folder name).
             'source'             => esc_url($protocol.'://dpsample.com/revslider.zip'), // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
         ),
         array(
-            'name'               => esc_html__( 'WooCommerce', 'bistroly' ),
+            'name'               => esc_html__( 'WooCommerce', 'polishe' ),
             'slug'               => 'woocommerce',
             'required'           => true,
 		),
 		array(
-            'name'               => esc_html__( 'Qi Addons For Elementor', 'bistroly' ),
+            'name'               => esc_html__( 'Qi Addons For Elementor', 'polishe' ),
             'slug'               => 'qi-addons-for-elementor',
             'required'           => true,
 		),
 		array(
-            'name'               => esc_html__( 'Classic Editor', 'bistroly' ),
+            'name'               => esc_html__( 'Classic Editor', 'polishe' ),
             'slug'               => 'classic-editor',
             'required'           => true,
 		),
         
 	);
 	$config  = array(
-		'domain'       => 'bistroly',
+		'domain'       => 'polishe',
 		'default_path' => '',
 		'menu'         => 'install-required-plugins',
 		'has_notices'  => true,
 		'is_automatic' => false,
 		'message'      => '',
 		'strings'      => array(
-			'page_title'                      => esc_html__( 'Install Required Plugins', 'bistroly' ),
-			'menu_title'                      => esc_html__( 'Install Plugins', 'bistroly' ),
-			'installing'                      => esc_html__( 'Installing Plugin: %s', 'bistroly' ),
-			'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'bistroly' ),
-			'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'bistroly' ),
-			'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'bistroly' ),
-			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'bistroly' ),
-			'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'bistroly' ),
-			'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'bistroly' ),
-			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'bistroly' ),
-			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'bistroly' ),
-			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'bistroly' ),
-			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'bistroly' ),
-			'activate_link'                   => _n_noop( 'Activate installed plugin', 'Activate installed plugins', 'bistroly' ),
-			'return'                          => esc_html__( 'Return to Required Plugins Installer', 'bistroly' ),
-			'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'bistroly' ),
-			'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'bistroly' ),
+			'page_title'                      => esc_html__( 'Install Required Plugins', 'polishe' ),
+			'menu_title'                      => esc_html__( 'Install Plugins', 'polishe' ),
+			'installing'                      => esc_html__( 'Installing Plugin: %s', 'polishe' ),
+			'oops'                            => esc_html__( 'Something went wrong with the plugin API.', 'polishe' ),
+			'notice_can_install_required'     => _n_noop( 'This theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'polishe' ),
+			'notice_can_install_recommended'  => _n_noop( 'This theme recommends the following plugin: %1$s.', 'This theme recommends the following plugins: %1$s.', 'polishe' ),
+			'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'polishe' ),
+			'notice_can_activate_required'    => _n_noop( 'The following required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'polishe' ),
+			'notice_can_activate_recommended' => _n_noop( 'The following recommended plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'polishe' ),
+			'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'polishe' ),
+			'notice_ask_to_update'            => _n_noop( 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'polishe' ),
+			'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'polishe' ),
+			'install_link'                    => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'polishe' ),
+			'activate_link'                   => _n_noop( 'Activate installed plugin', 'Activate installed plugins', 'polishe' ),
+			'return'                          => esc_html__( 'Return to Required Plugins Installer', 'polishe' ),
+			'plugin_activated'                => esc_html__( 'Plugin activated successfully.', 'polishe' ),
+			'complete'                        => esc_html__( 'All plugins installed and activated successfully. %s', 'polishe' ),
 			'nag_type'                        => 'updated',
 		),
 	);
@@ -102,4 +102,4 @@ function bistroly_register_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
-add_action( 'tgmpa_register', 'bistroly_register_required_plugins' );
+add_action( 'tgmpa_register', 'polishe_register_required_plugins' );

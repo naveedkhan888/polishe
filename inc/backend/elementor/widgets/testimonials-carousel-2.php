@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Testimonial Carousel 2
  */
-class Bistroly_Testimonials2 extends Widget_Base{
+class Polishe_Testimonials2 extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Testimonial Carousel 2', 'bistroly' );
+		return __( 'XP Testimonial Carousel 2', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -32,25 +32,25 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'section_testimonials',
 			[
-				'label' => __( 'Testimonials', 'bistroly' ),
+				'label' => __( 'Testimonials', 'polishe' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -63,7 +63,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'timage',
 			[
-				'label' => __( 'Avatar:', 'bistroly' ),
+				'label' => __( 'Avatar:', 'polishe' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => get_template_directory_uri().'/images/avatar-1.png',
@@ -74,7 +74,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tname',
 			[
-				'label' => __( 'Name:', 'bistroly' ),
+				'label' => __( 'Name:', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Emilia Clarke',
 			]
@@ -83,7 +83,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tjob',
 			[
-				'label' => __( 'Job:', 'bistroly' ),
+				'label' => __( 'Job:', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Developer',
 			]
@@ -91,7 +91,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$repeater->add_control(
 			'tcontent',
 			[
-				'label' => __( 'Content:', 'bistroly' ),
+				'label' => __( 'Content:', 'polishe' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => '10',
 				'default' => '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."',
@@ -106,7 +106,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		        'show_label'  => false,
 		        'default'     => [
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'polishe' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -115,7 +115,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'polishe' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -124,7 +124,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		 
 		            ],
 		            [
-		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'bistroly' ),
+		             	'tcontent' => __( '"I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment."', 'polishe' ),
 		                'timage'  => [
 							'url' => get_template_directory_uri().'/images/avatar-1.png',
 						],
@@ -141,31 +141,31 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'bistroly' ),
+				'label' => __( 'Loop', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'yes',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'bistroly' ),
+				'label' => __( 'Autoplay', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'bistroly' ),
+				'label' => __( 'Autoplay Timeout', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -185,23 +185,23 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_control(
 			'arrow_align',
 			[
-				'label' => __( 'Arrows Align', 'bistroly' ),
+				'label' => __( 'Arrows Align', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'middle'   => __( 'Middle', 'bistroly' ),
-					'bottom'   => __( 'Bottom', 'bistroly' ),
+					'middle'   => __( 'Middle', 'polishe' ),
+					'bottom'   => __( 'Bottom', 'polishe' ),
 				],
 				'default' => 'middle',
 				'prefix_class' => 'arrows-',
@@ -213,27 +213,27 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots_style',
 			[
-				'label' => __( 'Dots Style', 'bistroly' ),
+				'label' => __( 'Dots Style', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'vertical'   => [
-						'title' => esc_html__( 'Vertical', 'bistroly' ),
+						'title' => esc_html__( 'Vertical', 'polishe' ),
 						'icon'  => 'fa fa-ellipsis-v',
 					],
 					'horizontal' => [
-						'title' => esc_html__( 'Horizontal', 'bistroly' ),
+						'title' => esc_html__( 'Horizontal', 'polishe' ),
 						'icon'  => 'fa fa-ellipsis-h',
 					],
 				],
@@ -251,7 +251,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_general',
 			[
-				'label' => __( 'General', 'bistroly' ),
+				'label' => __( 'General', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -259,7 +259,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'tcontent_color',
 			[
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -281,7 +281,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_tinfo',
 			[
-				'label' => __( 'Information', 'bistroly' ),
+				'label' => __( 'Information', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -290,7 +290,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_timage',
 			[
-				'label' => __( 'Photo', 'bistroly' ),
+				'label' => __( 'Photo', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -298,7 +298,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_img',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -316,7 +316,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -328,7 +328,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'quote_color',
 			[
-				'label' => __( 'Icon Color', 'bistroly' ),
+				'label' => __( 'Icon Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -339,7 +339,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'quote_bg',
 			[
-				'label' => __( 'Icon Background', 'bistroly' ),
+				'label' => __( 'Icon Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_tname',
 			[
-				'label' => __( 'Name', 'bistroly' ),
+				'label' => __( 'Name', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -360,7 +360,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'spacing_name',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -377,7 +377,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'style_tjob',
 			[
-				'label' => __( 'Job', 'bistroly' ),
+				'label' => __( 'Job', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -407,7 +407,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -430,7 +430,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -441,7 +441,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -459,7 +459,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -470,7 +470,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'bistroly' ),
+                'label' => __( 'Color Active', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -484,7 +484,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -494,7 +494,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -512,7 +512,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_responsive_control(
 			'arrow_width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -528,7 +528,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -539,7 +539,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -550,7 +550,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'bistroly' ),
+				'label' => __( 'Color Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -561,7 +561,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'bistroly' ),
+				'label' => __( 'Background Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -572,7 +572,7 @@ class Bistroly_Testimonials2 extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -620,4 +620,4 @@ class Bistroly_Testimonials2 extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Testimonials2() );
+Plugin::instance()->widgets_manager->register( new Polishe_Testimonials2() );

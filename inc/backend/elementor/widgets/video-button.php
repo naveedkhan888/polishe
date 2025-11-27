@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Video Button
  */
-class Bistroly_VideoPopup extends Widget_Base{
+class Polishe_VideoPopup extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Video Button', 'bistroly' );
+		return __( 'XP Video Button', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -33,26 +33,26 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Button', 'bistroly' ),
+				'label' => __( 'Button', 'polishe' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -66,16 +66,16 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'vlink',
 			[
-				'label' => __( 'Video Link', 'bistroly' ),
+				'label' => __( 'Video Link', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+				'placeholder' => __( 'https://your-link.com', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'caption',
 			[
-				'label' => __( 'Caption', 'bistroly' ),
+				'label' => __( 'Caption', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);
@@ -83,10 +83,10 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'animate',
 			[
-				'label' => __( 'Animation', 'bistroly' ),
+				'label' => __( 'Animation', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'bistroly' ),
-				'label_off' => __( 'No', 'bistroly' ),
+				'label_on' => __( 'Yes', 'polishe' ),
+				'label_off' => __( 'No', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -98,7 +98,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Button', 'bistroly' ),
+				'label' => __( 'Button', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -107,7 +107,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_width',
 			[
-				'label' => __( 'Size', 'bistroly' ),
+				'label' => __( 'Size', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -123,7 +123,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'btn_size',
 			[
-				'label' => __( 'Icon Size', 'bistroly' ),
+				'label' => __( 'Icon Size', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -142,14 +142,14 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-				'label' => __( 'Normal', 'bistroly' ),
+				'label' => __( 'Normal', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_border_color',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -172,7 +172,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_bg',
 			[
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -183,7 +183,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_circle',
 			[
-				'label' => __( 'Animation Color', 'bistroly' ),
+				'label' => __( 'Animation Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -200,14 +200,14 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-				'label' => __( 'Hover', 'bistroly' ),
+				'label' => __( 'Hover', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'btn_hover_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -219,7 +219,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn__hover_border_color',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -230,7 +230,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_bg',
 			[
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'btn_hover_circle',
 			[
-				'label' => __( 'Animation Color', 'bistroly' ),
+				'label' => __( 'Animation Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -262,7 +262,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->start_controls_section(
 			'caption_section',
 			[
-				'label' => __( 'Caption', 'bistroly' ),
+				'label' => __( 'Caption', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'caption!'  => ''
@@ -273,7 +273,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_control(
 			'caption_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -291,7 +291,7 @@ class Bistroly_VideoPopup extends Widget_Base{
 		$this->add_responsive_control(
 			'caption_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -329,5 +329,5 @@ class Bistroly_VideoPopup extends Widget_Base{
 	}
 
 }
-// After the Bistroly_VideoPopup class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_VideoPopup() );
+// After the Polishe_VideoPopup class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_VideoPopup() );
