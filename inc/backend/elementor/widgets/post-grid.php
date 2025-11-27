@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Post Grid
  */
-class Bistroly_Post_Grid extends Widget_Base {
+class Polishe_Post_Grid extends Widget_Base {
 
  	public function get_name() {
 		return 'ipostgrid';
 	}
 
 	public function get_title() {
-		return __( 'XP Post Grid', 'bistroly' );
+		return __( 'XP Post Grid', 'polishe' );
 	}
 
 	public function get_icon() {
@@ -20,7 +20,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -28,24 +28,24 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Posts', 'bistroly' ),
+				'label' => __( 'Posts', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'post_cat',
 			[
-				'label' => __( 'Select Categories', 'bistroly' ),
+				'label' => __( 'Select Categories', 'polishe' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_post(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'bistroly' ),
+				'placeholder' => __( 'All Categories', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'post_num',
 			[
-				'label' => __( 'Show Number Posts', 'bistroly' ),
+				'label' => __( 'Show Number Posts', 'polishe' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '6',
 			]
@@ -53,7 +53,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'exc',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'bistroly' ),
+				'label' => esc_html__( 'Excerpt Length', 'polishe' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '0',
 			]
@@ -61,12 +61,12 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'post_thumbnail',
 			[
-				'label' => __( 'Thumbnail Image Size', 'bistroly' ),
+				'label' => __( 'Thumbnail Image Size', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'bistroly-post-thumbnail-grid',
+				'default' => 'polishe-post-thumbnail-grid',
 				'options' => [
-					'bistroly-post-thumbnail-grid' => __( 'Default', 'bistroly' ),
-					'full' => __( 'Full', 'bistroly' ),
+					'polishe-post-thumbnail-grid' => __( 'Default', 'polishe' ),
+					'full' => __( 'Full', 'polishe' ),
 				],
 			]
 		);
@@ -75,7 +75,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_grid',
 			[
-				'label' => __( 'Grid', 'bistroly' ),
+				'label' => __( 'Grid', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -84,7 +84,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'bistroly' ),
+				'label' => __( 'Columns', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -103,7 +103,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'grid_gap',
 			[
-				'label' => __( 'Grid Gap', 'bistroly' ),
+				'label' => __( 'Grid Gap', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -126,7 +126,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->start_controls_section(
 			'posts_style',
 			[
-				'label' => __( 'Post Items', 'bistroly' ),
+				'label' => __( 'Post Items', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,7 +134,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'bistroly' ),
+				'label' => __( 'General', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -143,7 +143,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -155,7 +155,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'item_bg',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -185,7 +185,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -197,7 +197,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'bistroly' ),
+				'label' => __( 'Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,7 +218,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_excerpt',
 			[
-				'label' => __( 'Excerpt', 'bistroly' ),
+				'label' => __( 'Excerpt', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -227,7 +227,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -248,7 +248,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_cat',
 			[
-				'label' => __( 'Category', 'bistroly' ),
+				'label' => __( 'Category', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -257,10 +257,10 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'bistroly' ),
+				'label' => __( 'Show Category', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bistroly' ),
-				'label_off' => __( 'Hide', 'bistroly' ),
+				'label_on' => __( 'Show', 'polishe' ),
+				'label_off' => __( 'Hide', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -269,7 +269,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'cat_bg',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -300,7 +300,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'heading_meta',
 			[
-				'label' => __( 'Meta', 'bistroly' ),
+				'label' => __( 'Meta', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -309,7 +309,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 		$this->add_control(
 			'meta_hover_color',
 			[
-				'label' => __( 'Hover Color', 'bistroly' ),
+				'label' => __( 'Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -369,7 +369,7 @@ class Bistroly_Post_Grid extends Widget_Base {
 					<div class="post-inner">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<div class="entry-media">
-								<?php if( $settings['show_cat'] ) { bistroly_posted_in(); } ?>
+								<?php if( $settings['show_cat'] ) { polishe_posted_in(); } ?>
 								<a href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail($settings['post_thumbnail']); ?>
 								</a>
@@ -377,15 +377,15 @@ class Bistroly_Post_Grid extends Widget_Base {
 						<?php } ?>
 
 						<div class="inner-post">
-							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) bistroly_posted_in(); ?>
+							<?php if( !has_post_thumbnail() && $settings['show_cat'] ) polishe_posted_in(); ?>
 							<div class="entry-header">
 								<?php the_title( '<h5 class="entry-title"><a class="title-link" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
 							</div>
 
-							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .bistroly_excerpt($settings['exc']). '...</div>'; } ?>
+							<?php if( $settings['exc'] ) { echo '<div class="entry-summary the-excerpt">' .polishe_excerpt($settings['exc']). '...</div>'; } ?>
 						</div>
 						<div class="entry-meta">
-							<?php if( bistroly_get_option( 'post_entry_meta' ) ) { bistroly_post_meta(); } ?>
+							<?php if( polishe_get_option( 'post_entry_meta' ) ) { polishe_post_meta(); } ?>
 							<a href="<?php the_permalink(); ?>" class="btn-details"><i class="xp-webicon-trajectory"></i></a>
 						</div>
 					</div>
@@ -409,4 +409,4 @@ class Bistroly_Post_Grid extends Widget_Base {
 	}
 }
 // Register the widget
-Plugin::instance()->widgets_manager->register( new Bistroly_Post_Grid() );
+Plugin::instance()->widgets_manager->register( new Polishe_Post_Grid() );

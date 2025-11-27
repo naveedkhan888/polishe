@@ -13,7 +13,7 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'bistroly-portfolio-thumbnail-grid' );
+						the_post_thumbnail( 'polishe-portfolio-thumbnail-grid' );
 					}
 				?>
 			</a>

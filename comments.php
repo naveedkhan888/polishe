@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 /*
@@ -26,10 +26,10 @@ if ( post_password_required() ) {
     // You can start editing here -- including this comment!
     if ( have_comments() ) : ?>
 
-        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'bistroly'), esc_html__('Comment (1)', 'bistroly'), esc_html__(  'Comments (%)', 'bistroly') ); ?></h4>
+        <h4 class="comments-title"><?php comments_number( esc_html__('Comments (0)', 'polishe'), esc_html__('Comment (1)', 'polishe'), esc_html__(  'Comments (%)', 'polishe') ); ?></h4>
 
         <ol class="comment-list">
-            <?php wp_list_comments('callback=bistroly_comment_list'); ?>
+            <?php wp_list_comments('callback=polishe_comment_list'); ?>
         </ol><!-- .comment-list -->
 
         <?php
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
         // If comments are closed and there are comments, let's leave a little note, shall we?
         if ( ! comments_open() ) :
             ?>
-            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'bistroly' ); ?></p>
+            <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'polishe' ); ?></p>
         <?php
         endif;
 
@@ -50,17 +50,17 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
 
     $comments_args = array(
-        'title_reply'   => esc_html__('Leave a comment', 'bistroly'),
-        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'bistroly' ) .'" required></textarea></p>',
+        'title_reply'   => esc_html__('Leave a comment', 'polishe'),
+        'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="'. esc_attr__( 'Comment*', 'polishe' ) .'" required></textarea></p>',
 
         'fields'        => apply_filters( 'comment_form_default_fields', array(
             'author' =>
                 '<div class="row"><p class="comment-form-author col-md-6"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Name*', 'bistroly' ) .'" required /></p>',
+                '" size="30" placeholder="'. esc_attr__( 'Name*', 'polishe' ) .'" required /></p>',
 
             'email' =>
                 '<p class="comment-form-email col-md-6"><input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                '" size="30" placeholder="'. esc_attr__( 'Email*', 'bistroly' ) .'" required /></p></div>',
+                '" size="30" placeholder="'. esc_attr__( 'Email*', 'polishe' ) .'" required /></p></div>',
         )),
         'class_submit' => 'xptf-btn xptf-btn-border',
         'format'       => 'xhtml'

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Client Logos
  */
-class Bistroly_Image_Carousel extends Widget_Base{
+class Polishe_Image_Carousel extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Client Logos', 'bistroly' );
+		return __( 'XP Client Logos', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logos', 'bistroly' ),
+				'label' => __( 'Logos', 'polishe' ),
 			]
 		);
 
@@ -40,15 +40,15 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'title',
 			[
-				'label' => __( 'Name', 'bistroly' ),
+				'label' => __( 'Name', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( '', 'bistroly' ),
+				'default' => __( '', 'polishe' ),
 			]
 		);
 		$repeater->add_control(
 			'image_partner',
 			[
-				'label' => __( 'Image', 'bistroly' ),
+				'label' => __( 'Image', 'polishe' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -58,7 +58,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$repeater->add_control(
 			'image_link',
 			[
-				'label' => __( 'Link', 'bistroly' ),
+				'label' => __( 'Link', 'polishe' ),
 				'type' => Controls_Manager::URL,
 				'default' => [],
 			]
@@ -90,10 +90,10 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides To Show', 'bistroly' ),
+				'label' => __( 'Slides To Show', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'bistroly' ),
+					'' => __( 'Default', 'polishe' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -102,31 +102,31 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'bistroly' ),
+				'label' => __( 'Loop', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'bistroly' ),
+				'label' => __( 'Autoplay', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'bistroly' ),
+				'label' => __( 'Autoplay Timeout', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -146,24 +146,24 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
@@ -175,26 +175,26 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'image_style_section',
 			[
-				'label' => __( 'Style Logos', 'bistroly' ),
+				'label' => __( 'Style Logos', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Vertical Align', 'bistroly' ),
+				'label' => __( 'Vertical Align', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'flex-start'    => [
-						'title' => __( 'Top', 'bistroly' ),
+						'title' => __( 'Top', 'polishe' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-v-align-middle',
 					],
 					'flex-end' => [
-						'title' => __( 'Bottom', 'bistroly' ),
+						'title' => __( 'Bottom', 'polishe' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],
@@ -207,7 +207,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_height',
 			[
-				'label' => __( 'Height', 'bistroly' ),
+				'label' => __( 'Height', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -228,7 +228,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'img_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -247,14 +247,14 @@ class Bistroly_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bistroly' ),
+				'label' => __( 'Normal', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'bistroly' ),
+				'label' => __( 'Opacity', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -281,14 +281,14 @@ class Bistroly_Image_Carousel extends Widget_Base{
 
 		$this->start_controls_tab( 'img_hover_effects',
 			[
-				'label' => __( 'Hover', 'bistroly' ),
+				'label' => __( 'Hover', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'bistroly' ),
+				'label' => __( 'Opacity', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -321,7 +321,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -332,7 +332,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -349,7 +349,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -360,7 +360,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'bistroly' ),
+                'label' => __( 'Color Active', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -374,7 +374,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -384,7 +384,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -395,7 +395,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'bistroly' ),
+				'label' => __( 'Color Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -406,7 +406,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -417,7 +417,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'bistroly' ),
+				'label' => __( 'Background Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -428,7 +428,7 @@ class Bistroly_Image_Carousel extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -519,5 +519,5 @@ class Bistroly_Image_Carousel extends Widget_Base{
 	}
 
 }
-// After the Bistroly_Image_Carousel class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Image_Carousel() );
+// After the Polishe_Image_Carousel class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Image_Carousel() );

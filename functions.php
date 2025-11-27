@@ -1,13 +1,13 @@
 <?php
 /**
- * Bistroly functions and definitions
+ * Polishe functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Bistroly
+ * @package Polishe
  */
 
-if ( ! function_exists( 'bistroly_setup' ) ) :
+if ( ! function_exists( 'polishe_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'bistroly_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function bistroly_setup() {
+	function polishe_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on _s, use a find and replace
-		 * to change 'bistroly' to the name of your theme in all the template files.
+		 * to change 'polishe' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'bistroly', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'polishe', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -43,7 +43,7 @@ if ( ! function_exists( 'bistroly_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'bistroly' ),
+			'primary' => esc_html__( 'Primary', 'polishe' ),
 		) );
 
 		/*
@@ -73,32 +73,32 @@ if ( ! function_exists( 'bistroly_setup' ) ) :
 		) );
 
 		/* Add image sizes */
-		add_image_size( 'bistroly-post-thumbnail-grid', 600, 400, array( 'center', 'center' ) );
-		add_image_size( 'bistroly-portfolio-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
-		add_image_size( 'bistroly-portfolio-thumbnail-grid-wdouble', 1200, 600, array( 'center', 'center' ) );
-		add_image_size( 'bistroly-portfolio-thumbnail-grid-whdouble', 1200, 1200, array( 'center', 'center' ) );
+		add_image_size( 'polishe-post-thumbnail-grid', 600, 400, array( 'center', 'center' ) );
+		add_image_size( 'polishe-portfolio-thumbnail-grid', 600, 600, array( 'center', 'center' ) );
+		add_image_size( 'polishe-portfolio-thumbnail-grid-wdouble', 1200, 600, array( 'center', 'center' ) );
+		add_image_size( 'polishe-portfolio-thumbnail-grid-whdouble', 1200, 1200, array( 'center', 'center' ) );
 
 		/*
 		 * This theme styles the visual editor to resemble the theme style,
 		 * specifically font, colors, and column width.
 	 	 */
-		add_editor_style( array( 'css/editor-style.css', bistroly_fonts_url() ) );
+		add_editor_style( array( 'css/editor-style.css', polishe_fonts_url() ) );
 		
 	}
 endif;
-add_action( 'after_setup_theme', 'bistroly_setup' );
+add_action( 'after_setup_theme', 'polishe_setup' );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bistroly_widgets_init() {
+function polishe_widgets_init() {
 	/* Register the 'primary' sidebar. */
 	register_sidebar( array(
-		'name'          => esc_html__( 'Primary Sidebar', 'bistroly' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'polishe' ),
 		'id'            => 'primary',
-		'description'   => esc_html__( 'Add widgets here.', 'bistroly' ),
+		'description'   => esc_html__( 'Add widgets here.', 'polishe' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h6 class="widget-title">',
@@ -106,30 +106,30 @@ function bistroly_widgets_init() {
 	) );
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
-add_action( 'widgets_init', 'bistroly_widgets_init' );
+add_action( 'widgets_init', 'polishe_widgets_init' );
 
 /**
  * Register custom fonts.
  */
-if ( ! function_exists( 'bistroly_fonts_url' ) ) :
+if ( ! function_exists( 'polishe_fonts_url' ) ) :
 /**
  * Register Google fonts for Blessing.
  *
- * Create your own bistroly_fonts_url() function to override in a child theme.
+ * Create your own polishe_fonts_url() function to override in a child theme.
  *
  * @since Blessing 1.0
  *
  * @return string Google fonts URL for the theme.
  */
-function bistroly_fonts_url() {
+function polishe_fonts_url() {
 	$fonts_url = '';
 	$font_families     = array();
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Roboto Slab, translate this to 'off'. Do not translate into your own language. */
 
-	$body_font = bistroly_get_option( 'body_typo', [] );
-	$second_font = bistroly_get_option( 'second_font', [] );
+	$body_font = polishe_get_option( 'body_typo', [] );
+	$second_font = polishe_get_option( 'second_font', [] );
 
 	if ( !isset( $body_font['font-family'] ) || $body_font['font-family'] == '' ) {
 		$font_families[] = 'Inter:300,400,500,600,700';
@@ -153,16 +153,16 @@ endif;
 /**
  * Enqueue scripts and styles.
  */
-function bistroly_scripts() {
+function polishe_scripts() {
 
 	// Add custom fonts, used in the main stylesheet.
-	wp_enqueue_style( 'bistroly-fonts', bistroly_fonts_url(), array(), null );
+	wp_enqueue_style( 'polishe-fonts', polishe_fonts_url(), array(), null );
 
 	/** All frontend css files **/ 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '4.0', 'all');
 	
 	/** load fonts icons **/
-    wp_enqueue_style( 'bistroly-xpcustomicon', get_template_directory_uri().'/css/xpcustomicon.css');
+    wp_enqueue_style( 'polishe-xpcustomicon', get_template_directory_uri().'/css/xpcustomicon.css');
 
     /** Owl slider **/
 	wp_enqueue_style( 'owl-slider', get_template_directory_uri().'/css/owl.carousel.min.css');
@@ -177,9 +177,9 @@ function bistroly_scripts() {
     wp_enqueue_style( 'select-2-css', get_template_directory_uri().'/css/select2.min.css');
 
 	/** Theme stylesheet. **/
-	wp_enqueue_style( 'bistroly-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'polishe-style', get_stylesheet_uri() );	
 
-	if( bistroly_get_option('preload') != false ){
+	if( polishe_get_option('preload') != false ){
 		wp_enqueue_script( 'royal-preloader', get_template_directory_uri()."/js/royal_preloader.min.js", array('jquery'), '20200716', true);
 	}
 
@@ -192,15 +192,15 @@ function bistroly_scripts() {
 	wp_enqueue_script( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui.js', array( 'jquery' ), '20180915', true );
 	wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array( 'jquery' ), '20180917', true );
 	wp_enqueue_script( 'reveal-js', get_template_directory_uri() . '/js/image_reveal_js.js', array( 'jquery' ), '20180920', true );
-    wp_enqueue_script( 'bistroly-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
-	wp_enqueue_script( 'bistroly-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
-	wp_enqueue_script( 'bistroly-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );
+    wp_enqueue_script( 'polishe-elementor', get_template_directory_uri() . '/js/elementor.js', array( 'jquery' ), '20200716', true );
+	wp_enqueue_script( 'polishe-elementor-header', get_template_directory_uri() . '/js/elementor-header.js', array('jquery'), '20200716', true );
+	wp_enqueue_script( 'polishe-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '20200716', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bistroly_scripts' );
+add_action( 'wp_enqueue_scripts', 'polishe_scripts' );
 
 
 
@@ -273,25 +273,25 @@ require_once get_template_directory() . '/inc/post-import-actions.php';
 update_option('my_theme_after_import_done', 'yes');
 
 
-function bistroly_register_block_styles() {
+function polishe_register_block_styles() {
     // Add custom styles to core paragraph block
     register_block_style('core/paragraph', array(
         'name'  => 'custom-style',
-        'label' => __('Custom Style', 'bistroly'),
+        'label' => __('Custom Style', 'polishe'),
     ));
 }
-add_action('init', 'bistroly_register_block_styles');
+add_action('init', 'polishe_register_block_styles');
 
-function bistroly_register_block_patterns() {
+function polishe_register_block_patterns() {
     register_block_pattern(
-        'bistroly/custom-pattern',
+        'polishe/custom-pattern',
         array(
-            'title'   => __('Custom Pattern', 'bistroly'),
-            'content' => '<!-- wp:paragraph --><p>' . __('Hello World!', 'bistroly') . '</p><!-- /wp:paragraph -->',
+            'title'   => __('Custom Pattern', 'polishe'),
+            'content' => '<!-- wp:paragraph --><p>' . __('Hello World!', 'polishe') . '</p><!-- /wp:paragraph -->',
         )
     );
 }
-add_action('init', 'bistroly_register_block_patterns');
+add_action('init', 'polishe_register_block_patterns');
 
 add_theme_support('wp-block-styles');
 

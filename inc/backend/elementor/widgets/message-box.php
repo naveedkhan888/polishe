@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Message Box
  */
-class Bistroly_MessageBox extends Widget_Base{
+class Polishe_MessageBox extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_MessageBox extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Message Box', 'bistroly' );
+		return __( 'XP Message Box', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_MessageBox extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Message Box', 'bistroly' ),
+				'label' => __( 'Message Box', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_font',
 			[
-				'label' => __( 'Icon', 'bistroly' ),
+				'label' => __( 'Icon', 'polishe' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -52,9 +52,9 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Information Box', 'bistroly' ),
+				'default' => __( 'Information Box', 'polishe' ),
 				'label_block' => true,
 			]
 		);
@@ -64,7 +64,7 @@ class Bistroly_MessageBox extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'We help ambitious businesses like yours generate.', 'bistroly' ),
+				'default' => __( 'We help ambitious businesses like yours generate.', 'polishe' ),
 			]
 		);
 
@@ -74,7 +74,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->start_controls_section(
 			'style_box_section',
 			[
-				'label' => __( 'Box', 'bistroly' ),
+				'label' => __( 'Box', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -82,7 +82,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'box_bg',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -93,7 +93,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_responsive_control(
 			'box_radius',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -109,7 +109,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'bistroly' ),
+				'label' => __( 'Padding Box', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -131,7 +131,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->start_controls_section(
 			'style_icon_section',
 			[
-				'label' => __( 'Icon', 'bistroly' ),
+				'label' => __( 'Icon', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -139,7 +139,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'icon_bg',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -150,7 +150,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,7 +162,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_responsive_control(
 			'icon_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -181,7 +181,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'bistroly' ),
+				'label' => __( 'Content', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -190,7 +190,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -198,7 +198,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -214,7 +214,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -234,7 +234,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'bistroly' ),
+				'label' => __( 'Description', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -242,7 +242,7 @@ class Bistroly_MessageBox extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -279,5 +279,5 @@ class Bistroly_MessageBox extends Widget_Base{
 	}
 
 }
-// After the Bistroly_MessageBox class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_MessageBox() );
+// After the Polishe_MessageBox class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_MessageBox() );

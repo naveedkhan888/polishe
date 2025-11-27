@@ -12,7 +12,7 @@ class XP_Lists_Showcase extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'XP Lists Showcase', 'bistroly' );
+        return __( 'XP Lists Showcase', 'polishe' );
     }
 
     public function get_icon() {
@@ -20,7 +20,7 @@ class XP_Lists_Showcase extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_bistroly' ];
+        return [ 'category_polishe' ];
     }
 
     protected function register_controls() {
@@ -29,7 +29,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'bistroly' ),
+                'label' => __( 'Content', 'polishe' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -37,10 +37,10 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'show_top_border',
             [
-                'label' => __( 'Show Top Border', 'bistroly' ),
+                'label' => __( 'Show Top Border', 'polishe' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __( 'Show', 'bistroly' ),
-                'label_off' => __( 'Hide', 'bistroly' ),
+                'label_on' => __( 'Show', 'polishe' ),
+                'label_off' => __( 'Hide', 'polishe' ),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -49,10 +49,10 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'show_bottom_border',
             [
-                'label' => __( 'Show Bottom Border', 'bistroly' ),
+                'label' => __( 'Show Bottom Border', 'polishe' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __( 'Show', 'bistroly' ),
-                'label_off' => __( 'Hide', 'bistroly' ),
+                'label_on' => __( 'Show', 'polishe' ),
+                'label_off' => __( 'Hide', 'polishe' ),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -62,9 +62,9 @@ class XP_Lists_Showcase extends Widget_Base {
 
         $repeater->add_control(
             'title', [
-                'label' => __( 'Title', 'bistroly' ),
+                'label' => __( 'Title', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'List Title', 'bistroly' ),
+                'default' => __( 'List Title', 'polishe' ),
                 'label_block' => true,
             ]
         );
@@ -72,7 +72,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'title_tag',
             [
-                'label' => __( 'Title HTML Tag', 'bistroly' ),
+                'label' => __( 'Title HTML Tag', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -91,9 +91,9 @@ class XP_Lists_Showcase extends Widget_Base {
 
         $repeater->add_control(
             'subtitle', [
-                'label' => __( 'Subtitle', 'bistroly' ),
+                'label' => __( 'Subtitle', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'List Subtitle', 'bistroly' ),
+                'default' => __( 'List Subtitle', 'polishe' ),
                 'label_block' => true,
             ]
         );
@@ -101,7 +101,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'subtitle_tag',
             [
-                'label' => __( 'Subtitle HTML Tag', 'bistroly' ),
+                'label' => __( 'Subtitle HTML Tag', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'p' => 'p',
@@ -121,9 +121,9 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'link',
             [
-                'label' => __( 'Link', 'bistroly' ),
+                'label' => __( 'Link', 'polishe' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+                'placeholder' => __( 'https://your-link.com', 'polishe' ),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -136,7 +136,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'image_1',
             [
-                'label' => __( 'Image 1', 'bistroly' ),
+                'label' => __( 'Image 1', 'polishe' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -147,7 +147,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'image_2',
             [
-                'label' => __( 'Image 2', 'bistroly' ),
+                'label' => __( 'Image 2', 'polishe' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -158,7 +158,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $repeater->add_control(
             'image_3',
             [
-                'label' => __( 'Image 3', 'bistroly' ),
+                'label' => __( 'Image 3', 'polishe' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -169,20 +169,20 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'list_items',
             [
-                'label' => __( 'List Items', 'bistroly' ),
+                'label' => __( 'List Items', 'polishe' ),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'title' => __( 'Menu', 'bistroly' ),
+                        'title' => __( 'Menu', 'polishe' ),
                         'title_tag' => 'h3',
-                        'subtitle' => __( 'Main Courses', 'bistroly' ),
+                        'subtitle' => __( 'Main Courses', 'polishe' ),
                         'subtitle_tag' => 'p',
                     ],
                     [
-                        'title' => __( 'Cocktails', 'bistroly' ),
+                        'title' => __( 'Cocktails', 'polishe' ),
                         'title_tag' => 'h3',
-                        'subtitle' => __( 'Mixed Drinks', 'bistroly' ),
+                        'subtitle' => __( 'Mixed Drinks', 'polishe' ),
                         'subtitle_tag' => 'p',
                     ],
                 ],
@@ -196,7 +196,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'Style', 'bistroly' ),
+                'label' => __( 'Style', 'polishe' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -205,7 +205,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'heading_title_style',
             [
-                'label' => __( 'Title', 'bistroly' ),
+                'label' => __( 'Title', 'polishe' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -214,7 +214,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -226,7 +226,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'title_active_color',
             [
-                'label' => __( 'Active Color', 'bistroly' ),
+                'label' => __( 'Active Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -239,7 +239,7 @@ class XP_Lists_Showcase extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'label' => __( 'Typography', 'bistroly' ),
+                'label' => __( 'Typography', 'polishe' ),
                 'selector' => '{{WRAPPER}} .xptheme-e-title',
             ]
         );
@@ -248,7 +248,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'heading_subtitle_style',
             [
-                'label' => __( 'Subtitle', 'bistroly' ),
+                'label' => __( 'Subtitle', 'polishe' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -257,7 +257,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'subtitle_color',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -269,7 +269,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'subtitle_active_color',
             [
-                'label' => __( 'Active Color', 'bistroly' ),
+                'label' => __( 'Active Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -282,7 +282,7 @@ class XP_Lists_Showcase extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'subtitle_typography',
-                'label' => __( 'Typography', 'bistroly' ),
+                'label' => __( 'Typography', 'polishe' ),
                 'selector' => '{{WRAPPER}} .xptheme-e-subtitle',
             ]
         );
@@ -291,7 +291,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'heading_border_style',
             [
-                'label' => __( 'Border', 'bistroly' ),
+                'label' => __( 'Border', 'polishe' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -300,7 +300,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'border_color',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => 'rgba(255, 255, 255, 0.3)',
                 'selectors' => [
@@ -313,7 +313,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'border_width',
             [
-                'label' => __( 'Width', 'bistroly' ),
+                'label' => __( 'Width', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px' ],
                 'range' => [
@@ -338,7 +338,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_control(
             'heading_padding',
             [
-                'label' => __( 'Padding', 'bistroly' ),
+                'label' => __( 'Padding', 'polishe' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -347,7 +347,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'item_padding',
             [
-                'label' => __( 'Item Padding', 'bistroly' ),
+                'label' => __( 'Item Padding', 'polishe' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
@@ -362,7 +362,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->start_controls_section(
             'image_1_style_section',
             [
-                'label' => __( 'Image 1 Style', 'bistroly' ),
+                'label' => __( 'Image 1 Style', 'polishe' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -370,7 +370,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_1_width',
             [
-                'label' => __( 'Width', 'bistroly' ),
+                'label' => __( 'Width', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -393,7 +393,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_1_border_radius',
             [
-                'label' => __( 'Border Radius', 'bistroly' ),
+                'label' => __( 'Border Radius', 'polishe' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
@@ -408,7 +408,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->start_controls_section(
             'image_2_style_section',
             [
-                'label' => __( 'Image 2 Style', 'bistroly' ),
+                'label' => __( 'Image 2 Style', 'polishe' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -416,7 +416,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_2_width',
             [
-                'label' => __( 'Width', 'bistroly' ),
+                'label' => __( 'Width', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -439,7 +439,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_2_border_radius',
             [
-                'label' => __( 'Border Radius', 'bistroly' ),
+                'label' => __( 'Border Radius', 'polishe' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [
@@ -454,7 +454,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->start_controls_section(
             'image_3_style_section',
             [
-                'label' => __( 'Image 3 Style', 'bistroly' ),
+                'label' => __( 'Image 3 Style', 'polishe' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -462,7 +462,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_3_width',
             [
-                'label' => __( 'Width', 'bistroly' ),
+                'label' => __( 'Width', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -485,7 +485,7 @@ class XP_Lists_Showcase extends Widget_Base {
         $this->add_responsive_control(
             'image_3_border_radius',
             [
-                'label' => __( 'Border Radius', 'bistroly' ),
+                'label' => __( 'Border Radius', 'polishe' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors' => [

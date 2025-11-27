@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Bistroly_Logo extends Widget_Base {
+class Polishe_Logo extends Widget_Base {
 
 	public function get_name() {
 		return 'ilogo';
 	}
 
 	public function get_title() {
-		return __( 'XP Logo', 'bistroly' );
+		return __( 'XP Logo', 'polishe' );
 	}
 
 	public function get_icon() {
@@ -18,7 +18,7 @@ class Bistroly_Logo extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'category_bistroly_header' ];
+		return [ 'category_polishe_header' ];
 	}
 
 	protected function register_controls() {
@@ -26,26 +26,26 @@ class Bistroly_Logo extends Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Logo', 'bistroly' ),
+				'label' => __( 'Logo', 'polishe' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -58,19 +58,19 @@ class Bistroly_Logo extends Widget_Base {
 		$this->add_control(
 			'logo_image',
 			[
-				'label' => esc_html__( 'Image', 'bistroly' ),
+				'label' => esc_html__( 'Image', 'polishe' ),
 				'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => '',
 				],
-				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'bistroly' ),
+				'description' => esc_html__( 'Upload a custom logo. If empty, site logo from Customizer will be used.', 'polishe' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'logo_width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -87,7 +87,7 @@ class Bistroly_Logo extends Widget_Base {
 		$this->add_responsive_control(
 			'logo_height',
 			[
-				'label' => __( 'Height', 'bistroly' ),
+				'label' => __( 'Height', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -135,4 +135,4 @@ class Bistroly_Logo extends Widget_Base {
 	}
 }
 
-Plugin::instance()->widgets_manager->register( new Bistroly_Logo() );
+Plugin::instance()->widgets_manager->register( new Polishe_Logo() );

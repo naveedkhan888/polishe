@@ -5,14 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Widget Name: Button with Icon
  */
-class Bistroly_Button extends Widget_Base {
+class Polishe_Button extends Widget_Base {
 
     public function get_name() {
         return 'ibutton';
     }
 
     public function get_title() {
-        return __( 'XP Button', 'bistroly' );
+        return __( 'XP Button', 'polishe' );
     }
 
     public function get_icon() {
@@ -20,15 +20,15 @@ class Bistroly_Button extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_bistroly' ];
+        return [ 'category_polishe' ];
     }
 
     public static function get_button_color() {
         return [
-            'main'   => __( 'Main Color', 'bistroly' ),
-            'dark'   => __( 'Dark Color', 'bistroly' ),
-            'light'  => __( 'Light Color', 'bistroly' ),
-            'border' => __( 'Border Color', 'bistroly' ),
+            'main'   => __( 'Main Color', 'polishe' ),
+            'dark'   => __( 'Dark Color', 'polishe' ),
+            'light'  => __( 'Light Color', 'polishe' ),
+            'border' => __( 'Border Color', 'polishe' ),
         ];
     }
 
@@ -37,30 +37,30 @@ class Bistroly_Button extends Widget_Base {
         $this->start_controls_section(
             'button_section',
             [
-                'label' => __( 'Button', 'bistroly' ),
+                'label' => __( 'Button', 'polishe' ),
             ]
         );
 
         $this->add_responsive_control(
             'align',
             [
-                'label' => __( 'Alignment', 'bistroly' ),
+                'label' => __( 'Alignment', 'polishe' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __( 'Left', 'bistroly' ),
+                        'title' => __( 'Left', 'polishe' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'bistroly' ),
+                        'title' => __( 'Center', 'polishe' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'bistroly' ),
+                        'title' => __( 'Right', 'polishe' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                     'justify' => [
-                        'title' => __( 'Justify', 'bistroly' ),
+                        'title' => __( 'Justify', 'polishe' ),
                         'icon' => 'eicon-text-align-justify',
                     ],
                 ],
@@ -72,7 +72,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'btn_style',
             [
-                'label' => __( 'Style Color', 'bistroly' ),
+                'label' => __( 'Style Color', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'main',
                 'options' => self::get_button_color(),
@@ -83,9 +83,9 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'text',
             [
-                'label' => __( 'Label', 'bistroly' ),
+                'label' => __( 'Label', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Click here', 'bistroly' ),
+                'default' => __( 'Click here', 'polishe' ),
                 'dynamic' => [
                     'active' => true,
                 ],
@@ -96,7 +96,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'selected_icon',
             [
-                'label' => __( 'Icon', 'bistroly' ),
+                'label' => __( 'Icon', 'polishe' ),
                 'type' => Controls_Manager::ICONS,
                 'fa4compatibility' => 'icon',
                 'skin' => 'inline',
@@ -107,12 +107,12 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'icon_position',
             [
-                'label' => __( 'Icon Position', 'bistroly' ),
+                'label' => __( 'Icon Position', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'left',
                 'options' => [
-                    'left' => __( 'Before', 'bistroly' ),
-                    'right' => __( 'After', 'bistroly' ),
+                    'left' => __( 'Before', 'polishe' ),
+                    'right' => __( 'After', 'polishe' ),
                 ],
                 'condition' => [
                     'selected_icon[value]!' => '',
@@ -123,7 +123,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'icon_spacing',
             [
-                'label' => __( 'Icon Spacing', 'bistroly' ),
+                'label' => __( 'Icon Spacing', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -143,9 +143,9 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'link',
             [
-                'label' => __( 'Link', 'bistroly' ),
+                'label' => __( 'Link', 'polishe' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+                'placeholder' => __( 'https://your-link.com', 'polishe' ),
                 'default' => [
                     'url' => '#',
                 ],
@@ -161,7 +161,7 @@ class Bistroly_Button extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'General', 'bistroly' ),
+                'label' => __( 'General', 'polishe' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -181,7 +181,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'button_radius',
             [
-                'label' => __( 'Border Radius', 'bistroly' ),
+                'label' => __( 'Border Radius', 'polishe' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%' ],
                 'selectors' => [
@@ -202,7 +202,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'icon_size',
             [
-                'label' => __( 'Icon Size', 'bistroly' ),
+                'label' => __( 'Icon Size', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -226,14 +226,14 @@ class Bistroly_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_normal',
             [
-                'label' => __( 'Normal', 'bistroly' ),
+                'label' => __( 'Normal', 'polishe' ),
             ]
         );
 
         $this->add_control(
             'button_text_color',
             [
-                'label' => __( 'Text Color', 'bistroly' ),
+                'label' => __( 'Text Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -246,7 +246,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'btn_bg',
             [
-                'label' => __( 'Background Color', 'bistroly' ),
+                'label' => __( 'Background Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn' => 'background-color: {{VALUE}};',
@@ -267,14 +267,14 @@ class Bistroly_Button extends Widget_Base {
         $this->start_controls_tab(
             'tab_button_hover',
             [
-                'label' => __( 'Hover', 'bistroly' ),
+                'label' => __( 'Hover', 'polishe' ),
             ]
         );
 
         $this->add_control(
             'hover_color',
             [
-                'label' => __( 'Text Color', 'bistroly' ),
+                'label' => __( 'Text Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'color: {{VALUE}};',
@@ -286,7 +286,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'button_background_hover_color',
             [
-                'label' => __( 'Background Color', 'bistroly' ),
+                'label' => __( 'Background Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'background-color: {{VALUE}};',
@@ -297,7 +297,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'border_hover_color',
             [
-                'label' => __( 'Border Color', 'bistroly' ),
+                'label' => __( 'Border Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .xptf-btn:hover, {{WRAPPER}} .xptf-btn:focus' => 'border-color: {{VALUE}};',
@@ -308,7 +308,7 @@ class Bistroly_Button extends Widget_Base {
         $this->add_control(
             'hover_animation',
             [
-                'label' => __( 'Hover Animation', 'bistroly' ),
+                'label' => __( 'Hover Animation', 'polishe' ),
                 'type' => Controls_Manager::HOVER_ANIMATION,
             ]
         );
@@ -366,4 +366,4 @@ class Bistroly_Button extends Widget_Base {
     }
 }
 
-Plugin::instance()->widgets_manager->register( new Bistroly_Button() );
+Plugin::instance()->widgets_manager->register( new Polishe_Button() );

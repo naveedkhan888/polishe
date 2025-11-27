@@ -10,7 +10,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
     }
 
     public function get_title() {
-        return __( 'Food Price Menu', 'bistroly' );
+        return __( 'Food Price Menu', 'polishe' );
     }
 
     public function get_icon() {
@@ -26,7 +26,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'bistroly' ),
+                'label' => __( 'Content', 'polishe' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -36,9 +36,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title',
             [
-                'label' => __( 'Title', 'bistroly' ),
+                'label' => __( 'Title', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Menu Item' , 'bistroly' ),
+                'default' => __( 'Menu Item' , 'polishe' ),
                 'label_block' => true,
             ]
         );
@@ -46,19 +46,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'title_tag',
             [
-                'label' => __( 'Title HTML Tag', 'bistroly' ),
+                'label' => __( 'Title HTML Tag', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
-                    'h1' => __( 'H1', 'bistroly' ),
-                    'h2' => __( 'H2', 'bistroly' ),
-                    'h3' => __( 'H3', 'bistroly' ),
-                    'h4' => __( 'H4', 'bistroly' ),
-                    'h5' => __( 'H5', 'bistroly' ),
-                    'h6' => __( 'H6', 'bistroly' ),
-                    'p' => __( 'p', 'bistroly' ),
-                    'span' => __( 'span', 'bistroly' ),
-                    'div' => __( 'div', 'bistroly' ),
+                    'h1' => __( 'H1', 'polishe' ),
+                    'h2' => __( 'H2', 'polishe' ),
+                    'h3' => __( 'H3', 'polishe' ),
+                    'h4' => __( 'H4', 'polishe' ),
+                    'h5' => __( 'H5', 'polishe' ),
+                    'h6' => __( 'H6', 'polishe' ),
+                    'p' => __( 'p', 'polishe' ),
+                    'span' => __( 'span', 'polishe' ),
+                    'div' => __( 'div', 'polishe' ),
                 ],
             ]
         );
@@ -66,9 +66,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description',
             [
-                'label' => __( 'Description', 'bistroly' ),
+                'label' => __( 'Description', 'polishe' ),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => __( 'Menu Item Description' , 'bistroly' ),
+                'default' => __( 'Menu Item Description' , 'polishe' ),
                 'show_label' => true,
             ]
         );
@@ -76,19 +76,19 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'description_tag',
             [
-                'label' => __( 'Description HTML Tag', 'bistroly' ),
+                'label' => __( 'Description HTML Tag', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'p',
                 'options' => [
-                    'h1' => __( 'H1', 'bistroly' ),
-                    'h2' => __( 'H2', 'bistroly' ),
-                    'h3' => __( 'H3', 'bistroly' ),
-                    'h4' => __( 'H4', 'bistroly' ),
-                    'h5' => __( 'H5', 'bistroly' ),
-                    'h6' => __( 'H6', 'bistroly' ),
-                    'p' => __( 'p', 'bistroly' ),
-                    'span' => __( 'span', 'bistroly' ),
-                    'div' => __( 'div', 'bistroly' ),
+                    'h1' => __( 'H1', 'polishe' ),
+                    'h2' => __( 'H2', 'polishe' ),
+                    'h3' => __( 'H3', 'polishe' ),
+                    'h4' => __( 'H4', 'polishe' ),
+                    'h5' => __( 'H5', 'polishe' ),
+                    'h6' => __( 'H6', 'polishe' ),
+                    'p' => __( 'p', 'polishe' ),
+                    'span' => __( 'span', 'polishe' ),
+                    'div' => __( 'div', 'polishe' ),
                 ],
             ]
         );
@@ -96,9 +96,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'price',
             [
-                'label' => __( 'Price', 'bistroly' ),
+                'label' => __( 'Price', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( '$10' , 'bistroly' ),
+                'default' => __( '$10' , 'polishe' ),
                 'label_block' => true,
             ]
         );
@@ -106,9 +106,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'menu_label',
             [
-                'label' => __( 'Menu Label', 'bistroly' ),
+                'label' => __( 'Menu Label', 'polishe' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Special', 'bistroly' ),
+                'default' => __( 'Special', 'polishe' ),
                 'label_block' => true,
             ]
         );
@@ -116,7 +116,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'image',
             [
-                'label' => __( 'Image', 'bistroly' ),
+                'label' => __( 'Image', 'polishe' ),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -127,9 +127,9 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $repeater->add_control(
             'link',
             [
-                'label' => __( 'Link', 'bistroly' ),
+                'label' => __( 'Link', 'polishe' ),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+                'placeholder' => __( 'https://your-link.com', 'polishe' ),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -142,14 +142,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'list',
             [
-                'label' => __( 'List Items', 'bistroly' ),
+                'label' => __( 'List Items', 'polishe' ),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'title' => __( 'Menu Item #1', 'bistroly' ),
-                        'description' => __( 'Description for menu item #1', 'bistroly' ),
-                        'price' => __( '$10', 'bistroly' ),
+                        'title' => __( 'Menu Item #1', 'polishe' ),
+                        'description' => __( 'Description for menu item #1', 'polishe' ),
+                        'price' => __( '$10', 'polishe' ),
                     ],
                 ],
                 'title_field' => '{{{ title }}}',
@@ -162,7 +162,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => __( 'Style', 'bistroly' ),
+                'label' => __( 'Style', 'polishe' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -171,7 +171,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Title Color', 'bistroly' ),
+                'label' => __( 'Title Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .title' => 'color: {{VALUE}}',
@@ -183,7 +183,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'label' => __( 'Title Typography', 'bistroly' ),
+                'label' => __( 'Title Typography', 'polishe' ),
                 'selector' => '{{WRAPPER}} .title',
             ]
         );
@@ -192,7 +192,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'description_color',
             [
-                'label' => __( 'Description Color', 'bistroly' ),
+                'label' => __( 'Description Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .description' => 'color: {{VALUE}}',
@@ -204,7 +204,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'description_typography',
-                'label' => __( 'Description Typography', 'bistroly' ),
+                'label' => __( 'Description Typography', 'polishe' ),
                 'selector' => '{{WRAPPER}} .description',
             ]
         );
@@ -213,7 +213,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'price_color',
             [
-                'label' => __( 'Price Color', 'bistroly' ),
+                'label' => __( 'Price Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .price' => 'color: {{VALUE}}',
@@ -225,7 +225,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'menu_label_bg_color',
             [
-                'label' => __( 'Menu Label Background Color', 'bistroly' ),
+                'label' => __( 'Menu Label Background Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .menu-label' => 'background-color: {{VALUE}}',
@@ -237,7 +237,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'price_typography',
-                'label' => __( 'Price Typography', 'bistroly' ),
+                'label' => __( 'Price Typography', 'polishe' ),
                 'selector' => '{{WRAPPER}} .price',
             ]
         );
@@ -246,14 +246,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_style',
             [
-                'label' => __( 'Separator Style', 'bistroly' ),
+                'label' => __( 'Separator Style', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'bistroly' ),
-                    'dotted' => __( 'Dotted', 'bistroly' ),
-                    'dashed' => __( 'Dashed', 'bistroly' ),
-                    'double' => __( 'Double', 'bistroly' ),
-                    'none' => __( 'None', 'bistroly' ),
+                    'solid' => __( 'Solid', 'polishe' ),
+                    'dotted' => __( 'Dotted', 'polishe' ),
+                    'dashed' => __( 'Dashed', 'polishe' ),
+                    'double' => __( 'Double', 'polishe' ),
+                    'none' => __( 'None', 'polishe' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -265,7 +265,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_weight',
             [
-                'label' => __( 'Separator Weight', 'bistroly' ),
+                'label' => __( 'Separator Weight', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -282,7 +282,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'separator_color',
             [
-                'label' => __( 'Separator Color', 'bistroly' ),
+                'label' => __( 'Separator Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .separator' => 'border-bottom-color: {{VALUE}}',
@@ -294,14 +294,14 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_style',
             [
-                'label' => __( 'Item Separator Style', 'bistroly' ),
+                'label' => __( 'Item Separator Style', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __( 'Solid', 'bistroly' ),
-                    'dotted' => __( 'Dotted', 'bistroly' ),
-                    'dashed' => __( 'Dashed', 'bistroly' ),
-                    'double' => __( 'Double', 'bistroly' ),
-                    'none' => __( 'None', 'bistroly' ),
+                    'solid' => __( 'Solid', 'polishe' ),
+                    'dotted' => __( 'Dotted', 'polishe' ),
+                    'dashed' => __( 'Dashed', 'polishe' ),
+                    'double' => __( 'Double', 'polishe' ),
+                    'none' => __( 'None', 'polishe' ),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -313,7 +313,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_weight',
             [
-                'label' => __( 'Item Separator Weight', 'bistroly' ),
+                'label' => __( 'Item Separator Weight', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -330,7 +330,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_control(
             'item_separator_color',
             [
-                'label' => __( 'Item Separator Color', 'bistroly' ),
+                'label' => __( 'Item Separator Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .item-separator' => 'border-top-color: {{VALUE}}',
@@ -342,7 +342,7 @@ class Food_Price_Menu_Widget extends Widget_Base {
         $this->add_responsive_control(
             'item_spacing',
             [
-                'label' => __( 'Item Spacing', 'bistroly' ),
+                'label' => __( 'Item Spacing', 'polishe' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [

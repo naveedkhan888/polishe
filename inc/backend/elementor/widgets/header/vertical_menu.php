@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 
  */
 
-class Bistroly_Vertical_Menu extends Widget_Base{
+class Polishe_Vertical_Menu extends Widget_Base{
 
 
 
@@ -26,7 +26,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 	public function get_title() {
 
-		return __( 'XP Vertical Services Menu', 'bistroly' );
+		return __( 'XP Vertical Services Menu', 'polishe' );
 
 	}
 
@@ -42,7 +42,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 	public function get_categories() {
 
-		return [ 'category_bistroly_sidebar' ];
+		return [ 'category_polishe_sidebar' ];
 
 	}
 
@@ -58,7 +58,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Menu', 'bistroly' ),
+				'label' => __( 'Menu', 'polishe' ),
 
 			]
 
@@ -74,7 +74,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => esc_html__( 'Select Services Menu', 'bistroly' ),
+				'label' => esc_html__( 'Select Services Menu', 'polishe' ),
 
 				'type' => Controls_Manager::SELECT,
 
@@ -104,7 +104,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Vertical Menu Style', 'bistroly' ),
+				'label' => __( 'Vertical Menu Style', 'polishe' ),
 
 				'tab'   => Controls_Manager::TAB_STYLE,
 
@@ -122,7 +122,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -144,7 +144,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Hover Color', 'bistroly' ),
+				'label' => __( 'Background Hover Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -166,7 +166,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Background Flash Color', 'bistroly' ),
+				'label' => __( 'Background Flash Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -190,7 +190,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -214,7 +214,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Hover Text Color', 'bistroly' ),
+				'label' => __( 'Hover Text Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -238,7 +238,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Active Menu Item Color', 'bistroly' ),
+				'label' => __( 'Active Menu Item Color', 'polishe' ),
 
 				'type' => Controls_Manager::COLOR,
 
@@ -280,7 +280,7 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 			[
 
-				'label' => __( 'Item Padding', 'bistroly' ),
+				'label' => __( 'Item Padding', 'polishe' ),
 
 				'type' => Controls_Manager::DIMENSIONS,
 
@@ -366,4 +366,4 @@ class Bistroly_Vertical_Menu extends Widget_Base{
 
 // Register the new vertical menu widget with Elementor
 
-Plugin::instance()->widgets_manager->register( new Bistroly_Vertical_Menu() );
+Plugin::instance()->widgets_manager->register( new Polishe_Vertical_Menu() );

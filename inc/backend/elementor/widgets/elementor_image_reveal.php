@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Reveal
  */
-class Bistroly_Image_Reveal extends Widget_Base{
+class Polishe_Image_Reveal extends Widget_Base{
 
 	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Image Reveal', 'bistroly' );
+		return __( 'XP Image Reveal', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -32,14 +32,14 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Image', 'bistroly' ),
+				'label' => __( 'Image', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'image',
 			[
-				'label' => __( 'Choose Image', 'bistroly' ),
+				'label' => __( 'Choose Image', 'polishe' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -59,19 +59,19 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -84,13 +84,13 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'link_to',
 			[
-				'label' => __( 'Link', 'bistroly' ),
+				'label' => __( 'Link', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'none',
 				'options' => [
-					'none' => __( 'None', 'bistroly' ),
-					'file' => __( 'Media File', 'bistroly' ),
-					'custom' => __( 'Custom URL', 'bistroly' ),
+					'none' => __( 'None', 'polishe' ),
+					'file' => __( 'Media File', 'polishe' ),
+					'custom' => __( 'Custom URL', 'polishe' ),
 				],
 			]
 		);
@@ -98,12 +98,12 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'bistroly' ),
+				'label' => __( 'Link', 'polishe' ),
 				'type' => Controls_Manager::URL,
 				'dynamic' => [
 					'active' => true,
 				],
-				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+				'placeholder' => __( 'https://your-link.com', 'polishe' ),
 				'condition' => [
 					'link_to' => 'custom',
 				],
@@ -114,13 +114,13 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'open_lightbox',
 			[
-				'label' => __( 'Lightbox', 'bistroly' ),
+				'label' => __( 'Lightbox', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
-					'default' => __( 'Default', 'bistroly' ),
-					'yes' => __( 'Yes', 'bistroly' ),
-					'no' => __( 'No', 'bistroly' ),
+					'default' => __( 'Default', 'polishe' ),
+					'yes' => __( 'Yes', 'polishe' ),
+					'no' => __( 'No', 'polishe' ),
 				],
 				'condition' => [
 					'link_to' => 'file',
@@ -134,17 +134,17 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->start_controls_section(
 			'reveal_section',
 			[
-				'label' => __( 'Reveal Animation', 'bistroly' ),
+				'label' => __( 'Reveal Animation', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'reveal_enable',
 			[
-				'label' => __( 'Enable Reveal Effect', 'bistroly' ),
+				'label' => __( 'Enable Reveal Effect', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'bistroly' ),
-				'label_off' => __( 'No', 'bistroly' ),
+				'label_on' => __( 'Yes', 'polishe' ),
+				'label_off' => __( 'No', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -153,21 +153,21 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'reveal_direction',
 			[
-				'label' => __( 'Reveal Direction', 'bistroly' ),
+				'label' => __( 'Reveal Direction', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'lr',
 				'options' => [
-					'lr' => __( 'Left to Right', 'bistroly' ),
-					'rl' => __( 'Right to Left', 'bistroly' ),
-					'tb' => __( 'Top to Bottom', 'bistroly' ),
-					'bt' => __( 'Bottom to Top', 'bistroly' ),
-					'scale' => __( 'Scale Up', 'bistroly' ),
-					'blur' => __( 'Blur In', 'bistroly' ),
-					'clip' => __( 'Clip Path', 'bistroly' ),
-					'circle' => __( 'Circle Expand', 'bistroly' ),
-					'diagonal' => __( 'Diagonal', 'bistroly' ),
-					'rotate' => __( 'Rotate Scale', 'bistroly' ),
-					'flip' => __( '3D Flip', 'bistroly' ),
+					'lr' => __( 'Left to Right', 'polishe' ),
+					'rl' => __( 'Right to Left', 'polishe' ),
+					'tb' => __( 'Top to Bottom', 'polishe' ),
+					'bt' => __( 'Bottom to Top', 'polishe' ),
+					'scale' => __( 'Scale Up', 'polishe' ),
+					'blur' => __( 'Blur In', 'polishe' ),
+					'clip' => __( 'Clip Path', 'polishe' ),
+					'circle' => __( 'Circle Expand', 'polishe' ),
+					'diagonal' => __( 'Diagonal', 'polishe' ),
+					'rotate' => __( 'Rotate Scale', 'polishe' ),
+					'flip' => __( '3D Flip', 'polishe' ),
 				],
 				'condition' => [
 					'reveal_enable' => 'yes',
@@ -178,7 +178,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'reveal_duration',
 			[
-				'label' => __( 'Animation Duration', 'bistroly' ),
+				'label' => __( 'Animation Duration', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -199,7 +199,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'reveal_delay',
 			[
-				'label' => __( 'Animation Delay', 'bistroly' ),
+				'label' => __( 'Animation Delay', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -223,7 +223,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->start_controls_section(
 			'style_image_section',
 			[
-				'label' => __( 'Image Style', 'bistroly' ),
+				'label' => __( 'Image Style', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -231,7 +231,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'vw' ],
 				'range' => [
@@ -257,7 +257,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'max_width',
 			[
-				'label' => __( 'Max Width', 'bistroly' ),
+				'label' => __( 'Max Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'vw' ],
 				'range' => [
@@ -283,7 +283,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'height',
 			[
-				'label' => __( 'Height', 'bistroly' ),
+				'label' => __( 'Height', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', 'vh' ],
 				'range' => [
@@ -305,13 +305,13 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'object_fit',
 			[
-				'label' => __( 'Object Fit', 'bistroly' ),
+				'label' => __( 'Object Fit', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'bistroly' ),
-					'fill' => __( 'Fill', 'bistroly' ),
-					'cover' => __( 'Cover', 'bistroly' ),
-					'contain' => __( 'Contain', 'bistroly' ),
+					'' => __( 'Default', 'polishe' ),
+					'fill' => __( 'Fill', 'polishe' ),
+					'cover' => __( 'Cover', 'polishe' ),
+					'contain' => __( 'Contain', 'polishe' ),
 				],
 				'default' => '',
 				'condition' => [
@@ -335,14 +335,14 @@ class Bistroly_Image_Reveal extends Widget_Base{
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bistroly' ),
+				'label' => __( 'Normal', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity',
 			[
-				'label' => __( 'Opacity', 'bistroly' ),
+				'label' => __( 'Opacity', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -369,14 +369,14 @@ class Bistroly_Image_Reveal extends Widget_Base{
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bistroly' ),
+				'label' => __( 'Hover', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'opacity_hover',
 			[
-				'label' => __( 'Opacity', 'bistroly' ),
+				'label' => __( 'Opacity', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -402,7 +402,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'hover_animation',
 			[
-				'label' => __( 'Hover Animation', 'bistroly' ),
+				'label' => __( 'Hover Animation', 'polishe' ),
 				'type' => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -410,7 +410,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_control(
 			'background_hover_transition',
 			[
-				'label' => __( 'Transition Duration', 'bistroly' ),
+				'label' => __( 'Transition Duration', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -440,7 +440,7 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		$this->add_responsive_control(
 			'image_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -543,5 +543,5 @@ class Bistroly_Image_Reveal extends Widget_Base{
 		return [ 'image', 'photo', 'visual', 'reveal', 'animation' ];
 	}
 }
-// After the Bistroly_Image_Reveal class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Image_Reveal() );
+// After the Polishe_Image_Reveal class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Image_Reveal() );

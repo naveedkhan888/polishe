@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Projects Carousel
  */
-class Bistroly_Portfolio_Slider extends Widget_Base{
+class Polishe_Portfolio_Slider extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Portfolio Carousel', 'bistroly' );
+		return __( 'XP Portfolio Carousel', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -33,24 +33,24 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Projects', 'bistroly' ),
+				'label' => __( 'Projects', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'project_cat',
 			[
-				'label' => __( 'Select Categories', 'bistroly' ),
+				'label' => __( 'Select Categories', 'polishe' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->select_param_cate_project(),
 				'multiple' => true,
 				'label_block' => true,
-				'placeholder' => __( 'All Categories', 'bistroly' ),
+				'placeholder' => __( 'All Categories', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'project_num',
 			[
-				'label' => __( 'Show Number Projects', 'bistroly' ),
+				'label' => __( 'Show Number Projects', 'polishe' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => '5',
 			]
@@ -58,7 +58,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_slider',
 			[
-				'label' => __( 'Slider', 'bistroly' ),
+				'label' => __( 'Slider', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -70,10 +70,10 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'tshow',
 			[
-				'label' => __( 'Slides to Show', 'bistroly' ),
+				'label' => __( 'Slides to Show', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
-					'' => __( 'Default', 'bistroly' ),
+					'' => __( 'Default', 'polishe' ),
 				] + $slides_show,
 				'default' => ''
 			]
@@ -81,43 +81,43 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'center_mode',
 			[
-				'label' => __( 'Center Mode', 'bistroly' ),
+				'label' => __( 'Center Mode', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Loop', 'bistroly' ),
+				'label' => __( 'Loop', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'bistroly' ),
+				'label' => __( 'Autoplay', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true' => __( 'Yes', 'bistroly' ),
-					'false' => __( 'No', 'bistroly' ),
+					'true' => __( 'Yes', 'polishe' ),
+					'false' => __( 'No', 'polishe' ),
 				]
 			]
 		);
 		$this->add_control(
 			'timeout',
 			[
-				'label' => __( 'Autoplay Timeout', 'bistroly' ),
+				'label' => __( 'Autoplay Timeout', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -137,31 +137,31 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrows',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'false',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_control(
 			'dots',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'true',
 				'options' => [
-					'true'   => __( 'Yes', 'bistroly' ),
-					'false'  => __( 'No', 'bistroly' ),
+					'true'   => __( 'Yes', 'polishe' ),
+					'false'  => __( 'No', 'polishe' ),
 				],
 			]
 		);
 		$this->add_responsive_control(
 			'w_gaps',
 			[
-				'label' => __( 'Gap Width', 'bistroly' ),
+				'label' => __( 'Gap Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,14 +176,14 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'overlay_style_section',
 			[
-				'label' => __( 'Project Items', 'bistroly' ),
+				'label' => __( 'Project Items', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'heading_general',
 			[
-				'label' => __( 'General', 'bistroly' ),
+				'label' => __( 'General', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -191,19 +191,19 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'overlay_align',
 			[
-				'label' => __( 'Alignment Info', 'bistroly' ),
+				'label' => __( 'Alignment Info', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -226,7 +226,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_thumb',
 			[
-				'label' => __( 'Border Radius Image', 'bistroly' ),
+				'label' => __( 'Border Radius Image', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -237,10 +237,10 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'scale_thumb',
 			[
-				'label' => __( 'Animation Image Hover', 'bistroly' ),
+				'label' => __( 'Animation Image Hover', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Yes', 'bistroly' ),
-				'label_off' => __( 'No', 'bistroly' ),
+				'label_on' => __( 'Yes', 'polishe' ),
+				'label_off' => __( 'No', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -250,7 +250,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -258,7 +258,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -274,7 +274,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'bistroly' ),
+				'label' => __( 'Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -305,7 +305,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'heading_overlay',
 			[
-				'label' => __( 'Category', 'bistroly' ),
+				'label' => __( 'Category', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -313,10 +313,10 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'show_cat',
 			[
-				'label' => __( 'Show Category', 'bistroly' ),
+				'label' => __( 'Show Category', 'polishe' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bistroly' ),
-				'label_off' => __( 'Hide', 'bistroly' ),
+				'label_on' => __( 'Show', 'polishe' ),
+				'label_off' => __( 'Hide', 'polishe' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -324,7 +324,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'cat_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'navigation_section',
 			[
-				'label' => __( 'Dots', 'bistroly' ),
+				'label' => __( 'Dots', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'dots' => 'true',
@@ -363,7 +363,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_responsive_control(
 			'dots_spacing',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -380,7 +380,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
             'dots_bgcolor',
             [
-                'label' => __( 'Color', 'bistroly' ),
+                'label' => __( 'Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -391,7 +391,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __( 'Color Active', 'bistroly' ),
+                'label' => __( 'Color Active', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
 					'{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -405,7 +405,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->start_controls_section(
 			'style_nav',
 			[
-				'label' => __( 'Arrows', 'bistroly' ),
+				'label' => __( 'Arrows', 'polishe' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'arrows' => 'true',
@@ -415,7 +415,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -426,7 +426,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_hcolor',
 			[
-				'label' => __( 'Color Hover', 'bistroly' ),
+				'label' => __( 'Color Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -437,7 +437,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_color',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -448,7 +448,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'arrow_bg_hcolor',
 			[
-				'label' => __( 'Background Hover', 'bistroly' ),
+				'label' => __( 'Background Hover', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -459,7 +459,7 @@ class Bistroly_Portfolio_Slider extends Widget_Base{
 		$this->add_control(
 			'radius_arrow',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -549,5 +549,5 @@ data-mgaps="<?php echo esc_attr( $mgaps ); ?>">
 	  	return $cat;
 	}
 }
-// After the Bistroly_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Portfolio_Slider() );
+// After the Polishe_Portfolio_Slider class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Portfolio_Slider() );

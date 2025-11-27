@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Image Box
  */
-class Bistroly_Image_Box extends Widget_Base{
+class Polishe_Image_Box extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Image_Box extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Image Box', 'bistroly' );
+		return __( 'XP Image Box', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Image_Box extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -33,25 +33,25 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Image Box', 'bistroly' ),
+				'label' => __( 'Image Box', 'polishe' ),
 			]
 		);
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					]
 				],
@@ -63,7 +63,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 	       'image_box',
 	        [
-	           'label' => esc_html__( 'Image Box', 'bistroly' ),
+	           'label' => esc_html__( 'Image Box', 'polishe' ),
 	           'type'  => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -84,15 +84,15 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Marketing Research', 'bistroly' ),
+				'default' => __( 'Marketing Research', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'bistroly' ),
+				'label' => __( 'Title HTML Tag', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -114,16 +114,16 @@ class Bistroly_Image_Box extends Widget_Base{
 			[
 				'label' => 'Description',
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'bistroly' ),
+				'default' => __( 'Analysis of the market as a whole and its particular components (competitors, consumers, product, etc.)', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-				'label' => __( 'Link', 'bistroly' ),
+				'label' => __( 'Link', 'polishe' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => __( 'https://your-link.com', 'bistroly' ),
+				'placeholder' => __( 'https://your-link.com', 'polishe' ),
 				'default' => [
 					'url' => '#'
 				],
@@ -134,7 +134,7 @@ class Bistroly_Image_Box extends Widget_Base{
 			[
 				'label' => 'Label Button',
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Explore More', 'bistroly' ),
+				'default' => __( 'Explore More', 'polishe' ),
 				'label_block' => true,
 				'condition' => [
 					'link[url]!' => '',
@@ -149,7 +149,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Content', 'bistroly' ),
+				'label' => __( 'Content', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -158,14 +158,14 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'heading_gereral',
 			[
-				'label' => __( 'Gereral', 'bistroly' ),
+				'label' => __( 'Gereral', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_control(
 			'box_bg',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -176,7 +176,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding Box', 'bistroly' ),
+				'label' => __( 'Padding Box', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -187,7 +187,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'radius_box',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -207,7 +207,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -215,7 +215,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -231,7 +231,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -242,7 +242,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'title_hcolor',
 			[
-				'label' => __( 'Hover Color', 'bistroly' ),
+				'label' => __( 'Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -265,7 +265,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'heading_des',
 			[
-				'label' => __( 'Description', 'bistroly' ),
+				'label' => __( 'Description', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -273,7 +273,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'des_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -293,7 +293,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'heading_btn',
 			[
-				'label' => __( 'Button', 'bistroly' ),
+				'label' => __( 'Button', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 				'condition' => [
@@ -315,7 +315,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_normal',
 			[
-				'label' => __( 'Normal', 'bistroly' ),
+				'label' => __( 'Normal', 'polishe' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -324,7 +324,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -338,7 +338,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'btn_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'btn_bcolor',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -368,7 +368,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_btn_hover',
 			[
-				'label' => __( 'Hover', 'bistroly' ),
+				'label' => __( 'Hover', 'polishe' ),
 				'condition' => [
 					'label_link!' => '',
 				],
@@ -377,7 +377,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'hover_btn_bg_color',
 			[
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -391,7 +391,7 @@ class Bistroly_Image_Box extends Widget_Base{
 		$this->add_control(
 			'hover_btn_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -444,5 +444,5 @@ class Bistroly_Image_Box extends Widget_Base{
 		return [ 'service' ];
 	}
 }
-// After the Bistroly_Image_Box class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Image_Box() );
+// After the Polishe_Image_Box class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Image_Box() );

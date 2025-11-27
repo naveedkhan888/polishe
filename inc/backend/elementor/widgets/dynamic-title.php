@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Bistroly_Dynamic_Title extends Widget_Base {
+class Polishe_Dynamic_Title extends Widget_Base {
 
     public function get_name() {
-        return 'bistroly_dynamic_title';
+        return 'polishe_dynamic_title';
     }
 
     public function get_title() {
-        return __( 'Dynamic Title', 'bistroly' );
+        return __( 'Dynamic Title', 'polishe' );
     }
 
     public function get_icon() {
@@ -18,21 +18,21 @@ class Bistroly_Dynamic_Title extends Widget_Base {
     }
 
     public function get_categories() {
-        return [ 'category_bistroly' ];
+        return [ 'category_polishe' ];
     }
 
     protected function _register_controls() {
         $this->start_controls_section(
             'section_title',
             [
-                'label' => __( 'Title', 'bistroly' ),
+                'label' => __( 'Title', 'polishe' ),
             ]
         );
 
         $this->add_control(
             'html_tag',
             [
-                'label' => __( 'HTML Tag', 'bistroly' ),
+                'label' => __( 'HTML Tag', 'polishe' ),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -51,25 +51,25 @@ class Bistroly_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'alignment',
             [
-                'label' => __( 'Alignment', 'bistroly' ),
+                'label' => __( 'Alignment', 'polishe' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __( 'Left', 'bistroly' ),
+                        'title' => __( 'Left', 'polishe' ),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'bistroly' ),
+                        'title' => __( 'Center', 'polishe' ),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __( 'Right', 'bistroly' ),
+                        'title' => __( 'Right', 'polishe' ),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
                 'default' => 'center',
                 'selectors' => [
-                    '{{WRAPPER}} .bistroly-dynamic-title' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .polishe-dynamic-title' => 'text-align: {{VALUE}};',
                 ],
             ]
         );
@@ -77,10 +77,10 @@ class Bistroly_Dynamic_Title extends Widget_Base {
         $this->add_control(
             'color',
             [
-                'label' => __( 'Text Color', 'bistroly' ),
+                'label' => __( 'Text Color', 'polishe' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .bistroly-dynamic-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .polishe-dynamic-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -89,8 +89,8 @@ class Bistroly_Dynamic_Title extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'label' => __( 'Typography', 'bistroly' ),
-                'selector' => '{{WRAPPER}} .bistroly-dynamic-title',
+                'label' => __( 'Typography', 'polishe' ),
+                'selector' => '{{WRAPPER}} .polishe-dynamic-title',
             ]
         );
 
@@ -102,8 +102,8 @@ class Bistroly_Dynamic_Title extends Widget_Base {
         $tag = $settings['html_tag'];
         $title = get_the_title();
         
-        echo "<{$tag} class='bistroly-dynamic-title'>{$title}</{$tag}>";
+        echo "<{$tag} class='polishe-dynamic-title'>{$title}</{$tag}>";
     }
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new Bistroly_Dynamic_Title() );
+Plugin::instance()->widgets_manager->register_widget_type( new Polishe_Dynamic_Title() );

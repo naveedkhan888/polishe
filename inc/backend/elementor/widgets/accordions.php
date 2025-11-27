@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Accordions
  */
-class Bistroly_Accordions extends Widget_Base{
+class Polishe_Accordions extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Accordions extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Accordions', 'bistroly' );
+		return __( 'XP Accordions', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Accordions extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -33,7 +33,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Accordions', 'bistroly' ),
+				'label' => __( 'Accordions', 'polishe' ),
 			]
 		);
 
@@ -42,10 +42,10 @@ class Bistroly_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_title',
 			[
-				'label' => __( 'Title & Content', 'bistroly' ),
+				'label' => __( 'Title & Content', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Accordion Title', 'bistroly' ),
-				'placeholder' => __( 'Accordion Title', 'bistroly' ),
+				'default' => __( 'Accordion Title', 'polishe' ),
+				'placeholder' => __( 'Accordion Title', 'polishe' ),
 				'label_block' => true,
 			]
 		);
@@ -53,9 +53,9 @@ class Bistroly_Accordions extends Widget_Base{
 		$repeater->add_control(
 			'acc_content',
 			[
-				'label' => __( 'Content', 'bistroly' ),
-				'default' => __( 'Accordion Content', 'bistroly' ),
-				'placeholder' => __( 'Accordion Content', 'bistroly' ),
+				'label' => __( 'Content', 'polishe' ),
+				'default' => __( 'Accordion Content', 'polishe' ),
+				'placeholder' => __( 'Accordion Content', 'polishe' ),
 				'type' => Controls_Manager::WYSIWYG,
 				'show_label' => false,
 			]
@@ -64,17 +64,17 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'xp_accs',
 			[
-				'label' => __( 'Accordion Items', 'bistroly' ),
+				'label' => __( 'Accordion Items', 'polishe' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'acc_title' => __( 'Accordion #1', 'bistroly' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'bistroly' ),
+						'acc_title' => __( 'Accordion #1', 'polishe' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'polishe' ),
 					],
 					[
-						'acc_title' => __( 'Accordion #2', 'bistroly' ),
-						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'bistroly' ),
+						'acc_title' => __( 'Accordion #2', 'polishe' ),
+						'acc_content' => __( 'The basic philosophy of our studio is to create individual, aesthetically stunning solutions for our customers by lightning-fast development of projects employing unique styles.', 'polishe' ),
 					],
 				],
 				'title_field' => '{{{ acc_title }}}',
@@ -83,7 +83,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'default_active',
 			[
-				'label'   => esc_html__( 'Default Active', 'bistroly' ),
+				'label'   => esc_html__( 'Default Active', 'polishe' ),
 				'type'    => Controls_Manager::SWITCHER,
 				'default' => 'yes'
 			]
@@ -91,7 +91,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'item_active',
 			[
-				'label' => esc_html__( 'Item Active', 'bistroly' ),
+				'label' => esc_html__( 'Item Active', 'polishe' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 1,
 				'step' => 1,
@@ -109,14 +109,14 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_title',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -127,7 +127,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'bg_title_active',
 			[
-				'label' => __( 'Background Active', 'bistroly' ),
+				'label' => __( 'Background Active', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -138,7 +138,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_border',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -149,7 +149,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'title_color_active',
 			[
-				'label' => __( 'Color Active', 'bistroly' ),
+				'label' => __( 'Color Active', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -178,7 +178,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'title_padding',
 			[
-				'label' => __( 'Padding', 'bistroly' ),
+				'label' => __( 'Padding', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -192,14 +192,14 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->start_controls_section(
 			'style_content',
 			[
-				'label' => __( 'Content', 'bistroly' ),
+				'label' => __( 'Content', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'bg_content',
 			[
-				'label' => __( 'Background', 'bistroly' ),
+				'label' => __( 'Background', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -210,7 +210,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -228,7 +228,7 @@ class Bistroly_Accordions extends Widget_Base{
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'bistroly' ),
+				'label' => __( 'Padding', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -275,5 +275,5 @@ class Bistroly_Accordions extends Widget_Base{
 	}
 
 }
-// After the Bistroly_Accordions class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Accordions() );
+// After the Polishe_Accordions class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Accordions() );

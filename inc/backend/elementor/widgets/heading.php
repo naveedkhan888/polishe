@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Heading 
  */
-class Bistroly_Heading extends Widget_Base{
+class Polishe_Heading extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Heading extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Heading', 'bistroly' );
+		return __( 'XP Heading', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,14 +24,14 @@ class Bistroly_Heading extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	public static function get_subtitle_style() {
 		return [
-			'' 				=> __( 'Default', 'bistroly' ),
-			'is_highlight' 	=> __( 'Highlight', 'bistroly' ),
-			'is_line' 		=> __( 'Line', 'bistroly' ),
+			'' 				=> __( 'Default', 'polishe' ),
+			'is_highlight' 	=> __( 'Highlight', 'polishe' ),
+			'is_line' 		=> __( 'Line', 'polishe' ),
 		];
 	}
 
@@ -41,20 +41,20 @@ class Bistroly_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Content', 'bistroly' ),
+				'label' => __( 'Content', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'sub',
 			[
-				'label' => __( 'Subtitle', 'bistroly' ),
+				'label' => __( 'Subtitle', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'our services', 'bistroly' ),
-				'placeholder' => __( 'Enter your subtitle', 'bistroly' ),
+				'default' => __( 'our services', 'polishe' ),
+				'placeholder' => __( 'Enter your subtitle', 'polishe' ),
 				'label_block' => true,
 			]
 		);
@@ -62,20 +62,20 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
 				],
-				'default' => __( 'What we do', 'bistroly' ),
-				'placeholder' => __( 'Enter your title', 'bistroly' ),
+				'default' => __( 'What we do', 'polishe' ),
+				'placeholder' => __( 'Enter your title', 'polishe' ),
 				'label_block' => true,
 			]
 		);
 		$this->add_control(
 			'header_size',
 			[
-				'label' => __( 'Title HTML Tag', 'bistroly' ),
+				'label' => __( 'Title HTML Tag', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'h1' => 'H1',
@@ -94,23 +94,23 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'bistroly%s-align-',
+				// 'prefix_class' => 'polishe%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -124,7 +124,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->start_controls_section(
 			'style_section',
 			[
-				'label' => __( 'Heading', 'bistroly' ),
+				'label' => __( 'Heading', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -133,7 +133,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_stitle',
 			[
-				'label' => __( 'Subtitle', 'bistroly' ),
+				'label' => __( 'Subtitle', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -142,7 +142,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'subtitle_style',
 			[
-				'label' => __( 'Subtitle Style', 'bistroly' ),
+				'label' => __( 'Subtitle Style', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => self::get_subtitle_style(),
@@ -151,7 +151,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'line_width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -176,7 +176,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -188,7 +188,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_bg',
 			[
-				'label' => __( 'Background color', 'bistroly' ),
+				'label' => __( 'Background color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -202,7 +202,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'stitle_border',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -223,7 +223,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_responsive_control(
 			'stitle_bottom_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -241,7 +241,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'heading_title',
 			[
-				'label' => __( 'Title', 'bistroly' ),
+				'label' => __( 'Title', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -249,7 +249,7 @@ class Bistroly_Heading extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -288,4 +288,4 @@ class Bistroly_Heading extends Widget_Base{
 	}
 }
 // After the Schedule class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Heading() );
+Plugin::instance()->widgets_manager->register( new Polishe_Heading() );

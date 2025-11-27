@@ -183,7 +183,7 @@
 			cat 	= $(this).data('category'),
 			count   = grid.data('count');
 		$.ajax({
-			url : bistroly_loadmore_params.ajaxurl, // AJAX handler
+			url : polishe_loadmore_params.ajaxurl, // AJAX handler
 			data : {
 				'action': 'loadmore', // the parameter for admin-ajax.php
 				'ppp'	: more,
@@ -249,19 +249,19 @@
 	* switcher
 	* --------------------------------------------------*/
 	var swt = $('.xp-switcher').find('.switch input');
-	$('.bistroly_block_hidden').hide();
+	$('.polishe_block_hidden').hide();
 	swt.on( 'change', function() {
 		var parent = $(this).parents('.e-parent');
 		if(this.checked) {
 			parent.find('.r-switch').addClass('active');
 			parent.find('.l-switch').removeClass('active');
-			parent.find('.bistroly_block_show').hide();
-			parent.find('.bistroly_block_hidden').show();
+			parent.find('.polishe_block_show').hide();
+			parent.find('.polishe_block_hidden').show();
 		}else{
 			parent.find('.l-switch').addClass('active');
 			parent.find('.r-switch').removeClass('active');
-			parent.find('.bistroly_block_hidden').hide();
-			parent.find('.bistroly_block_show').show();
+			parent.find('.polishe_block_hidden').hide();
+			parent.find('.polishe_block_show').show();
 		}
 	});
 

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bistroly
+ * @package Polishe
  */
 
 ?>
@@ -31,4 +31,4 @@
 } ?>
 <!-- #site-content-open -->
 <div id="content" class="site-content">
-	<?php bistroly_page_header(); ?>
+	<?php polishe_page_header(); ?>

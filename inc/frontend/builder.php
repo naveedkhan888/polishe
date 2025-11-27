@@ -1,7 +1,7 @@
 <?php
 /** header desktop **/
-if ( ! function_exists( 'bistroly_header_builder' ) ) {
-    function bistroly_header_builder (){
+if ( ! function_exists( 'polishe_header_builder' ) ) {
+    function polishe_header_builder (){
         $header_builder = '';    
 
         if ( is_page() ) {
@@ -11,11 +11,11 @@ if ( ! function_exists( 'bistroly_header_builder' ) ) {
                 if ($metabox_fb != '') {
                     $header_builder = $metabox_fb;
                 }else{
-                    $header_builder = bistroly_get_option('header_layout');
+                    $header_builder = polishe_get_option('header_layout');
                 }
             } 
         }else{
-            $header_builder = bistroly_get_option('header_layout');
+            $header_builder = polishe_get_option('header_layout');
         }
 
         if( !$header_builder ) {
@@ -31,8 +31,8 @@ if ( ! function_exists( 'bistroly_header_builder' ) ) {
 }
 
 /** header mobile **/
-if ( ! function_exists( 'bistroly_mobile_builder' ) ) {
-    function bistroly_mobile_builder (){
+if ( ! function_exists( 'polishe_mobile_builder' ) ) {
+    function polishe_mobile_builder (){
         
         if ( is_page() ) {
             if ( function_exists('rwmb_meta') ) {
@@ -41,11 +41,11 @@ if ( ! function_exists( 'bistroly_mobile_builder' ) ) {
                 if ($metabox_hmb != '') {
                     $mobile_builder = $metabox_hmb;
                 }else{
-                    $mobile_builder = bistroly_get_option('header_mobile');
+                    $mobile_builder = polishe_get_option('header_mobile');
                 }
             } 
         }else{
-            $mobile_builder = bistroly_get_option('header_mobile');
+            $mobile_builder = polishe_get_option('header_mobile');
         }
 
         if( !$mobile_builder ) {
@@ -61,10 +61,10 @@ if ( ! function_exists( 'bistroly_mobile_builder' ) ) {
 }
 
 /** side panel **/
-if ( ! function_exists( 'bistroly_sidepanel_builder' ) ) {
-    function bistroly_sidepanel_builder (){
+if ( ! function_exists( 'polishe_sidepanel_builder' ) ) {
+    function polishe_sidepanel_builder (){
 
-        $panel_builder = bistroly_get_option('sidepanel_layout');
+        $panel_builder = polishe_get_option('sidepanel_layout');
 
         if( !$panel_builder ) {
             return;
@@ -77,10 +77,10 @@ if ( ! function_exists( 'bistroly_sidepanel_builder' ) ) {
 }
 
 /** 404 template **/
-if ( ! function_exists( 'bistroly_404_builder' ) ) {
-    function bistroly_404_builder (){
+if ( ! function_exists( 'polishe_404_builder' ) ) {
+    function polishe_404_builder (){
 
-        $error_builder = bistroly_get_option('page_404');
+        $error_builder = polishe_get_option('page_404');
 
         if( !$error_builder ) { ?>
             <div class="error-404 not-found text-center">
@@ -88,12 +88,12 @@ if ( ! function_exists( 'bistroly_404_builder' ) ) {
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
                         <img class="error-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo-white.svg" alt="404">
                     </a>
-                    <h1><?php wp_kses( _e( '404', 'bistroly' ), wp_kses_allowed_html('post')  ); ?></h1>
-                    <h2><?php esc_html_e( 'Sorry! Page Not Found!', 'bistroly' ); ?></h2>
+                    <h1><?php wp_kses( _e( '404', 'polishe' ), wp_kses_allowed_html('post')  ); ?></h1>
+                    <h2><?php esc_html_e( 'Sorry! Page Not Found!', 'polishe' ); ?></h2>
                     <div class="page-content">
-                        <p><?php esc_html_e( 'Oops! The page you are looking for does not exist. Please return to the site’s homepage.', 'bistroly' ); ?></p>
+                        <p><?php esc_html_e( 'Oops! The page you are looking for does not exist. Please return to the site’s homepage.', 'polishe' ); ?></p>
                         <?php get_search_form(); ?>
-                        <a class="xptf-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'take me home', 'bistroly' ); ?></a>
+                        <a class="xptf-btn" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'take me home', 'polishe' ); ?></a>
                     </div>
                 </div>
             </div>
@@ -106,8 +106,8 @@ if ( ! function_exists( 'bistroly_404_builder' ) ) {
 }
 
 /** footer **/
-if ( ! function_exists( 'bistroly_footer_builder' ) ) {
-    function bistroly_footer_builder (){
+if ( ! function_exists( 'polishe_footer_builder' ) ) {
+    function polishe_footer_builder (){
         $footer_builder = '';    
 
         if ( is_page() ) {
@@ -117,11 +117,11 @@ if ( ! function_exists( 'bistroly_footer_builder' ) ) {
                 if ($metabox_fb != '') {
                     $footer_builder = $metabox_fb;
                 }else{
-                    $footer_builder = bistroly_get_option('footer_layout');
+                    $footer_builder = polishe_get_option('footer_layout');
                 }
             } 
         }else{
-            $footer_builder = bistroly_get_option('footer_layout');
+            $footer_builder = polishe_get_option('footer_layout');
         }
 
         if( !$footer_builder ) {

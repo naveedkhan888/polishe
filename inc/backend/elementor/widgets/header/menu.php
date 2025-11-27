@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Menu
  */
-class Bistroly_Menu extends Widget_Base{
+class Polishe_Menu extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_Menu extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP Nav Menu', 'bistroly' );
+		return __( 'XP Nav Menu', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_Menu extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly_header' ];
+		return [ 'category_polishe_header' ];
 	}
 
 	protected function register_controls() {
@@ -32,7 +32,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'Menu', 'bistroly' ),
+				'label' => __( 'Menu', 'polishe' ),
 			]
 		);
 
@@ -40,7 +40,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'nav_menu',
 			[
-				'label' => esc_html__( 'Select Menu', 'bistroly' ),
+				'label' => esc_html__( 'Select Menu', 'polishe' ),
 				'type' => Controls_Manager::SELECT,
 				'multiple' => false,
 				'options' => $menus,
@@ -52,19 +52,19 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -81,14 +81,14 @@ class Bistroly_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_menu_section',
 			[
-				'label' => __( 'Menu Parents', 'bistroly' ),
+				'label' => __( 'Menu Parents', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'space_item',
 			[
-				'label' => __( 'Spacing Items', 'bistroly' ),
+				'label' => __( 'Spacing Items', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -106,7 +106,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'text_color',
 			[
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -117,7 +117,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'arrow_color',
 			[
-				'label' => __( 'Arrow Color', 'bistroly' ),
+				'label' => __( 'Arrow Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -128,7 +128,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'text_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'bistroly' ),
+				'label' => __( 'Text Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -162,14 +162,14 @@ class Bistroly_Menu extends Widget_Base{
 		$this->start_controls_section(
 			'style_smenu_section',
 			[
-				'label' => __( 'Dropdown Menus', 'bistroly' ),
+				'label' => __( 'Dropdown Menus', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'smenu_width',
 			[
-				'label' => __( 'Width', 'bistroly' ),
+				'label' => __( 'Width', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -185,7 +185,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'smenu_radius',
 			[
-				'label' => __( 'Border Radius', 'bistroly' ),
+				'label' => __( 'Border Radius', 'polishe' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -205,7 +205,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_color',
 			[
-				'label' => __( 'Background Color', 'bistroly' ),
+				'label' => __( 'Background Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -216,7 +216,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'item_title',
 			[
-				'label' => __( 'Menu Items', 'bistroly' ),
+				'label' => __( 'Menu Items', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -224,7 +224,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_color',
 			[
-				'label' => __( 'Text Color', 'bistroly' ),
+				'label' => __( 'Text Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -235,7 +235,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'text_s_hover_color',
 			[
-				'label' => __( 'Text Hover Color', 'bistroly' ),
+				'label' => __( 'Text Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -246,7 +246,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'bg_s_hover_color',
 			[
-				'label' => __( 'Background Hover Color', 'bistroly' ),
+				'label' => __( 'Background Hover Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -257,7 +257,7 @@ class Bistroly_Menu extends Widget_Base{
 		$this->add_control(
 			'border_s_color',
 			[
-				'label' => __( 'Border Color', 'bistroly' ),
+				'label' => __( 'Border Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -311,5 +311,5 @@ class Bistroly_Menu extends Widget_Base{
 	}
 
 }
-// After the Bistroly_Menu class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_Menu() );
+// After the Polishe_Menu class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_Menu() );

@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( bistroly_get_shop_layout() === 'full-content' ) {
+if ( polishe_get_shop_layout() === 'full-content' ) {
 	return;
 }
 

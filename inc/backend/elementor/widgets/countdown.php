@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly (security measu
 /**
  * Widget Name: Contact Info
  */
-class Bistroly_CountDown extends Widget_Base{
+class Polishe_CountDown extends Widget_Base{
 
  	// The get_name() method is a simple one, you just need to return a widget name that will be used in the code.
 	public function get_name() {
@@ -14,7 +14,7 @@ class Bistroly_CountDown extends Widget_Base{
 
 	// The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
 	public function get_title() {
-		return __( 'XP CountDown', 'bistroly' );
+		return __( 'XP CountDown', 'polishe' );
 	}
 
 	// The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -24,7 +24,7 @@ class Bistroly_CountDown extends Widget_Base{
 
 	// The get_categories method, lets you set the category of the widget, return the category name as a string.
 	public function get_categories() {
-		return [ 'category_bistroly' ];
+		return [ 'category_polishe' ];
 	}
 
 	protected function register_controls() {
@@ -32,30 +32,30 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => __( 'CountDown', 'bistroly' ),
+				'label' => __( 'CountDown', 'polishe' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'align',
 			[
-				'label' => __( 'Alignment', 'bistroly' ),
+				'label' => __( 'Alignment', 'polishe' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bistroly' ),
+						'title' => __( 'Left', 'polishe' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bistroly' ),
+						'title' => __( 'Center', 'polishe' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bistroly' ),
+						'title' => __( 'Right', 'polishe' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				// 'prefix_class' => 'bistroly%s-align-',
+				// 'prefix_class' => 'polishe%s-align-',
 				'selectors' => [
 					'{{WRAPPER}}' => 'text-align: {{VALUE}};',
 				],
@@ -67,16 +67,16 @@ class Bistroly_CountDown extends Widget_Base{
 			[
 				'label' => 'Date - Time',
 				'type' => Controls_Manager::DATE_TIME,
-				'default' => __( '2025-10-26 12:00', 'bistroly' ),
+				'default' => __( '2025-10-26 12:00', 'polishe' ),
 			]
 		);
 
 		$this->add_control(
 			'zone',
 			[
-				'label' => __( 'UTC Timezone Offset', 'bistroly' ),
+				'label' => __( 'UTC Timezone Offset', 'polishe' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => __( '0', 'bistroly' ),
+				'default' => __( '0', 'polishe' ),
 			]
 		);
 
@@ -85,39 +85,39 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_normal',
 			[
-				'label' => __( 'One', 'bistroly' ),
+				'label' => __( 'One', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'day',
 			[
-				'label' => __( 'Day', 'bistroly' ),
+				'label' => __( 'Day', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Day', 'bistroly' ),
+				'default' => __( 'Day', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'hour',
 			[
-				'label' => __( 'Hour', 'bistroly' ),
+				'label' => __( 'Hour', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hour', 'bistroly' ),
+				'default' => __( 'Hour', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'min',
 			[
-				'label' => __( 'Minute', 'bistroly' ),
+				'label' => __( 'Minute', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minute', 'bistroly' ),
+				'default' => __( 'Minute', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'second',
 			[
-				'label' => __( 'Second', 'bistroly' ),
+				'label' => __( 'Second', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Second', 'bistroly' ),
+				'default' => __( 'Second', 'polishe' ),
 			]
 		);
 
@@ -126,39 +126,39 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->start_controls_tab(
 			'tab_title_active',
 			[
-				'label' => __( 'Multi', 'bistroly' ),
+				'label' => __( 'Multi', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'days',
 			[
-				'label' => __( 'Days', 'bistroly' ),
+				'label' => __( 'Days', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Days', 'bistroly' ),
+				'default' => __( 'Days', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'hours',
 			[
-				'label' => __( 'Hours', 'bistroly' ),
+				'label' => __( 'Hours', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Hours', 'bistroly' ),
+				'default' => __( 'Hours', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'mins',
 			[
-				'label' => __( 'Minutes', 'bistroly' ),
+				'label' => __( 'Minutes', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Minutes', 'bistroly' ),
+				'default' => __( 'Minutes', 'polishe' ),
 			]
 		);
 		$this->add_control(
 			'seconds',
 			[
-				'label' => __( 'Seconds', 'bistroly' ),
+				'label' => __( 'Seconds', 'polishe' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Seconds', 'bistroly' ),
+				'default' => __( 'Seconds', 'polishe' ),
 			]
 		);
 
@@ -171,7 +171,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->start_controls_section(
 			'style_content_section',
 			[
-				'label' => __( 'Style', 'bistroly' ),
+				'label' => __( 'Style', 'polishe' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -180,7 +180,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_number',
 			[
-				'label' => __( 'Number', 'bistroly' ),
+				'label' => __( 'Number', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -188,7 +188,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'number_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_responsive_control(
 			'number_space',
 			[
-				'label' => __( 'Spacing', 'bistroly' ),
+				'label' => __( 'Spacing', 'polishe' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -224,7 +224,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_titles',
 			[
-				'label' => __( 'Texts', 'bistroly' ),
+				'label' => __( 'Texts', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -233,7 +233,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -253,7 +253,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'heading_sepe',
 			[
-				'label' => __( 'Seperator', 'bistroly' ),
+				'label' => __( 'Seperator', 'polishe' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -261,7 +261,7 @@ class Bistroly_CountDown extends Widget_Base{
 		$this->add_control(
 			'sepe_color',
 			[
-				'label' => __( 'Color', 'bistroly' ),
+				'label' => __( 'Color', 'polishe' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -295,5 +295,5 @@ class Bistroly_CountDown extends Widget_Base{
 	}
 
 }
-// After the Bistroly_CountDown class is defined, I must register the new widget class with Elementor:
-Plugin::instance()->widgets_manager->register( new Bistroly_CountDown() );
+// After the Polishe_CountDown class is defined, I must register the new widget class with Elementor:
+Plugin::instance()->widgets_manager->register( new Polishe_CountDown() );

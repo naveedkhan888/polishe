@@ -1,7 +1,7 @@
 <?php
 // Breadcrumbs
-if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
-    function bistroly_get_breadcrumbs ( 
+if ( ! function_exists( 'polishe_get_breadcrumbs' ) ) {
+    function polishe_get_breadcrumbs ( 
         $list_style = 'ul', 
         $list_id = 'breadcrumbs', 
         $list_class = 'breadcrumbs none-style',
@@ -11,9 +11,9 @@ if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
         $breadcrumb = '<' . $list_style . ' id="' . $list_id . '" class="' . $list_class . '">';
         // Front page
         if ( is_front_page() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'bistroly') . '</li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__('Home', 'polishe') . '</li>'; //get_bloginfo( 'name' )
         } else {
-            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'bistroly') . '</a></li>'; //get_bloginfo( 'name' )
+            $breadcrumb .= '<li><a href="' . home_url() . '">' . esc_html__('Home', 'polishe') . '</a></li>'; //get_bloginfo( 'name' )
         }
         // Blog archive
         if ( 'page' == get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) {
@@ -82,11 +82,11 @@ if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
         }
         // Search
         if ( is_search() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'bistroly' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( 'Search', 'polishe' ) . '</li>';
         }
         // 404
         if ( is_404() ) {
-            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'bistroly' ) . '</li>';
+            $breadcrumb .= '<li class="' . $active_class . '">' . esc_html__( '404', 'polishe' ) . '</li>';
         }
         // Custom Post Type Archive
         if ( is_post_type_archive() ) {
@@ -110,8 +110,8 @@ if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
                 $cpt_obj = get_post_type_object( $post_type );
                 if ( ! $output && get_post_type_archive_link( $cpt_obj->name ) ) {
                     $archive_link = '';
-                    if ( 'xp_portfolio' == get_post_type() && bistroly_get_option('portfolio_archive') == 'archive_custom' ) {
-                        $archive_link = get_page_link( bistroly_get_option('archive_page_custom') );                                
+                    if ( 'xp_portfolio' == get_post_type() && polishe_get_option('portfolio_archive') == 'archive_custom' ) {
+                        $archive_link = get_page_link( polishe_get_option('archive_page_custom') );                                
                     } else {
                         $archive_link = get_post_type_archive_link( $cpt_obj->name );
                     }
@@ -131,8 +131,8 @@ if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
             if ( get_post_type_archive_link( $cpt_obj->name ) ) {
                 // Custom portfolio archive page link
                 $archive_link = '';
-                if ( 'xp_portfolio' == get_post_type() && bistroly_get_option('portfolio_archive') == 'archive_custom' ) {
-                    $archive_link = get_page_link( bistroly_get_option('archive_page_custom') );                                
+                if ( 'xp_portfolio' == get_post_type() && polishe_get_option('portfolio_archive') == 'archive_custom' ) {
+                    $archive_link = get_page_link( polishe_get_option('archive_page_custom') );                                
                 } else {
                     $archive_link = get_post_type_archive_link( $cpt_obj->name );
                 }
@@ -190,10 +190,10 @@ if ( ! function_exists( 'bistroly_get_breadcrumbs' ) ) {
     }
 }
 
-if ( ! function_exists( 'bistroly_breadcrumbs' ) ) {
-    function bistroly_breadcrumbs (){
+if ( ! function_exists( 'polishe_breadcrumbs' ) ) {
+    function polishe_breadcrumbs (){
 
-        if( bistroly_get_option('breadcrumbs') && !is_front_page() ){ echo bistroly_get_breadcrumbs(); } ?>
+        if( polishe_get_option('breadcrumbs') && !is_front_page() ){ echo polishe_get_breadcrumbs(); } ?>
     
         <?php
     }

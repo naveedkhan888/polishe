@@ -15,7 +15,7 @@ class Triple_Widget_Container extends Widget_Base
 
     public function get_title()
     {
-        return esc_html__('XP Service 1', 'bistroly');
+        return esc_html__('XP Service 1', 'polishe');
     }
 
     public function get_icon()
@@ -25,7 +25,7 @@ class Triple_Widget_Container extends Widget_Base
 
     public function get_categories()
     {
-        return ['category_bistroly'];
+        return ['category_polishe'];
     }
 
     public function get_keywords()
@@ -37,14 +37,14 @@ class Triple_Widget_Container extends Widget_Base
     {
         // Content Section
         $this->start_controls_section('widgets_content', [
-            'label' => esc_html__('Widgets', 'bistroly'),
+            'label' => esc_html__('Widgets', 'polishe'),
             'tab' => Controls_Manager::TAB_CONTENT,
         ]);
 
         $this->add_responsive_control(
             'columns',
             [
-                'label' => esc_html__('Columns', 'bistroly'),
+                'label' => esc_html__('Columns', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '3',
                 'tablet_default' => '2',
@@ -70,16 +70,16 @@ class Triple_Widget_Container extends Widget_Base
 
         // Content Tab
         $repeater->start_controls_tab('tab_content', [
-            'label' => esc_html__('Content', 'bistroly'),
+            'label' => esc_html__('Content', 'polishe'),
         ]);
 
         // Add URL Control
         $repeater->add_control(
             'widget_link',
             [
-                'label' => esc_html__('Link', 'bistroly'),
+                'label' => esc_html__('Link', 'polishe'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__('https://your-link.com', 'bistroly'),
+                'placeholder' => esc_html__('https://your-link.com', 'polishe'),
                 'show_external' => true,
                 'default' => [
                     'url' => '',
@@ -94,15 +94,15 @@ class Triple_Widget_Container extends Widget_Base
 
         // Content Controls
         $repeater->add_control('subtitle', [
-            'label' => esc_html__('Subtitle', 'bistroly'),
+            'label' => esc_html__('Subtitle', 'polishe'),
             'type' => Controls_Manager::TEXT,
-            'default' => esc_html__('Your Subtitle', 'bistroly'),
+            'default' => esc_html__('Your Subtitle', 'polishe'),
             'label_block' => true,
         ]);
 
         
         $repeater->add_control('icon', [
-            'label' => esc_html__('Icon', 'bistroly'),
+            'label' => esc_html__('Icon', 'polishe'),
             'type' => Controls_Manager::ICONS,
             'default' => [
                 'value' => 'fas fa-home',
@@ -112,14 +112,14 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $repeater->add_control('heading', [
-            'label' => esc_html__('Heading', 'bistroly'),
+            'label' => esc_html__('Heading', 'polishe'),
             'type' => Controls_Manager::TEXT,
-            'default' => esc_html__('Your Heading', 'bistroly'),
+            'default' => esc_html__('Your Heading', 'polishe'),
             'label_block' => true,
         ]);
 
         $repeater->add_control('heading_tag', [
-            'label' => esc_html__('Heading Tag', 'bistroly'),
+            'label' => esc_html__('Heading Tag', 'polishe'),
             'type' => Controls_Manager::SELECT,
             'default' => 'h2',
             'options' => [
@@ -133,15 +133,15 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $repeater->add_control('divider', [
-            'label' => esc_html__('Show Divider', 'bistroly'),
+            'label' => esc_html__('Show Divider', 'polishe'),
             'type' => Controls_Manager::SWITCHER,
             'default' => 'yes',
         ]);
 
         $repeater->add_control('paragraph', [
-            'label' => esc_html__('Paragraph', 'bistroly'),
+            'label' => esc_html__('Paragraph', 'polishe'),
             'type' => Controls_Manager::TEXTAREA,
-            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus ut perspic iatis unde omnis', 'bistroly'),
+            'default' => esc_html__('Sed ut perspiciatis unde omnis iste natus ut perspic iatis unde omnis', 'polishe'),
             'rows' => 5,
         ]);
 
@@ -149,12 +149,12 @@ class Triple_Widget_Container extends Widget_Base
 
         // Style Tab
         $repeater->start_controls_tab('tab_style', [
-            'label' => esc_html__('Style', 'bistroly'),
+            'label' => esc_html__('Style', 'polishe'),
         ]);
 
         // Background Style
         $repeater->add_control('background_color', [
-            'label' => esc_html__('Background Color', 'bistroly'),
+            'label' => esc_html__('Background Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} {{CURRENT_ITEM}}' => 'background-color: {{VALUE}};',
@@ -163,13 +163,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Subtitle Style
         $repeater->add_control('subtitle_heading', [
-            'label' => esc_html__('Subtitle', 'bistroly'),
+            'label' => esc_html__('Subtitle', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $repeater->add_control('subtitle_color', [
-            'label' => esc_html__('Color', 'bistroly'),
+            'label' => esc_html__('Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} {{CURRENT_ITEM}} .custom-widget__subtitle' => 'color: {{VALUE}};',
@@ -184,13 +184,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Icon Style
         $repeater->add_control('icon_heading', [
-            'label' => esc_html__('Icon', 'bistroly'),
+            'label' => esc_html__('Icon', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $repeater->add_control('icon_color', [
-            'label' => esc_html__('Color', 'bistroly'),
+            'label' => esc_html__('Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} {{CURRENT_ITEM}} .elementor-icon i' => 'color: {{VALUE}};',
@@ -199,7 +199,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $repeater->add_responsive_control('icon_size', [
-            'label' => esc_html__('Size', 'bistroly'),
+            'label' => esc_html__('Size', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -214,13 +214,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Heading Style
         $repeater->add_control('heading_style_heading', [
-            'label' => esc_html__('Heading', 'bistroly'),
+            'label' => esc_html__('Heading', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $repeater->add_control('heading_color', [
-            'label' => esc_html__('Color', 'bistroly'),
+            'label' => esc_html__('Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} {{CURRENT_ITEM}} .custom-heading' => 'color: {{VALUE}};',
@@ -235,7 +235,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Divider Style
         $repeater->add_control('divider_style_heading', [
-            'label' => esc_html__('Divider', 'bistroly'),
+            'label' => esc_html__('Divider', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
             'condition' => [
@@ -244,7 +244,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $repeater->add_control('divider_color', [
-            'label' => esc_html__('Color', 'bistroly'),
+            'label' => esc_html__('Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'condition' => [
                 'divider' => 'yes',
@@ -255,14 +255,14 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $repeater->add_control('divider_style', [
-            'label' => esc_html__('Style', 'bistroly'),
+            'label' => esc_html__('Style', 'polishe'),
             'type' => Controls_Manager::SELECT,
             'default' => 'solid',
             'options' => [
-                'solid' => esc_html__('Solid', 'bistroly'),
-                'dashed' => esc_html__('Dashed', 'bistroly'),
-                'dotted' => esc_html__('Dotted', 'bistroly'),
-                'double' => esc_html__('Double', 'bistroly'),
+                'solid' => esc_html__('Solid', 'polishe'),
+                'dashed' => esc_html__('Dashed', 'polishe'),
+                'dotted' => esc_html__('Dotted', 'polishe'),
+                'double' => esc_html__('Double', 'polishe'),
             ],
             'condition' => [
                 'divider' => 'yes',
@@ -274,13 +274,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Paragraph Style
         $repeater->add_control('paragraph_style_heading', [
-            'label' => esc_html__('Paragraph', 'bistroly'),
+            'label' => esc_html__('Paragraph', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $repeater->add_control('paragraph_color', [
-            'label' => esc_html__('Color', 'bistroly'),
+            'label' => esc_html__('Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} {{CURRENT_ITEM}} .custom-paragraph' => 'color: {{VALUE}};',
@@ -298,23 +298,23 @@ class Triple_Widget_Container extends Widget_Base
 
         // Add the repeater control
         $this->add_control('widgets', [
-            'label' => esc_html__('Widgets', 'bistroly'),
+            'label' => esc_html__('Widgets', 'polishe'),
             'type' => Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'default' => [
                 [
-                    'subtitle' => esc_html__('Your Subtitle', 'bistroly'),
-                    'heading' => esc_html__('Title 1', 'bistroly'),
+                    'subtitle' => esc_html__('Your Subtitle', 'polishe'),
+                    'heading' => esc_html__('Title 1', 'polishe'),
                     
                 ],
                 [
-                    'subtitle' => esc_html__('Your Subtitle', 'bistroly'),
-                    'heading' => esc_html__('Title 2', 'bistroly'),
+                    'subtitle' => esc_html__('Your Subtitle', 'polishe'),
+                    'heading' => esc_html__('Title 2', 'polishe'),
                     
                 ],
                 [
-                    'subtitle' => esc_html__('Your Subtitle', 'bistroly'),
-                    'heading' => esc_html__('Title 3', 'bistroly'),
+                    'subtitle' => esc_html__('Your Subtitle', 'polishe'),
+                    'heading' => esc_html__('Title 3', 'polishe'),
                     
                 ],
             ],
@@ -325,7 +325,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Container Style Section
         $this->start_controls_section('section_style_container', [
-            'label' => esc_html__('Container Style', 'bistroly'),
+            'label' => esc_html__('Container Style', 'polishe'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
@@ -333,7 +333,7 @@ class Triple_Widget_Container extends Widget_Base
         $this->add_responsive_control(
             'container_width',
             [
-                'label' => esc_html__('Container Width', 'bistroly'),
+                'label' => esc_html__('Container Width', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['%', 'px', 'vw'],
                 'range' => [
@@ -361,7 +361,7 @@ class Triple_Widget_Container extends Widget_Base
         );
 
         $this->add_responsive_control('items_gap', [
-            'label' => esc_html__('Items Gap', 'bistroly'),
+            'label' => esc_html__('Items Gap', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'default' => [
                 'size' => 20,
@@ -381,13 +381,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Widget Style Section
         $this->start_controls_section('section_style_global', [
-            'label' => esc_html__('Global Widget Style', 'bistroly'),
+            'label' => esc_html__('Global Widget Style', 'polishe'),
             'tab' => Controls_Manager::TAB_STYLE,
         ]);
 
         // Global Container Style
         $this->add_control('global_container_heading', [
-            'label' => esc_html__('Container', 'bistroly'),
+            'label' => esc_html__('Container', 'polishe'),
             'type' => Controls_Manager::HEADING,
         ]);
 
@@ -403,7 +403,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_border_radius', [
-            'label' => esc_html__('Border Radius', 'bistroly'),
+            'label' => esc_html__('Border Radius', 'polishe'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', '%'],
             'selectors' => [
@@ -417,7 +417,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_padding', [
-            'label' => esc_html__('Padding', 'bistroly'),
+            'label' => esc_html__('Padding', 'polishe'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -427,7 +427,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Subtitle Style
         $this->add_control('global_subtitle_heading', [
-            'label' => esc_html__('Subtitle', 'bistroly'),
+            'label' => esc_html__('Subtitle', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
@@ -438,7 +438,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_subtitle_spacing', [
-            'label' => esc_html__('Spacing', 'bistroly'),
+            'label' => esc_html__('Spacing', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -453,13 +453,13 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Icon Style 
         $this->add_control('global_icon_heading', [
-            'label' => esc_html__('Icon', 'bistroly'),
+            'label' => esc_html__('Icon', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $this->add_responsive_control('global_icon_size', [
-            'label' => esc_html__('Size', 'bistroly'),
+            'label' => esc_html__('Size', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -473,7 +473,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_icon_padding', [
-            'label' => esc_html__('Padding', 'bistroly'),
+            'label' => esc_html__('Padding', 'polishe'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', 'em', '%'],
             'selectors' => [
@@ -482,7 +482,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_control('global_icon_replace', [
-            'label' => esc_html__('Replace All Icons', 'bistroly'),
+            'label' => esc_html__('Replace All Icons', 'polishe'),
             'type' => Controls_Manager::ICONS,
             'default' => [
                 'value' => '',
@@ -494,7 +494,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_control('global_icon_color', [
-            'label' => esc_html__('Icon Color', 'bistroly'),
+            'label' => esc_html__('Icon Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'selectors' => [
                 '{{WRAPPER}} .elementor-icon i' => 'color: {{VALUE}};',
@@ -503,14 +503,14 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_control('global_icon_background_enable', [
-            'label' => esc_html__('Icon Background', 'bistroly'),
+            'label' => esc_html__('Icon Background', 'polishe'),
             'type' => Controls_Manager::SWITCHER,
             'default' => '',
             'prefix_class' => 'icon-background-',
         ]);
 
         $this->add_control('global_icon_background_color', [
-            'label' => esc_html__('Background Color', 'bistroly'),
+            'label' => esc_html__('Background Color', 'polishe'),
             'type' => Controls_Manager::COLOR,
             'condition' => [
                 'global_icon_background_enable' => 'yes',
@@ -521,7 +521,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_icon_border_radius', [
-            'label' => esc_html__('Border Radius', 'bistroly'),
+            'label' => esc_html__('Border Radius', 'polishe'),
             'type' => Controls_Manager::DIMENSIONS,
             'size_units' => ['px', '%'],
             'condition' => [
@@ -533,7 +533,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_icon_spacing', [
-            'label' => esc_html__('Icon Spacing', 'bistroly'),
+            'label' => esc_html__('Icon Spacing', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -548,7 +548,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Heading Style
         $this->add_control('global_heading_style_heading', [
-            'label' => esc_html__('Heading', 'bistroly'),
+            'label' => esc_html__('Heading', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
@@ -559,7 +559,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_heading_spacing', [
-            'label' => esc_html__('Spacing', 'bistroly'),
+            'label' => esc_html__('Spacing', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -574,20 +574,20 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Divider Style
         $this->add_control('global_divider_style_heading', [
-            'label' => esc_html__('Divider', 'bistroly'),
+            'label' => esc_html__('Divider', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
 
         $this->add_control('global_divider_style', [
-            'label' => esc_html__('Style', 'bistroly'),
+            'label' => esc_html__('Style', 'polishe'),
             'type' => Controls_Manager::SELECT,
             'default' => 'solid',
             'options' => [
-                'solid' => esc_html__('Solid', 'bistroly'),
-                'dashed' => esc_html__('Dashed', 'bistroly'),
-                'dotted' => esc_html__('Dotted', 'bistroly'),
-                'double' => esc_html__('Double', 'bistroly'),
+                'solid' => esc_html__('Solid', 'polishe'),
+                'dashed' => esc_html__('Dashed', 'polishe'),
+                'dotted' => esc_html__('Dotted', 'polishe'),
+                'double' => esc_html__('Double', 'polishe'),
             ],
             'selectors' => [
                 '{{WRAPPER}} .custom-divider' => 'border-top-style: {{VALUE}};',
@@ -595,7 +595,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_divider_width', [
-            'label' => esc_html__('Width', 'bistroly'),
+            'label' => esc_html__('Width', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'size_units' => ['px', '%'],
             'range' => [
@@ -614,7 +614,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_divider_thickness', [
-            'label' => esc_html__('Thickness', 'bistroly'),
+            'label' => esc_html__('Thickness', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -629,7 +629,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Global Paragraph Style
         $this->add_control('global_paragraph_style_heading', [
-            'label' => esc_html__('Paragraph', 'bistroly'),
+            'label' => esc_html__('Paragraph', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
@@ -640,7 +640,7 @@ class Triple_Widget_Container extends Widget_Base
         ]);
 
         $this->add_responsive_control('global_paragraph_spacing', [
-            'label' => esc_html__('Spacing', 'bistroly'),
+            'label' => esc_html__('Spacing', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [
@@ -655,7 +655,7 @@ class Triple_Widget_Container extends Widget_Base
 
         // Hover Effects
         $this->add_control('hover_effects_heading', [
-            'label' => esc_html__('Hover Effects', 'bistroly'),
+            'label' => esc_html__('Hover Effects', 'polishe'),
             'type' => Controls_Manager::HEADING,
             'separator' => 'before',
         ]);
@@ -663,11 +663,11 @@ class Triple_Widget_Container extends Widget_Base
         $this->start_controls_tabs('hover_effects_tabs');
 
         $this->start_controls_tab('hover_effects_normal', [
-            'label' => esc_html__('Normal', 'bistroly'),
+            'label' => esc_html__('Normal', 'polishe'),
         ]);
 
         $this->add_control('widget_transition', [
-            'label' => esc_html__('Transition Duration', 'bistroly'),
+            'label' => esc_html__('Transition Duration', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'default' => [
                 'size' => 0.3,
@@ -687,11 +687,11 @@ class Triple_Widget_Container extends Widget_Base
         $this->end_controls_tab();
 
         $this->start_controls_tab('hover_effects_hover', [
-            'label' => esc_html__('Hover', 'bistroly'),
+            'label' => esc_html__('Hover', 'polishe'),
         ]);
 
         $this->add_control('widget_scale', [
-            'label' => esc_html__('Scale', 'bistroly'),
+            'label' => esc_html__('Scale', 'polishe'),
             'type' => Controls_Manager::SLIDER,
             'range' => [
                 'px' => [

@@ -10,19 +10,19 @@
  *
  * @return array All registered meta boxes
  */
-function bistroly_register_meta_boxes( $meta_boxes ) {
+function polishe_register_meta_boxes( $meta_boxes ) {
 	
 	// Post format's meta box
 	$meta_boxes[] = array(
 		'id'       => 'format_detail',
-		'title'    => esc_html__( 'Format Details', 'bistroly' ),
+		'title'    => esc_html__( 'Format Details', 'polishe' ),
 		'pages'    => array( 'post' ),
 		'context'  => 'normal',
 		'priority' => 'high',
 		'autosave' => true,
 		'fields'   => array(
 			array(
-				'name'             => esc_html__( 'Image', 'bistroly' ),
+				'name'             => esc_html__( 'Image', 'polishe' ),
 				'id'               => 'post_image',
 				'type'             => 'image_advanced',
 				'class'            => 'image',
@@ -31,7 +31,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),
 			array(
-				'name'  => esc_html__( 'Gallery', 'bistroly' ),
+				'name'  => esc_html__( 'Gallery', 'polishe' ),
 				'id'    => 'post_gallery',
 				'type'  => 'image_advanced',
 				'class' => 'gallery',
@@ -39,7 +39,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
     			'image_size'       => 'thumbnail',
 			),			
 			array(
-				'name'  => esc_html__( 'Audio', 'bistroly' ),
+				'name'  => esc_html__( 'Audio', 'polishe' ),
 				'id'    => 'post_audio',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -48,7 +48,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139083759',
 			),
 			array(
-				'name'  => esc_html__( 'Video', 'bistroly' ),
+				'name'  => esc_html__( 'Video', 'polishe' ),
 				'id'    => 'post_video',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -57,14 +57,14 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 				'desc'  => 'Example: https://vimeo.com/87959439',
 			),
 			array(
-				'name'  => esc_html__( 'Background Video', 'bistroly' ),
+				'name'  => esc_html__( 'Background Video', 'polishe' ),
 				'id'    => 'bg_video',
 				'type'  => 'image_advanced',
 				'class' => 'video',
 				'max_file_uploads' => 1,
 			),
 			array(
-				'name'  => esc_html__( 'Link', 'bistroly' ),
+				'name'  => esc_html__( 'Link', 'polishe' ),
 				'id'    => 'post_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -72,7 +72,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Text Link', 'bistroly' ),
+				'name'  => esc_html__( 'Text Link', 'polishe' ),
 				'id'    => 'text_link',
 				'type'  => 'textarea',
 				'cols'  => 20,
@@ -80,13 +80,13 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 				'class' => 'link',
 			),
 			array(
-				'name'  => esc_html__( 'Quote', 'bistroly' ),
+				'name'  => esc_html__( 'Quote', 'polishe' ),
 				'id'    => 'post_quote',
 				'type'  => 'textarea',
 				'class' => 'quote',
 			),
 			array(
-				'name'  => esc_html__( 'Quote Name', 'bistroly' ),
+				'name'  => esc_html__( 'Quote Name', 'polishe' ),
 				'id'    => 'quote_name',
 				'type'  => 'text',
 				'class' => 'quote',
@@ -97,7 +97,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 	// Page Settings
 	$meta_boxes[] = array(
 		'id'       => 'page-settings',
-		'title'    => esc_html__( 'Page Header Settings', 'bistroly' ),
+		'title'    => esc_html__( 'Page Header Settings', 'polishe' ),
 		'pages'    => array( 'page' ),
 		'context'  => 'normal',
 		'priority' => 'high',
@@ -105,7 +105,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 		'fields'   => array(
             array(
                 'id'        => 'page_layout',
-                'name'      => esc_html__( 'Page Layout', 'bistroly' ),
+                'name'      => esc_html__( 'Page Layout', 'polishe' ),
                 'type'      => 'image_select',
                 'options'   => array(
                     'full-content'    => get_template_directory_uri() . '/inc/backend/images/full.png',
@@ -115,7 +115,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
                 'std'       => 'full-content'
             ),
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'bistroly' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'polishe' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -124,7 +124,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'bistroly' ),
+                'name'             => esc_html__( 'Background Page Header', 'polishe' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -155,7 +155,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 		    	),
 			),
 			array(
-                'name'             => esc_html__( 'Header Transparent?', 'bistroly' ),
+                'name'             => esc_html__( 'Header Transparent?', 'polishe' ),
                 'id'               => 'is_trans',
 				'type'             => 'select',
 				'options'   => array(
@@ -198,14 +198,14 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 
 	$meta_boxes[] = array(
         'id'       => 'ppheader-settings',
-        'title'    => esc_html__( 'Page Header Settings', 'bistroly' ),
+        'title'    => esc_html__( 'Page Header Settings', 'polishe' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Page Header On/Off', 'bistroly' ),
+                'name'             => esc_html__( 'Page Header On/Off', 'polishe' ),
                 'id'               => 'pheader_switch',
                 'type'             => 'switch',
                 'style'            => 'rounded',
@@ -214,7 +214,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
                 'std'              => 'on'
             ),
             array(
-                'name'             => esc_html__( 'Background Page Header', 'bistroly' ),
+                'name'             => esc_html__( 'Background Page Header', 'polishe' ),
                 'id'               => 'pheader_bg_image',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -223,14 +223,14 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 	);
 	$meta_boxes[] = array(
         'id'       => 'case-settings',
-        'title'    => esc_html__( 'Project Settings', 'bistroly' ),
+        'title'    => esc_html__( 'Project Settings', 'polishe' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
         'autosave' => true,
         'fields'   => array(
             array(
-                'name'             => esc_html__( 'Carousel Image', 'bistroly' ),
+                'name'             => esc_html__( 'Carousel Image', 'polishe' ),
                 'id'               => 'slide_img',
                 'type'             => 'image_advanced',
                 'max_file_uploads' => 1,
@@ -240,7 +240,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 
     $meta_boxes[] = array(
         'id'       => 'pthumb-settings',
-        'title'    => esc_html__( 'Thumbnail Image Settings', 'bistroly' ),
+        'title'    => esc_html__( 'Thumbnail Image Settings', 'polishe' ),
         'pages'    => array( 'xp_portfolio' ),
         'context'  => 'normal',
         'priority' => 'high',
@@ -248,7 +248,7 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
         'fields'   => array(
             array(
                 'id'        => 'thumb_size',
-                'name'      => esc_html__( 'Select Size', 'bistroly' ),
+                'name'      => esc_html__( 'Select Size', 'polishe' ),
                 'type'      => 'select',
                 'options'   => array(
                     'normal' 	=> 'Normal Width',
@@ -263,4 +263,4 @@ function bistroly_register_meta_boxes( $meta_boxes ) {
 	return $meta_boxes;
 }
 
-add_filter( 'rwmb_meta_boxes', 'bistroly_register_meta_boxes' );
+add_filter( 'rwmb_meta_boxes', 'polishe_register_meta_boxes' );

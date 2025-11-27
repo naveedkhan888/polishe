@@ -18,7 +18,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
     // The get_title() method, which again, is a very simple one, you need to return the widget title that will be displayed as the widget label.
     public function get_title()
     {
-        return __('XP Service Carousel', 'bistroly');
+        return __('XP Service Carousel', 'polishe');
     }
 
     // The get_icon() method, is an optional but recommended method, it lets you set the widget icon. you can use any of the eicon or font-awesome icons, simply return the class name as a string.
@@ -30,7 +30,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
     // The get_categories method, lets you set the category of the widget, return the category name as a string.
     public function get_categories()
     {
-        return ['category_bistroly'];
+        return ['category_polishe'];
     }
 
     protected function register_controls()
@@ -40,25 +40,25 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __('Image Box', 'bistroly'),
+                'label' => __('Image Box', 'polishe'),
             ]
         );
         $this->add_responsive_control(
             'align',
             [
-                'label' => __('Alignment', 'bistroly'),
+                'label' => __('Alignment', 'polishe'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left'    => [
-                        'title' => __('Left', 'bistroly'),
+                        'title' => __('Left', 'polishe'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bistroly'),
+                        'title' => __('Center', 'polishe'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'bistroly'),
+                        'title' => __('Right', 'polishe'),
                         'icon' => 'eicon-text-align-right',
                     ]
                 ],
@@ -71,7 +71,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'image_box',
             [
-                'label' => __('Image', 'bistroly'),
+                'label' => __('Image', 'polishe'),
                 'type' => Controls_Manager::MEDIA,
             ]
         );
@@ -79,7 +79,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'title_box',
             [
-                'label' => __('Title', 'bistroly'),
+                'label' => __('Title', 'polishe'),
                 'type' => Controls_Manager::TEXTAREA,
                 'default' => 'Service Title',
             ]
@@ -88,9 +88,9 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $repeater->add_control(
             'link_box',
             [
-                'label' => __('Link', 'bistroly'),
+                'label' => __('Link', 'polishe'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => __('https://your-link.com', 'bistroly'),
+                'placeholder' => __('https://your-link.com', 'polishe'),
                 'default' => [
                     'url' => '#'
                 ],
@@ -119,7 +119,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'header_size',
             [
-                'label' => __('Title HTML Tag', 'bistroly'),
+                'label' => __('Title HTML Tag', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -143,10 +143,10 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'tshow',
             [
-                'label' => __('Slides To Show', 'bistroly'),
+                'label' => __('Slides To Show', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    '' => __('Default', 'bistroly'),
+                    '' => __('Default', 'polishe'),
                 ] + $slides_show,
                 'default' => '',
                 'separator' => 'before',
@@ -155,31 +155,31 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'loop',
             [
-                'label' => __('Loop', 'bistroly'),
+                'label' => __('Loop', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'false',
                 'options' => [
-                    'true' => __('Yes', 'bistroly'),
-                    'false' => __('No', 'bistroly'),
+                    'true' => __('Yes', 'polishe'),
+                    'false' => __('No', 'polishe'),
                 ]
             ]
         );
         $this->add_control(
             'autoplay',
             [
-                'label' => __('Autoplay', 'bistroly'),
+                'label' => __('Autoplay', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'true',
                 'options' => [
-                    'true' => __('Yes', 'bistroly'),
-                    'false' => __('No', 'bistroly'),
+                    'true' => __('Yes', 'polishe'),
+                    'false' => __('No', 'polishe'),
                 ]
             ]
         );
         $this->add_control(
             'timeout',
             [
-                'label' => __('Autoplay Timeout', 'bistroly'),
+                'label' => __('Autoplay Timeout', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -199,31 +199,31 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrows',
             [
-                'label' => __('Arrows', 'bistroly'),
+                'label' => __('Arrows', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'false',
                 'options' => [
-                    'true'   => __('Yes', 'bistroly'),
-                    'false'  => __('No', 'bistroly'),
+                    'true'   => __('Yes', 'polishe'),
+                    'false'  => __('No', 'polishe'),
                 ],
             ]
         );
         $this->add_control(
             'dots',
             [
-                'label' => __('Dots', 'bistroly'),
+                'label' => __('Dots', 'polishe'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'true',
                 'options' => [
-                    'true'   => __('Yes', 'bistroly'),
-                    'false'  => __('No', 'bistroly'),
+                    'true'   => __('Yes', 'polishe'),
+                    'false'  => __('No', 'polishe'),
                 ],
             ]
         );
         $this->add_responsive_control(
             'w_gaps',
             [
-                'label' => __('Gap Width', 'bistroly'),
+                'label' => __('Gap Width', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -241,7 +241,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'style_content_section',
             [
-                'label' => __('Content', 'bistroly'),
+                'label' => __('Content', 'polishe'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -251,7 +251,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_image_overlay',
             [
-                'label' => __('Image Overlay', 'bistroly'),
+                'label' => __('Image Overlay', 'polishe'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -262,7 +262,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
             Group_Control_Background::get_type(),
             [
                 'name' => 'overlay_background',
-                'label' => __('Overlay Color', 'bistroly'),
+                'label' => __('Overlay Color', 'polishe'),
                 'types' => ['gradient'],
                 'selector' => '{{WRAPPER}} .xpic-card .overlay',
                 'default' => 'gradient',
@@ -285,7 +285,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
             Group_Control_Background::get_type(),
             [
                 'name' => 'overlay_hover_background',
-                'label' => __('Overlay Hover Color', 'bistroly'),
+                'label' => __('Overlay Hover Color', 'polishe'),
                 'types' => ['gradient'],
                 'selector' => '{{WRAPPER}} .xpic-card:hover .overlay',
                 'default' => 'gradient',
@@ -306,7 +306,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'overlay_position',
             [
-                'label' => __('Overlay Position', 'bistroly'),
+                'label' => __('Overlay Position', 'polishe'),
                 'type' => Controls_Manager::HIDDEN,
                 'default' => '',
                 'selectors' => [
@@ -320,7 +320,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'overlay_transition',
             [
-                'label' => __('Overlay Transition', 'bistroly'),
+                'label' => __('Overlay Transition', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -344,14 +344,14 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_gereral',
             [
-                'label' => __('Gereral', 'bistroly'),
+                'label' => __('Gereral', 'polishe'),
                 'type' => Controls_Manager::HEADING,
             ]
         );
         $this->add_control(
             'box_bg',
             [
-                'label' => __('Background', 'bistroly'),
+                'label' => __('Background', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -362,7 +362,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'box_padding',
             [
-                'label' => __('Padding Box', 'bistroly'),
+                'label' => __('Padding Box', 'polishe'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -373,7 +373,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'radius_box',
             [
-                'label' => __('Border Radius', 'bistroly'),
+                'label' => __('Border Radius', 'polishe'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -393,7 +393,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_title',
             [
-                'label' => __('Title', 'bistroly'),
+                'label' => __('Title', 'polishe'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -401,7 +401,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'title_space',
             [
-                'label' => __('Spacing', 'bistroly'),
+                'label' => __('Spacing', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -417,7 +417,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'title_color',
             [
-                'label' => __('Color', 'bistroly'),
+                'label' => __('Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -429,7 +429,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'title_hcolor',
             [
-                'label' => __('Hover Color', 'bistroly'),
+                'label' => __('Hover Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -451,7 +451,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'heading_btn',
             [
-                'label' => __('Button', 'bistroly'),
+                'label' => __('Button', 'polishe'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -473,7 +473,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_tab(
             'tab_btn_normal',
             [
-                'label' => __('Normal', 'bistroly'),
+                'label' => __('Normal', 'polishe'),
                 'condition' => [
                     'label_link!' => '',
                 ],
@@ -483,7 +483,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_bg_color',
             [
-                'label' => __('Background Color', 'bistroly'),
+                'label' => __('Background Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -497,7 +497,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_color',
             [
-                'label' => __('Color', 'bistroly'),
+                'label' => __('Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -511,7 +511,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'btn_bcolor',
             [
-                'label' => __('Border Color', 'bistroly'),
+                'label' => __('Border Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -527,7 +527,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_tab(
             'tab_btn_hover',
             [
-                'label' => __('Hover', 'bistroly'),
+                'label' => __('Hover', 'polishe'),
                 'condition' => [
                     'label_link!' => '',
                 ],
@@ -536,7 +536,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'hover_btn_bg_color',
             [
-                'label' => __('Background Color', 'bistroly'),
+                'label' => __('Background Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -550,7 +550,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'hover_btn_color',
             [
-                'label' => __('Color', 'bistroly'),
+                'label' => __('Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -571,7 +571,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'navigation_section',
             [
-                'label' => __('Dots', 'bistroly'),
+                'label' => __('Dots', 'polishe'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'dots' => 'true',
@@ -582,7 +582,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'dots_spacing',
             [
-                'label' => __('Spacing', 'bistroly'),
+                'label' => __('Spacing', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -599,7 +599,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'dots_bgcolor',
             [
-                'label' => __('Color', 'bistroly'),
+                'label' => __('Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .owl-dots button.owl-dot span' => 'background: {{VALUE}};',
@@ -610,7 +610,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'dots_active_bgcolor',
             [
-                'label' => __('Color Active', 'bistroly'),
+                'label' => __('Color Active', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .owl-dots button.owl-dot.active span' => 'background: {{VALUE}};',
@@ -624,7 +624,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->start_controls_section(
             'style_nav',
             [
-                'label' => __('Arrows', 'bistroly'),
+                'label' => __('Arrows', 'polishe'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'arrows' => 'true',
@@ -634,7 +634,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'arrow_spacing',
             [
-                'label' => __('Spacing', 'bistroly'),
+                'label' => __('Spacing', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -651,7 +651,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_responsive_control(
             'arrow_width',
             [
-                'label' => __('Width', 'bistroly'),
+                'label' => __('Width', 'polishe'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -667,7 +667,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_color',
             [
-                'label' => __('Color', 'bistroly'),
+                'label' => __('Color', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -679,7 +679,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_bg_color',
             [
-                'label' => __('Background', 'bistroly'),
+                'label' => __('Background', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -690,7 +690,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_hcolor',
             [
-                'label' => __('Color Hover', 'bistroly'),
+                'label' => __('Color Hover', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -701,7 +701,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'arrow_bg_hcolor',
             [
-                'label' => __('Background Hover', 'bistroly'),
+                'label' => __('Background Hover', 'polishe'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -712,7 +712,7 @@ class Image_Card_Carousel_Widget extends Widget_Base
         $this->add_control(
             'radius_arrow',
             [
-                'label' => __('Border Radius', 'bistroly'),
+                'label' => __('Border Radius', 'polishe'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
