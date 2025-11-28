@@ -37,7 +37,7 @@ function polishe_importer() {
 			'name'       => 'Home 2',
 			'preview'    => get_template_directory_uri().'/inc/backend/data/maintheme/home2.jpg',
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
-			'customizer' => get_template_directory_uri().'/inc/backend/data/coffee/customizer.dat',
+			'customizer' => get_template_directory_uri().'/inc/backend/data/nail/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
 			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
@@ -56,7 +56,7 @@ function polishe_importer() {
 			'name'       => 'Home 3',
 			'preview'    => get_template_directory_uri().'/inc/backend/data/maintheme/home3.jpg',
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
-			'customizer' => get_template_directory_uri().'/inc/backend/data/ice-cream/customizer.dat',
+			'customizer' => get_template_directory_uri().'/inc/backend/data/makeup/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
 			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
@@ -75,7 +75,7 @@ function polishe_importer() {
 			'name'       => 'Home 4',
 			'preview'    => get_template_directory_uri().'/inc/backend/data/maintheme/home4.jpg',
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
-			'customizer' => get_template_directory_uri().'/inc/backend/data/pizza/customizer.dat',
+			'customizer' => get_template_directory_uri().'/inc/backend/data/spa/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
 			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
@@ -94,7 +94,7 @@ function polishe_importer() {
 			'name'       => 'Home 5',
 			'preview'    => get_template_directory_uri().'/inc/backend/data/maintheme/home5.jpg',
 			'content'    => get_template_directory_uri().'/inc/backend/data/maintheme/demo-content.xml',
-			'customizer' => get_template_directory_uri().'/inc/backend/data/juice/customizer.dat',
+			'customizer' => get_template_directory_uri().'/inc/backend/data/barber/customizer.dat',
 			'widgets'    => get_template_directory_uri().'/inc/backend/data/maintheme/widgets.wie',
 			'sliders'    => 'https://dpsample.com/themes_data/polishe/sliders.zip',
 			'pages'      => array(
